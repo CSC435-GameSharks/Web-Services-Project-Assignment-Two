@@ -3,6 +3,7 @@
     <title>
       WoW Server JSP
     </title>
+    <link rel="stylesheet" type="text/css" href="css/WoWStyle.css" />
   </head>
   <body>
     <h3>
@@ -23,7 +24,7 @@
 	</tr>
 	<%@ page import="WoW.WoWServer" %>
 	<%
-	   WoWServer[] aryServers = request.getArribute("servList");
+	   WoWServer[] aryServers = (WoWServer[]) request.getAttribute("servList");
 	   for(int i = 0; i < aryServers.length; i++){
 
 	%>
