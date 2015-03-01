@@ -13,6 +13,7 @@ import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.servlet.ServletException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -37,18 +38,21 @@ public class WoWServServ extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        //response.setContentType("text/html;charset=UTF-8");
+	 try (PrintWriter out = response.getWriter()) {
             WoWServer[] aryServer = makeServerAPIRequest();
-            
-            try{
+            request.setAttribute("servList", aryServer);
+	    RequestDispatcher rd = request.getRequestDispatcher("WoWServ.jsp");
+	    rd.forward(request,response);
+
+		/* try{
                 //out.println(strOutput);
             } catch (Exception ex) {
                 System.out.println(ex);
                 out.println(ex);
                 out.println("</body>");
                 out.println("</html>");
-            }
+            }*/
         }
     }
 

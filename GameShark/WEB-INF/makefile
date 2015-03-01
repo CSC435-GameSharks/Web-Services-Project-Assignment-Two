@@ -1,4 +1,4 @@
-CLASSPATH = -classpath lib/servlet-api.jar:lib/javax.json.jar:src/servlet/
+CLASSPATH = -classpath ~/Documents/tomcat/apache8/lib/servlet-api.jar:lib/javax.json.jar:src/servlet/
 DEST = -d classes
 SRC = \
 	src/WoW/WoWCharacter.java \
