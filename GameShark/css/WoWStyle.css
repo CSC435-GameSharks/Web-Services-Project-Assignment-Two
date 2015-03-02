@@ -71,4 +71,5 @@ table, .serverTable th, .serverTable td {
 .charTable {
     border: 0px solid #f00 !important;
     border-collapse: collapse;
+    table-layout: fixed;
 }

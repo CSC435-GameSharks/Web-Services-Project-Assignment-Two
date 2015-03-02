@@ -13,6 +13,7 @@ import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.servlet.ServletException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,12 +45,14 @@ public class WoWCharServ extends HttpServlet {
             HttpSession s = request.getSession();
             String sCharName = "";
             String sCharRealm = "";
-            
+	    
+	    out.println("checking for charRealm");
             //Check the session for a realm
             if(s.getAttribute("charRealm") != null){
                 sCharRealm = s.getAttribute("charRealm").toString();
             }
-            
+	    
+	    out.println("checking for charName");
             //Check the session for a name
             if(s.getAttribute("charName") != null){
                 sCharName = s.getAttribute("charName").toString();
@@ -59,12 +62,14 @@ public class WoWCharServ extends HttpServlet {
             //Check if there are any quert string infromation
             //if we have these we want to use them instead of what
             //we got from the session.  We also want to overwrite the session
+	    out.println("checking for request name");
             if(request.getParameter("name") != null){
                 sCharName = request.getParameter("name");
                 s.setAttribute("charName", sCharName);
                 
             }
             
+	    out.println("checking for request realm");
             if(request.getParameter("realm") != null){
                 sCharRealm = request.getParameter("realm");
                 s.setAttribute("charRealm", sCharRealm );
@@ -73,22 +78,28 @@ public class WoWCharServ extends HttpServlet {
             
             //Start building the output
             WoWCharacter wowChar = null;
-            
+	    out.println(sCharName);
+	    out.println(sCharRealm);
             //Check to see if we have valid information to make a request
             if(sCharName == "" || sCharRealm == "" ){
                 //sOutput += "</br>ERROR: Bad User or Realm  ";
+		out.println("Error");
             }else{
+		out.println("about to make char");
                 wowChar = makeServerAPIRequest(sCharName, sCharRealm);
+		request.setAttribute("userChar",wowChar);
+		RequestDispatcher rd = request.getRequestDispatcher("WoWChar.jsp");
+		rd.forward(request, response);
             }
                         
-            try{
+            /*try{
                 //out.println(sOutput);
             } catch (Exception ex) {
                 System.out.println(ex);
                 out.println(ex);
                 out.println("</body>");
                 out.println("</html>");
-            }
+		}*/
         }
     }
 
