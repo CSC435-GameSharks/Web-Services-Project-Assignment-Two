@@ -15,6 +15,11 @@
      <servlet-name>WoWServServ</servlet-name>
      <servlet-class>servlet.WoWServServ</servlet-class>
    </servlet>
+
+   <servlet>
+     <servlet-name>WoWClassServ</servlet-name>
+     <servlet-class>servlet.WoWClassServ</servlet-class>
+   </servlet>
  
    <!-- Note: All <servlet> elements MUST be grouped together and
          placed IN FRONT of the <servlet-mapping> elements -->
@@ -28,4 +33,10 @@
      <servlet-name>WoWServServ</servlet-name>
      <url-pattern>/wowServServ</url-pattern>
    </servlet-mapping>
+
+   <servlet-mapping>
+     <servlet-name>WoWClassServ</servlet-name>
+     <url-pattern>/wowClassServ</url-pattern>
+   </servlet-mapping>
+
 </web-app>

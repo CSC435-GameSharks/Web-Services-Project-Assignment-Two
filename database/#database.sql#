@@ -234,7 +234,7 @@ INSERT INTO wowClassRoles
 INSERT INTO wowClassRoles
     VALUES(
         1,
-        1
+        2
     );    
 
 INSERT INTO wowClassRoles
