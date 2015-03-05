@@ -10,7 +10,7 @@ public class WoWClassDetail {
     private String sName;
     private String sBio;
     private String[] aryRoles;
-    private String[] arySpecs;
+    private WoWSpec[] arySpecs;
     private WoWSpell[] arySpells;
     private WoWTalent[] aryTalents;
 
@@ -54,15 +54,29 @@ public class WoWClassDetail {
     public void setRoles(String[] aryIn){
 	this.aryRoles = aryIn;
     }
+
+    public String getRolesString(){
+	String sReturn = "";
+	boolean bFirstPass = true;
+	for(int i = 0; i < aryRoles.length; i++){
+	    if(bFirstPass){
+		sReturn += aryRoles[i];
+		bFirstPass = false;
+	    }else{
+		sReturn += ", " + aryRoles[i];
+	    }
+	}
+	return sReturn;
+    }
     /**
      * @return an array of strings that are the classes
      * specs
     */
-    public String[] getSpecs(){
+    public WoWSpec[] getSpecs(){
 	return arySpecs;
     }
     
-    public void setSpecs(String[] aryIn){
+    public void setSpecs(WoWSpec[] aryIn){
 	this.arySpecs = aryIn;
     }
     
@@ -73,10 +87,18 @@ public class WoWClassDetail {
 	return arySpells;
     }
 
+    public void setSpells(WoWSpell[] aryIn){
+	this.arySpells = aryIn;
+    }
+
     /**
      * @return an array of WoWTalent objects
     */
     public WoWTalent[] getTalents(){
 	return aryTalents;
+    }
+
+    public void setTalents(WoWTalent[] aryIn){
+	this.aryTalents = aryIn;
     }
 }

@@ -87,7 +87,7 @@ CREATE TABLE wowTalents(
     talentDesc varchar(512),
     lvl int,
     PRIMARY KEY (talentID, classID, specID),
-    FOREIGN KEY (classID) REFERENCES wowClass(classID)
+    FOREIGN KEY (classID) REFERENCES wowClass(classID),
     FOREIGN KEY (specID) REFERENCES wowSpecializations(specID));
 
 /*delete wowSpecTalents TABLE IF it EXISTS*/    
@@ -1277,6 +1277,547 @@ INSERT INTO wowSpecSpells
 * Warrior 1*
 ************
 */
+INSERT INTO wowTalents
+    VALUES (
+        0,
+	1,
+    	0,
+    	'Juggernaut',
+    	'',
+    	15
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        1,
+    	1,
+    	0,
+      	'Double Time',
+    	'',
+    	15
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        2,
+    	1,
+    	0,
+    	'Warbringer',
+    	'',
+    	15
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        3,
+    	1,
+    	0,
+    	'Enraged Regeneration',
+    	'',
+    	30
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        4,
+    	1,
+    	0,
+    	'Second Wind',
+    	'',
+    	30
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        5,
+        1,
+        0,
+        'Impending Victory',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        6,
+        1,
+        0,
+        'Taste for Blood',
+        '',
+        45
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        7,
+        1,
+        0,
+        'Sudden Death',
+        '',
+        45
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        8,
+    	1,
+    	0,
+    	'Slam',
+    	'',
+    	45
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        9,
+    	1,
+    	0,
+    	'Storm Bolt',
+    	'',
+    	60
+    );
+
+INSERT INTO wowTalents 
+    VALUES (
+        10,
+        1,
+        0,
+        'Shockwave',
+        '',
+        60
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        11,
+    	1,
+    	0,
+    	'Dragon Roar',
+    	'',
+    	60
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        12,
+    	1,
+    	0,
+    	'Mass Spell Reflection',
+    	'',
+    	75
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        13,
+        1,
+    	0,
+    	'Safeguard',
+    	'',
+     	75
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        14,
+        1,
+    	0,
+    	'Vigilance',
+    	'',
+    	75
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        15,
+    	1,
+    	0,
+    	'Avatar',
+    	'',
+    	90
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        16,
+    	1,
+    	0,
+    	'Bloodbath',
+    	'',
+    	90
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        17,
+        1,
+    	0,
+    	'Bladestrom',
+    	'',
+    	90
+    );
+
+INSERT INTO wowTalents
+    VALUES (
+        18,
+        1,
+        0,
+        'Anger Management',
+        '',
+    100);
+
+INSERT INTO wowTalents VALUES(
+    19,
+    1,
+    0,
+    'Ravager',
+    '',
+    100);
+
+INSERT INTO wowTalents VALUES(
+    20,
+    1,
+    0,
+    'Siegebreaker',
+    '',
+    100);
+
+INSERT INTO wowTalents VALUES (
+    21,
+    1,
+    1,
+    'Juggernaut',
+    '',
+    15);
+
+INSERT INTO wowTalents VALUES (
+    22,
+    1,
+    1,
+    'Double Time',
+    '',
+    15);
+
+INSERT INTO wowTalents VALUES (
+    23,
+    1,
+    1,
+    'Warbringer',
+    '',
+    15);
+
+INSERT INTO wowTalents VALUES (
+    24,
+    1,
+    1,
+    'Enraged Regeneration',
+    '',
+    30);
+
+INSERT INTO wowTalents VALUES (
+    25,
+    1,
+    1,
+    'Second Wind',
+    '',
+    30);
+
+INSERT INTO wowTalents VALUES (
+    26,
+    1,
+    1,
+    'Impending Victory',
+    '',
+    30);
+
+INSERT INTO wowTalents VALUES (
+    27,
+    1,
+    1,
+    'Furious Strikes',
+    '',
+    45);
+
+INSERT INTO wowTalents VALUES (
+    28,
+    1,
+    1,
+    'Sudden Death',
+    '',
+    45);
+
+INSERT INTO wowTalents VALUES (
+    29,
+    1,
+    1,
+    'Unquenchable Thirst',
+    '',
+    45);
+
+INSERT INTO wowTalents VALUES (
+    30,
+    1,
+    1,
+    'Storm Bolt',
+    '',
+    60);
+
+INSERT INTO wowTalents VALUES (
+    31,
+    1,
+    1,
+    'Shockwave',
+    '',
+    60);
+
+INSERT INTO wowTalents VALUES (
+    32,
+    1,
+    1,
+    'Dragon Roar',
+    '',
+    60);
+
+INSERT INTO wowTalents VALUES (
+    33,
+    1,
+    1,
+    'Mass Spell Reflection',
+    '',
+    75);
+
+INSERT INTO wowTalents VALUES (
+    34,
+    1,
+    1,
+    'Safeguard',
+    '',
+    75);
+
+INSERT INTO wowTalents VALUES (
+    35,
+    1,
+    1,
+    'Vigilance',
+    '',
+    75);
+
+INSERT INTO wowTalents VALUES (
+    36,
+    1,
+    1,
+    'Avatar',
+    '',
+    90);
+
+INSERT INTO wowTalents VALUES (
+    37,
+    1,
+    1,
+    'Bloodbath',
+    '',
+    90);
+
+INSERT INTO wowTalents VALUES (
+    38,
+    1,
+    1,
+    'Bladestorm',
+    '',
+    90);
+
+INSERT INTO wowTalents VALUES (
+    39,
+    1,
+    1,
+    'Anger Management',
+    '',
+    100);
+
+INSERT INTO wowTalents VALUES (
+    40,
+    1,
+    1,
+    'Ravager',
+    '',
+    100);
+
+INSERT INTO wowTalents VALUES (
+    41,
+    1,
+    1,
+    'Seigebreaker',
+    '',
+    100);
+
+INSERT INTO wowTalents VALUES (
+    42,
+    1,
+    2,
+    'Juggernaut',
+    '',
+    15);
+
+INSERT INTO wowTalents VALUES (
+    43,
+    1,
+    2,
+    'Double Time',
+    '',
+    15);
+
+INSERT INTO wowTalents VALUES(
+    44,
+    1,
+    2,
+    'Warbringer',
+    '',
+    15);
+
+INSERT INTO wowTalents VALUES(
+    45,
+    1,
+    2,
+    'Enraged Regeneration',
+    '',
+    30);
+
+INSERT INTO wowTalents VALUES(
+    46,
+    1,
+    2,
+    'Second Wind',
+    '',
+    30);
+
+INSERT INTO wowTalents VALUES(
+    47,
+    1,
+    2,
+    'Impending Victory',
+    '',
+    30);
+
+INSERT INTO wowTalents VALUES(
+    48,
+    1,
+    2,
+    'Heavy Repercussions',
+    '',
+    45);
+
+INSERT INTO wowTalents VALUES(
+    49,
+    1,
+    2,
+    'Sudden Death',
+    '',
+    45);
+
+INSERT INTO wowTalents VALUES(
+    50,
+    1,
+    2,
+    'Unyielding Strikes',
+    '',
+    45);
+
+INSERT INTO wowTalents VALUES(
+    51,
+    1,
+    2,
+    'Storm Bolt',
+    '',
+    60);
+
+INSERT INTO wowTalents VALUES(
+    52,
+    1,
+    2,
+    'Shockwave',
+    '',
+    60);
+
+INSERT INTO wowTalents VALUES(
+    53,
+    1,
+    2,
+    'Dragon Roar',
+    '',
+    60);
+
+INSERT INTO wowTalents VALUES(
+    54,
+    1,
+    2,
+    'Mass Spell Reflection',
+    '',
+    75);
+
+INSERT INTO wowTalents VALUES (
+    55,
+    1,
+    2,
+    'Safeguard',
+    '',
+    75);
+
+INSERT INTO wowTalents VALUES(
+    56,
+    1,
+    2,
+    'Vigilance',
+    '',
+    75);
+
+INSERT INTO wowTalents VALUES(
+    57,
+    1,
+    2,
+    'Avatar',
+    '',
+    90);
+
+INSERT INTO wowTalents VALUES (
+    58,
+    1,
+    2,
+    'Bloodbath',
+    '',
+    90);
+
+INSERT INTO wowTalents VALUES(
+    59,
+    1,
+    2,
+    'Bladestorm',
+    '',
+    90);
+
+INSERT INTO wowTalents VALUES(
+    60,
+    1,
+    2,
+    'Anger Management',
+    '',
+    100);
+
+INSERT INTO wowTalents VALUES(
+    61,
+    1,
+    2,
+    'Ravger',
+    '',
+    100);
+
+INSERT INTO wowTalents VALUES(
+    62,
+    1,
+    2,
+    'Gladiators Resolve',
+    '',
+    100);
+
     
 /*
 ************

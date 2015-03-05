@@ -3,6 +3,7 @@ package servlet;
 import WoW.WoWClassDetail;
 import WoW.WoWSpell;
 import WoW.WoWTalent;
+import WoW.WoWSpec;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -37,15 +38,27 @@ public class WoWClassServ extends HttpServlet {
 	try {
 	    WoWClassDetail wowClass;
 	    String[] aryRoles;
-	    String[] arySpecs;
+	    WoWSpec[] arySpecs;
+	    WoWSpell[] arySpells;
+	    WoWTalent[] aryTalents;
 	    int indexCounter = 0;
+	    String sClassID = "1";
+	    String sSpecID = "0";
+
+	    if(request.getParameter("classID") != null){
+		    sClassID = request.getParameter("classID");
+	    }
+
+	    if(request.getParameter("spec") != null){
+		sSpecID = request.getParameter("spec");
+	    }
 
 	    conn = DriverManager.getConnection(
 			    "jdbc:mysql://localhost:3306/csc435", "kirito", "spaz1991");
 		
 	    stmt = conn.createStatement();
 		
-	    String sqlStr = "SELECT * FROM wowClass WHERE classID = 1";
+	    String sqlStr = "SELECT * FROM wowClass WHERE classID = " + sClassID;
 	    ResultSet rset = stmt.executeQuery(sqlStr);
 		
 	    //Make Inital Class
@@ -70,30 +83,58 @@ public class WoWClassServ extends HttpServlet {
 	    sqlStr = "SELECT COUNT(*) AS rowCount FROM wowSpecializations WHERE classID = " + wowClass.getID();
 	    rset = stmt.executeQuery(sqlStr);
 	    rset.next();
-	    arySpecs = new String[rset.getInt("rowCount")];
+	    arySpecs = new WoWSpec[rset.getInt("rowCount")];
 	    
 	    //reset the counter
 	    indexCounter = 0;
-	    sqlStr = "SELECT specName FROM wowSpecializations WHERE classID = " + wowClass.getID();
+	    sqlStr = "SELECT specName, specID FROM wowSpecializations WHERE classID = " + wowClass.getID();
 	    rset = stmt.executeQuery(sqlStr);
 	    while(rset.next()){
-		arySpecs[indexCounter] = rset.getString("specName");
+		arySpecs[indexCounter] = new WoWSpec(rset.getString("specName"),rset.getInt("specID"));
 		indexCounter ++;
 	    }
 
 	    //Get the spells for the class and spec
-	    
-	    sqlStr = "SELECT COUNT(*) AS rowCount FROM (SELECT lvl, spellName FROM wowClassSpells WHERE classID = " + wowClass.getID() + "UNION SELECT lvl, spellName FROM wowSpecSpells WHERE specID = 0) temp";
+	    out.println(sSpecID);
+	    sqlStr = "SELECT COUNT(*) AS rowCount FROM (SELECT lvl, spellName FROM wowClassSpells WHERE classID = " + wowClass.getID() + " UNION SELECT lvl, spellName FROM wowSpecSpells WHERE specID = " + sSpecID + ") temp";
 	    rset = stmt.executeQuery(sqlStr);
 	    rset.next();
 	    arySpells = new WoWSpell[rset.getInt("rowCount")];
 	    
 	    //reset the counter
 	    indexCounter = 0;
-	    sqlStr = "SELECT lvl, spellName FROM (SELECT lvl, spellName FROM wowClassSpells WHERE classID = " + wowClass.getID() + "UNION SELECT lvl, spellName FROM wowSpecSpells WHERE specID = 0) temp ORDER BY temp.lvl";
+	    sqlStr = "SELECT lvl, spellName FROM (SELECT lvl, spellName FROM wowClassSpells WHERE classID = " + wowClass.getID() + " UNION SELECT lvl, spellName FROM wowSpecSpells WHERE specID = " + sSpecID + ") temp ORDER BY temp.lvl";
+	    rset = stmt.executeQuery(sqlStr);
+	    while(rset.next()){
+	    arySpells[indexCounter] = new WoWSpell(rset.getString("spellName"), rset.getInt("lvl"));
+	    indexCounter ++;
+	    }
+	    
+	    //Get the talents for the class
+	    sqlStr = "SELECT COUNT(*) AS rowCount FROM wowTalents WHERE classID = " + wowClass.getID() + " AND specID = " + sSpecID;
+	    rset = stmt.executeQuery(sqlStr);
+	    rset.next();
+	    aryTalents = new WoWTalent[rset.getInt("rowCount")];
+	    
+	    //reset the counter
+	    indexCounter = 0;
+	    sqlStr = "SELECT talentName, lvl FROM wowTalents WHERE classID = " + wowClass.getID() +  " AND specID = " + sSpecID;
+	    rset = stmt.executeQuery(sqlStr);
+	    while(rset.next()){
+		aryTalents[indexCounter] = new WoWTalent(rset.getString("talentName"), rset.getInt("lvl"));
+		indexCounter ++;
+	    }
 
 	    wowClass.setRoles(aryRoles);
 	    wowClass.setSpecs(arySpecs);
+	    wowClass.setSpells(arySpells);
+	    wowClass.setTalents(aryTalents);
+
+	    request.setAttribute("wowClass", wowClass);
+	    request.setAttribute("wowSpecID", sSpecID);
+	    RequestDispatcher rd = request.getRequestDispatcher("WoWClass.jsp");
+	    rd.forward(request, response);
+
         }catch (Exception ex) {
 	    out.println(ex.toString());
 	}finally{

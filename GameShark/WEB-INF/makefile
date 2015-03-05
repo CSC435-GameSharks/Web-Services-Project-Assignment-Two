@@ -8,6 +8,7 @@ SRC = \
 	src/WoW/WoWServer.java \
 	src/WoW/WoWSpell.java \
 	src/WoW/WoWTalent.java \
+	src/WoW/WoWSpec.java \
 	src/servlet/WoWCharServ.java \
 	src/servlet/WoWServServ.java \
 	src/servlet/WoWClassServ.java
