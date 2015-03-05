@@ -10,14 +10,14 @@ import javax.json.JsonArray;
 public class LeagueServerIncident{
 	private boolean active;
 	private String createdAt;
-	private long id;
+	private String id;
 	private LeagueServerIncMessage[] messages;
 	
 	
 	public LeagueServerIncident(JsonObject incident){
-		active = incident.get("active");
-		createdAt = incident.get("created_at");
-		id = incident.get("id");
+		active = incident.getBoolean("active");
+		createdAt = incident.get("created_at").toString();
+		id = incident.get("id").toString();
 		
 		JsonArray updates = incident.getJsonArray("updates");
 		int size = updates.size();
@@ -45,10 +45,10 @@ public class LeagueServerIncident{
 	}
 	
 	public String getID(){
-		return id.toString();
+		return id;
 	}
 	
-	public leagueServerIncMessage[] getMessages(){
+	public LeagueServerIncMessage[] getMessages(){
 		return messages;
 	}
 	

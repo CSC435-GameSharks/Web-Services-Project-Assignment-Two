@@ -3,42 +3,46 @@
     <title>
       League Server JSP
     </title>
-    <link rel="stylesheet" type="text/css" href="css/WoWStyle.css" />
   </head>
   <body>
-    <h3>
-      Server Status  
-    </h3>
     <div>
-      <table class="serverTable">
-	<caption>
-	  WoW Server Status
-	</caption>
-	<tr>
-	  <th>
-	    Name
-	  </th>
-	  <th>
-	    Status
-	  </th>
-	</tr>
-	<%@ page import="WoW.WoWServer" %>
+	<%@ page import="League.LeagueServer" %>
+	<%@ page import="League.LeagueServerService" %>
+	<%@ page import="League.LeagueServerIncident" %>
+	<%@ page import="League.LeagueServerIncMessage" %>
 	<%
-	   WoWServer[] aryServers = (WoWServer[]) request.getAttribute("servList");
-	   for(int i = 0; i < aryServers.length; i++){
-
-	%>
-	<tr>
-	  <td>
-	    <%= aryServers[i].getName() %>
-	  </td>
-	  <td>
-	    <%= aryServers[i].getStatus() %>
-	  </td>
-	</tr>
-	<%
+		LeagueServer[] servers = (LeagueServer[]) request.getAttribute("serverList");
+		if(leagueServers == null){
+			out.println("servers are null");
+		}
+		int size = servers.length;
+		for(int i = 0; i < size; i++){
+			out.println("<BR>Server Name: " + servers[i].getName());
+			out.println("<BR>Server Slug: " + servers[i].getSlug());
+		
+			LeagueServerService[] services = servers[i].getServices();
+			for(int j = 0; j < services.length; j++){
+				out.println("<BR>Service: " + services[j].getName());
+				out.println("<BR>Slug: " + services[j].getSlug());
+				out.println("<BR>Status: " + services[j].getStatus());
+				
+				LeagueServerIncident[] inc = services[j].getIncidents();
+				for(int k = 0; k < inc.length; k++){
+					out.println("<BR>Server Incidents: ");
+					out.println("<BR>Created: " + inc[k].getCreatedAt());
+					out.println("<BR>Active: " + inc[k].getActive());
+					
+					LeagueServerIncMessage[] message = inc[k].getMessages();
+					for(int m = 0; m < message.length; m++){
+						out.println("<BR>Severity: " + message[m].getSeverity());
+						out.println("<BR>Author: "+ message[m].getAuthor());
+						out.println("<BR>Created: "+ message[m].getCreatedAt());
+						out.println("<BR>Updated: "+ message[m].getUpdatedAt());
+						out.println("<BR>Content: "+ message[m].getContent());
+					}
+				}
+			}
 	   }
-
 	%>
     </div>
   </body>

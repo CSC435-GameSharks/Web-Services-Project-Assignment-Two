@@ -1,6 +1,10 @@
-CLASSPATH = -classpath ~/Documents/tomcat/apache8/lib/servlet-api.jar:lib/javax.json.jar:src/servlet/
+CLASSPATH = -classpath ~/Applications/Tomcat/lib/servlet-api.jar:lib/javax.json.jar:src/servlet/
 DEST = -d classes
 SRC = \
+    src/League/LeagueServer.java \
+    src/League/LeagueServerService.java \
+    src/League/LeagueServerIncident.java \
+    src/League/LeagueServerIncMessage.java \
 	src/WoW/WoWCharacter.java \
 	src/WoW/WoWClass.java \
 	src/WoW/WoWClassDetail.java \
@@ -9,6 +13,7 @@ SRC = \
 	src/WoW/WoWSpell.java \
 	src/WoW/WoWTalent.java \
 	src/WoW/WoWSpec.java \
+	src/servlet/LeagueServerStatus.java \
 	src/servlet/WoWCharServ.java \
 	src/servlet/WoWServServ.java \
 	src/servlet/WoWClassServ.java

@@ -20,6 +20,11 @@
      <servlet-name>WoWClassServ</servlet-name>
      <servlet-class>servlet.WoWClassServ</servlet-class>
    </servlet>
+
+   <servlet>
+     <servlet-name>LeagueServerStatus</servlet-name>
+     <servlet-class>servlet.LeagueServerStatus</servlet-class>
+   </servlet>
  
    <!-- Note: All <servlet> elements MUST be grouped together and
          placed IN FRONT of the <servlet-mapping> elements -->
@@ -37,6 +42,11 @@
    <servlet-mapping>
      <servlet-name>WoWClassServ</servlet-name>
      <url-pattern>/wowClassServ</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+     <servlet-name>LeagueServerStatus</servlet-name>
+     <url-pattern>/LeagueServerStatus</url-pattern>
    </servlet-mapping>
 
 </web-app>

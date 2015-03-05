@@ -15,9 +15,9 @@ public class LeagueServerService {
 
 	public LeagueServerService(JsonObject service){
 		
-		name = service.getString("name");
-		status = service.getString("status");
-		slug = service.getString("slug");	
+		name = service.getString("name").toString();
+		status = service.getString("status").toString();
+		slug = service.getString("slug").toString();	
 		
 		JsonArray inc = service.getJsonArray("incidents");
 		int size = inc.size();

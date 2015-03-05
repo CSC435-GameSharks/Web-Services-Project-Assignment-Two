@@ -11,17 +11,17 @@ public class LeagueServerIncMessage {
 	private String content;
 	private String createdAt;
 	private String severity;//info, alert or error
-	private long id;
+	private String id;
 	private String updatedAt;
 	
 	public LeagueServerIncMessage(JsonObject message){
 	
-		author = message.get("author");
-		content = message.get("content");
-		createdAt = message.get("created_at");
-		id = message.get("id");
-		severity = message.get("severity");
-		updatedAt = message.get("updated_at")    
+		author = message.get("author").toString();
+		content = message.get("content").toString();
+		createdAt = message.get("created_at").toString();
+		id = message.get("id").toString();
+		severity = message.get("severity").toString();
+		updatedAt = message.get("updated_at").toString();  
 		
 		}
 		
@@ -42,7 +42,7 @@ public class LeagueServerIncMessage {
 			return severity;
 		}
 		
-		public long getID(){
+		public String getID(){
 			return id;
 		}
 		
