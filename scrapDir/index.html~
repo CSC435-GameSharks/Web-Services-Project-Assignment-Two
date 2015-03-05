@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GameShark</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h2>
+      WoW Class
+    </h2>
+    <div>
+      <table>
+	<tr>
+	  <td>
+	    Select Class:
+	  </td>
+	  <td>
+	    <select>
+	      <option value="1">Warror</option>
+	      <option value="2">Paladin</option>
+	      <option value="3">Hunter</option>
+	      <option value="4">Rouge</option>
+	      <option value="5">Priest</option>
+	      <option value="6">Death Knight</option>
+	      <option value="7">Shaman</option>
+	      <option value="8">Mage</option>
+	      <option value="9">Warlock</option>
+	      <option value="10">Monk</option>
+	      <option value="11">Druid</option>
+	    </select>
+	  </td>
+	</tr>
+      </table>
+    </div>
+    </br>
+    <div>
+      <table>
+	<tr>
+	  <td>
+	    Warror
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    Roles: Tank, Melee Damage Dealer
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <input type="radio" name="spec" value="0" checked>Arms
+	    <input type="radio" name="spec" value="1">Fury
+	    <input type="radio" name="spec" value="2">Protection
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	    <table>
+	      
+	    </table>
+	  </td>
+	</tr>
+      </table>
+    </div>
+  </body>
+</html>
