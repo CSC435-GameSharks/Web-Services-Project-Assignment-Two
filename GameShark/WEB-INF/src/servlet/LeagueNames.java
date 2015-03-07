@@ -45,7 +45,7 @@ public class LeagueNames extends HttpServlet {
             
             //Check the session for a current summoner name
             out.println("looking for session name");
-            if (s.getAttribute("summoner") != null) {
+            if (s.getAttribute("sessionName") != null) {
                 sName = s.getAttribute("sessionName").toString();
                 
             }
@@ -60,9 +60,9 @@ public class LeagueNames extends HttpServlet {
             }
 
             LeagueSummoner summoner = null;
-            out.println(sName);
+            System.out.println(sName);
 
-            if (sName.equals("")) {
+            if (sName == "") {
                 out.println("Error in LeagueNames.java process request");
             } else {
                 summoner = makeAPIRequest(sName);
@@ -85,9 +85,8 @@ public class LeagueNames extends HttpServlet {
             JsonReader jsonReader = Json.createReader(is);
             JsonObject json = jsonReader.readObject();
             JsonObject summonerObject = json.getJsonObject(n);
-            jsonReader.close();
             summoner = new LeagueSummoner(summonerObject);
-
+            jsonReader.close();
         } catch (MalformedURLException ex) {
             Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, ex);
 
@@ -149,4 +148,5 @@ public class LeagueNames extends HttpServlet {
     }// </editor-fold>
 
 }
+
 

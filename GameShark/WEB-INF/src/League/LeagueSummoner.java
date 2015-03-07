@@ -17,7 +17,7 @@ public class LeagueSummoner {
         name = summoner.get("name").toString().replace("\"", "");
         id = summoner.get("id").toString();
         level = summoner.get("summonerLevel").toString();
-        profileIcon = summoner.get("ptofileIconId").toString();
+        profileIcon = summoner.get("profileIconId").toString();
         
         
     }
