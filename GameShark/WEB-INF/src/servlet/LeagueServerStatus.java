@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package servlet;
 
 import League.LeagueServer;
@@ -13,17 +18,19 @@ import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
-import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ *
+ *
  * @author kellymaestri
  */
-@WebServlet(name = "LeagueServerStatus", urlPatterns = {"/LeagueServerStatus"})
+@WebServlet(name = "LeagueServerServ", urlPatterns = {"/LeagueServerServ"})
 public class LeagueServerStatus extends HttpServlet {
 
     /**
@@ -37,27 +44,28 @@ public class LeagueServerStatus extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-	   try (PrintWriter out = response.getWriter()) {
-	    	LeagueServer[] leagueServers = makeAPIRequest();
-           request.setAttribute("serverList", leagueServers);
-		    RequestDispatcher rd = request.getRequestDispatcher("LeagueServer.jsp");
-		    rd.forward(request,response);
-	   }
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+
+            LeagueServer[] servers = makeAPIRequest();
+            request.setAttribute("serverList", servers);
+            RequestDispatcher rd = request.getRequestDispatcher("LeagueServer.jsp");
+            rd.forward(request, response);
+
+        }
     }
-
-
 
     private LeagueServer[] makeAPIRequest() {
         InputStream is = null;
         LeagueServer[] servers = null;
-        ArrayList<String> regions = new ArrayList<String>();		
-		try {
+        ArrayList<String> regions = new ArrayList<String>();
+        try {
             is = new URL("http://status.leagueoflegends.com/shards").openStream();
             JsonReader jsonReader = Json.createReader(is);
             JsonArray json = jsonReader.readArray();
-			
-			//first api call to get all the server "slugs"            
-			for (int i = 0; i < json.size(); i++) {
+
+            //first api call to get all the server "slugs"            
+            for (int i = 0; i < json.size(); i++) {
                 JsonObject temp = json.getJsonObject(i);
                 String blah = temp.get("slug").toString();
                 blah = blah.replace("\"", "");
@@ -65,13 +73,14 @@ public class LeagueServerStatus extends HttpServlet {
             }
             servers = new LeagueServer[regions.size()];
 
-			//second api call using the slugs from above
-			for (int i = 0; i < regions.size(); i++) {
-                is = new URL("http://status.leagueoflegends.com/shards/" +regions.get(i)).openStream();
+            //second api call using the slugs from above
+            for (int i = 0; i < regions.size(); i++) {
+                is = new URL("http://status.leagueoflegends.com/shards/" + regions.get(i)).openStream();
                 jsonReader = Json.createReader(is);
                 JsonObject jsonO = jsonReader.readObject();
                 servers[i] = new LeagueServer(jsonO);
             }
+
             jsonReader.close();
 
         } catch (MalformedURLException ex) {

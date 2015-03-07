@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package League;
 
 import javax.json.JsonObject;
@@ -17,9 +21,7 @@ public class LeagueSummoner {
         name = summoner.get("name").toString().replace("\"", "");
         id = summoner.get("id").toString();
         level = summoner.get("summonerLevel").toString();
-        profileIcon = summoner.get("profileIconId").toString();
-        
-        
+        profileIcon = summoner.get("profileIconId").toString(); 
     }
     
     public String getName(){

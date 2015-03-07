@@ -36,7 +36,7 @@ public class LeagueNames extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException {
 
         try (PrintWriter out = response.getWriter()) {
 
@@ -44,7 +44,7 @@ public class LeagueNames extends HttpServlet {
             String sName = "";
             
             //Check the session for a current summoner name
-            out.println("looking for session name");
+            out.println("Look for name from session");
             if (s.getAttribute("sessionName") != null) {
                 sName = s.getAttribute("sessionName").toString();
                 
@@ -52,58 +52,55 @@ public class LeagueNames extends HttpServlet {
             
             //check for a new summoner name
             //will want to use over current session summoner name
-            out.println("looking for request name");
+            out.println("Look for name from request");
             if (request.getParameter("name") != null) {
                 sName = request.getParameter("name");
                 s.setAttribute("sessionName", sName);
 
             }
 
-            LeagueSummoner summoner = null;
-            System.out.println(sName);
 
-            if (sName == "") {
-                out.println("Error in LeagueNames.java process request");
-            } else {
-                summoner = makeAPIRequest(sName);
-                request.setAttribute("summoner", summoner);
+            out.println(sName);
+
+                LeagueSummoner sum = makeAPIRequest(sName, out);
+                request.setAttribute("summoner", sum);
                 RequestDispatcher rd = request.getRequestDispatcher("LeagueSummoner.jsp");
                 rd.forward(request, response);
 
-            }
+            
+        } catch (IOException ex) {
+            
+            Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
 
-    private LeagueSummoner makeAPIRequest(String n) {
+    private LeagueSummoner makeAPIRequest(String n, PrintWriter out) {
         InputStream is = null;
         LeagueSummoner summoner = null;
         try {
 
             is = new URL("https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + n + "?api_key=cc288bed-bfa3-4158-9642-6b276a1381d7").openStream();
-
+           // is = connection.getInputStream();
+            
             JsonReader jsonReader = Json.createReader(is);
             JsonObject json = jsonReader.readObject();
             JsonObject summonerObject = json.getJsonObject(n);
             summoner = new LeagueSummoner(summonerObject);
             jsonReader.close();
+            is.close();
         } catch (MalformedURLException ex) {
             Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, ex);
+            return summoner;
 
         } catch (IOException ioe) {
-            Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, ioe);
+             return summoner;
 
         } catch (Exception e) {
             Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, e);
+            return summoner;
 
-        } finally {
-            try {
-                is.close();
-            } catch (IOException ex) {
-                Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-
+        } 
         return summoner;
 
     }
@@ -148,5 +145,3 @@ public class LeagueNames extends HttpServlet {
     }// </editor-fold>
 
 }
-
-

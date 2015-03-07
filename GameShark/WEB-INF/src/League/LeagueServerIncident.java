@@ -16,7 +16,7 @@ public class LeagueServerIncident{
 	
 	public LeagueServerIncident(JsonObject incident){
 		active = incident.getBoolean("active");
-		createdAt = incident.get("created_at").toString();
+		createdAt = incident.get("created_at").toString().replace("\"", "");
 		id = incident.get("id").toString();
 		
 		JsonArray updates = incident.getJsonArray("updates");
@@ -34,9 +34,9 @@ public class LeagueServerIncident{
 	
 	public String getActive(){
 		if(active){
-			return "true";	
+			return "Yes";	
 		}else{
-			return "false";
+			return "No";
 		}
 	}
 	

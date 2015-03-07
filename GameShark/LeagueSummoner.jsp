@@ -25,7 +25,7 @@
          out.println("<BR>Summoner ID: " + summoner.getID());
          out.println("<BR>Summoner level: "+ summoner.getLevel());
        }else{
-            out.println(" No User Character Data");
+            out.println(" Not a valid Summoner Name");
        }
     %>
     </div>

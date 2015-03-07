@@ -5,9 +5,9 @@
         </title>
     </head>
     <body>
-        <h2>
+        <h1>
             League of Legends Server Statuses 
-        </h2>
+        </h1>
         <div>
             <%@ page import="League.LeagueServer" %>
             <%@ page import="League.LeagueServerService" %>
@@ -17,31 +17,35 @@
             LeagueServer[] servers = (LeagueServer[]) request.getAttribute("serverList");
             for(int i = 0; i < servers.length; i++){
                     //NAME OF SERVER
-                    out.println("<dl><dt><h3>" + servers[i].getName()+"</h3><p>");
+                    out.println("<h2>" + servers[i].getName()+"</h2>");
 	
                     LeagueServerService[] services = servers[i].getServices();
+                    out.println("<ul style='list-style-type:none'>");
                     for(int j = 0; j < services.length; j++){
                         //THE SERVICES OF THE SERVER
-                        out.println("<dd><dt><b>" + services[j].getName() +":  </b>");
-                        out.print( services[j].getStatus()+"</dd>");
+                        out.println("<li><b>" + services[j].getName() +":  </b>");
+                        out.print( services[j].getStatus());
 			
                             LeagueServerIncident[] inc = services[j].getIncidents();
+                            out.println("<ul style='list-style-type:none'>");
                             for(int k = 0; k < inc.length; k++){
                                     //THE INCIDENTS OF THE SERVER
-                                    out.println("<dd><ins>Incidents</ins>:</dt>");
-                                    out.println("<dd>Created: " + inc[k].getCreatedAt()+"</dd>");
-                                    out.println("<dd>Active: " + inc[k].getActive()+"</dd>");
+                                    out.println("<li><ins>Incidents</ins>:</li>");
+                                    out.println("<ul style='list-style-type:none'>");
+                                    out.println("<li>Created: " + inc[k].getCreatedAt()+"</li>");
+                                    out.println("<li>Active: " + inc[k].getActive()+"</li>");
 				
                                     LeagueServerIncMessage[] message = inc[k].getMessages();
                                     for(int m = 0; m < message.length; m++){
                                             //THE MESSAGES ABOUT THE INCIDENT
-                                            out.println("<dd>"+ message[m].getSeverity()+": ");
-                                            out.print("<i>"+ message[m].getContent()+"</i></dd>");
+                                            out.println("<li>"+ message[m].getSeverity()+": ");
+                                            out.print("<i>"+ message[m].getContent()+"</i></li>");
                                     }
-                                    out.println("</dd>");
+                                    out.println("</ul>");
                             }
+                            out.println("</ul></li>");
                     }
-                    out.println("</p></dt></dl>");
+                    out.println("</ul>");
        }
             %>
         </div>

@@ -17,11 +17,11 @@ public class LeagueServerIncMessage {
 	public LeagueServerIncMessage(JsonObject message){
 	
 		author = message.get("author").toString();
-		content = message.get("content").toString();
-		createdAt = message.get("created_at").toString();
+		content = message.get("content").toString().replace("\"", "");
+		createdAt = message.get("created_at").toString().replace("\"", "");
 		id = message.get("id").toString();
-		severity = message.get("severity").toString();
-		updatedAt = message.get("updated_at").toString();  
+		severity = message.get("severity").toString().replace("\"", "").toUpperCase();
+		updatedAt = message.get("updated_at").toString().replace("\"", "");  
 		
 		}
 		

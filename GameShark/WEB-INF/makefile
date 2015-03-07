@@ -1,4 +1,4 @@
-CLASSPATH = -classpath ~/Applications/Tomcat/lib/servlet-api.jar:lib/javax.json.jar:src/servlet/
+CLASSPATH = -cp .:/Applications/Tomcat/lib/servlet-api.jar:lib/javax.json.jar:src/servlet/
 DEST = -d classes
 SRC = \
     src/League/LeagueServer.java \
