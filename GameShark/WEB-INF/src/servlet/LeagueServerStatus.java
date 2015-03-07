@@ -37,11 +37,12 @@ public class LeagueServerStatus extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-		LeagueServer[] leagueServers = makeAPIRequest();
-       request.setAttribute("serverList", leagueServers);
-		RequestDispatcher rd = request.getRequestDispatcher("LeagueServer.jsp");
-		rd.forward(request,response);
+	   try (PrintWriter out = response.getWriter()) {
+	    	LeagueServer[] leagueServers = makeAPIRequest();
+           request.setAttribute("serverList", leagueServers);
+		    RequestDispatcher rd = request.getRequestDispatcher("LeagueServer.jsp");
+		    rd.forward(request,response);
+	   }
     }
 
 
@@ -52,7 +53,6 @@ public class LeagueServerStatus extends HttpServlet {
         ArrayList<String> regions = new ArrayList<String>();		
 		try {
             is = new URL("http://status.leagueoflegends.com/shards").openStream();
-			 System.out.println("Got all slugs");
             JsonReader jsonReader = Json.createReader(is);
             JsonArray json = jsonReader.readArray();
 			
@@ -64,7 +64,7 @@ public class LeagueServerStatus extends HttpServlet {
                 regions.add(blah);
             }
             servers = new LeagueServer[regions.size()];
-				System.out.println("About to get all regions");
+
 			//second api call using the slugs from above
 			for (int i = 0; i < regions.size(); i++) {
                 is = new URL("http://status.leagueoflegends.com/shards/" +regions.get(i)).openStream();
@@ -72,7 +72,6 @@ public class LeagueServerStatus extends HttpServlet {
                 JsonObject jsonO = jsonReader.readObject();
                 servers[i] = new LeagueServer(jsonO);
             }
-			 System.out.println("Got all regions");
             jsonReader.close();
 
         } catch (MalformedURLException ex) {

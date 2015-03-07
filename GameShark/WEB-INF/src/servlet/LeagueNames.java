@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package servlet;
 
+import League.LeagueSummoner;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -14,6 +11,7 @@ import java.util.logging.Logger;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +23,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author kellymaestri
  */
-@WebServlet(name = "LSumServ", urlPatterns = {"/LSumServ"})
+@WebServlet(name = "LeagueSummonerServ", urlPatterns = {"/LeagueSummonerServ"})
 public class LeagueNames extends HttpServlet {
 
     /**
@@ -39,110 +37,56 @@ public class LeagueNames extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+
         try (PrintWriter out = response.getWriter()) {
 
             HttpSession s = request.getSession();
             String sName = "";
-
-            if (s.getAttribute("sumName") != null) {
-                sName = s.getAttribute("sumName").toString();
-               // sName = "kmae26";
+            
+            //Check the session for a current summoner name
+            out.println("looking for session name");
+            if (s.getAttribute("summoner") != null) {
+                sName = s.getAttribute("sessionName").toString();
+                
             }
-
+            
+            //check for a new summoner name
+            //will want to use over current session summoner name
+            out.println("looking for request name");
             if (request.getParameter("name") != null) {
                 sName = request.getParameter("name");
-                s.setAttribute("sumName", sName);
+                s.setAttribute("sessionName", sName);
 
             }
 
-            String strOutput = "";
-            strOutput = startingHTML("League Summoner Look Up");
+            LeagueSummoner summoner = null;
+            out.println(sName);
 
-            if (sName == "") {
-                 strOutput += "</br>Invalid Summoner Name ";
+            if (sName.equals("")) {
+                out.println("Error in LeagueNames.java process request");
             } else {
-                strOutput += makeAPIRequest(sName);
+                summoner = makeAPIRequest(sName);
+                request.setAttribute("summoner", summoner);
+                RequestDispatcher rd = request.getRequestDispatcher("LeagueSummoner.jsp");
+                rd.forward(request, response);
 
             }
-
-            strOutput += endHTML();
-
-            try {
-                out.println(strOutput);
-            } catch (Exception ex) {
-                System.out.println(ex);
-                out.println(ex);
-                out.println("</body>");
-                out.println("</html>");
-            }
-
         }
 
     }
 
-    private String startingHTML(String strTitle) {
-        StringBuilder sb = new StringBuilder();
-
-        sb.append("<!DOCTYPE html>");
-        sb.append("<html>");
-        sb.append("   <head>");
-        sb.append("       <title>");
-        sb.append("           ").append(strTitle);
-        sb.append("       </title>");
-        sb.append("   </head>");
-        sb.append(makeInputHTML());
-        sb.append("   <body>");
-
-        return sb.toString();
-    }
-
-    private String makeInputHTML() {
-        StringBuilder sb = new StringBuilder();
-
-        sb.append("<script>");
-        sb.append("   function click1(){");
-        sb.append("       var name = document.getElementById(\"name\");");
-        sb.append("       window.location.assign(\"http://localhost:8080/HelloWeb/LSumServ?name=\" + name.value);");
-        sb.append("   }");
-        sb.append("</script>");
-        sb.append("Summoner Name:<input id=\"name\" type=\"text\" name=\"name\"></br>");
-        sb.append("<input id=\"Submit\" type=\"button\" value=\"Submit\" onclick=\"click1();\">");
-        return sb.toString();
-    }
-
-    private String endHTML() {
-        StringBuilder sb = new StringBuilder();
-
-        sb.append("   </body>");
-        sb.append("</html>");
-
-        return sb.toString();
-
-    }
-
-    private String makeAPIRequest(String n) {
+    private LeagueSummoner makeAPIRequest(String n) {
         InputStream is = null;
-        StringBuilder sb = new StringBuilder();
+        LeagueSummoner summoner = null;
         try {
 
             is = new URL("https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + n + "?api_key=cc288bed-bfa3-4158-9642-6b276a1381d7").openStream();
 
             JsonReader jsonReader = Json.createReader(is);
-
             JsonObject json = jsonReader.readObject();
-            // out.println(json.toString());
-            //out.println(json.get("kmae26").toString());
-            JsonObject values = json.getJsonObject(n);
-            sb = new StringBuilder();
-            sb.append("</br>");
-            sb.append("Summoner Name: ").append(values.get("name").toString().replace("\"", ""));
-            sb.append("</br>");
-            sb.append("ID: ").append(values.get("id").toString());
-            sb.append("</br>");
-            sb.append("Level: ").append(values.get("summonerLevel").toString());
-
+            JsonObject summonerObject = json.getJsonObject(n);
             jsonReader.close();
+            summoner = new LeagueSummoner(summonerObject);
 
         } catch (MalformedURLException ex) {
             Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, ex);
@@ -152,7 +96,7 @@ public class LeagueNames extends HttpServlet {
 
         } catch (Exception e) {
             Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, e);
-            
+
         } finally {
             try {
                 is.close();
@@ -161,7 +105,7 @@ public class LeagueNames extends HttpServlet {
             }
         }
 
-        return sb.toString();
+        return summoner;
 
     }
 
@@ -205,3 +149,4 @@ public class LeagueNames extends HttpServlet {
     }// </editor-fold>
 
 }
+

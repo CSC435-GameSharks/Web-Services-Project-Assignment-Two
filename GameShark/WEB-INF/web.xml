@@ -4,7 +4,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
  
-   <!-- To save as "hello\WEB-INF\web.xml" -->
+   <!-- To save as "GameShark\WEB-INF\web.xml" -->
  
    <servlet>
       <servlet-name>WoWCharServ</servlet-name>
@@ -24,6 +24,11 @@
    <servlet>
      <servlet-name>LeagueServerStatus</servlet-name>
      <servlet-class>servlet.LeagueServerStatus</servlet-class>
+   </servlet>
+
+   <servlet>
+     <servlet-name>LeagueSummonerServ</servlet-name>
+     <servlet-class>servlet.LeagueNames</servlet-class>
    </servlet>
  
    <!-- Note: All <servlet> elements MUST be grouped together and
@@ -47,6 +52,11 @@
    <servlet-mapping>
      <servlet-name>LeagueServerStatus</servlet-name>
      <url-pattern>/LeagueServerStatus</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+     <servlet-name>LeagueSummonerServ</servlet-name>
+     <url-pattern>/LeagueSummonerServ</url-pattern>
    </servlet-mapping>
 
 </web-app>
