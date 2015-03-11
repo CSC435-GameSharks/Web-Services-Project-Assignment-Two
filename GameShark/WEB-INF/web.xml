@@ -20,6 +20,11 @@
      <servlet-name>WoWClassServ</servlet-name>
      <servlet-class>servlet.WoWClassServ</servlet-class>
    </servlet>
+
+   <servlet>
+     <servlet-name>WoWItemServ</servlet-name>
+     <servlet-class>servlet.WoWItemServ</servlet-class>
+   </servlet>
  
    <!-- Note: All <servlet> elements MUST be grouped together and
          placed IN FRONT of the <servlet-mapping> elements -->
@@ -39,4 +44,8 @@
      <url-pattern>/wowClassServ</url-pattern>
    </servlet-mapping>
 
+   <servlet-mapping>
+     <servlet-name>WoWItemServ</servlet-name>
+     <url-pattern>/wowItemServ</url-pattern>
+   </servlet-mapping>
 </web-app>

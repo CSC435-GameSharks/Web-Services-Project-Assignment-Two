@@ -9,9 +9,11 @@ SRC = \
 	src/WoW/WoWSpell.java \
 	src/WoW/WoWTalent.java \
 	src/WoW/WoWSpec.java \
+	src/WoW/WoWItem.java \
 	src/servlet/WoWCharServ.java \
 	src/servlet/WoWServServ.java \
-	src/servlet/WoWClassServ.java
+	src/servlet/WoWClassServ.java \
+	src/servlet/WoWItemServ.java
 compile:
 	javac $(CLASSPATH) $(DEST) $(SRC)
 
