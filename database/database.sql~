@@ -3517,39 +3517,1220 @@ INSERT INTO wowSpecSpells
 * Death Knight 6*****************************************************************************
 *********************************************************************************************
 */
-        
+     
+INSERT INTO wowClassSpells
+    VALUES(
+        137,
+	6,
+	'Death Coil',
+	'',
+	55
+    );
+   
+INSERT INTO wowClassSpells
+    VALUES(
+        138,
+	6,
+	'Death Grip',
+	'',
+	55
+    );
+INSERT INTO wowClassSpells
+    VALUES(
+        139,
+	6,
+	'Frost Presence',
+	'',
+	55
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        140,
+	6,
+	'Icy Touch',
+	'',
+	55
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        141,
+	6,
+	'Blood Boil',
+	'',
+	55
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        142,
+	6,
+	'Plague Strike',
+	'',
+	55
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        143,
+	6,
+	'Death Strike',
+	'',
+	56
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        144,
+	6,
+	'Blood Presence',
+	'',
+	57
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        145,
+	6,
+	'Mind Freeze',
+	'',
+	57
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        146,
+	6,
+	'Chains of Ice',
+	'',
+	58
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        147,
+	6,
+	'Strangulate',
+	'',
+	58
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        148,
+	6,
+	'Death of Decay',
+	'',
+	60
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        149,
+	6,
+	'Dark Succor (Passive)',
+	'',
+	60
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        150,
+	6,
+	'On a Pale Horse (Passive)',
+	'',
+	61
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        151,
+	6,
+	'Icebound Fortitude',
+	'',
+	62
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        152,
+	6,
+	'Unholy Presence',
+	'',
+	64
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        153,
+	6,
+	'Horn of Winter',
+	'',
+	65
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        154,
+	6,
+	'Path of Frost',
+	'',
+	66
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        155,
+	6,
+	'Anti-Magic Shell',
+	'',
+	68
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        156,
+	6,
+	'Control Undead',
+	'',
+	69
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        157,
+	6,
+	'Raise Ally',
+	'',
+	72
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        158,
+	6,
+	'Empower Rune Weapon',
+	'',
+	76
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        159,
+	6,
+	'Army of the Dead',
+	'',
+	80
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        160,
+	6,
+	'Outbreak',
+	'',
+	81
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        161,
+	6,
+	'Dark Simulacrum',
+	'',
+	85
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        162,
+	6,
+	'Soul Reaper',
+	'',
+	87
+    );
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        178,
+	15,
+	'Crimson Scourge (Passive) ',
+	'',
+	10
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        179,
+	15,
+	'Resolve (Passive)',
+	'',
+	10
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        180,
+	15,
+	'Veteran of the Third War (Passive)',
+	'',
+	55
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        181,
+	15,
+	'Dark Command',
+	'',
+	58
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        182,
+	15,
+	'Rune Tap',
+	'',
+	64
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        183,
+	15,
+	'Will of the Necropolis (Passive)',
+	'',
+	70
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        184,
+	15,
+	'Dancing Rune Weapon',
+	'',
+	74
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        185,
+	15,
+	'Vampiric Blood',
+	'',
+	76
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        186,
+	15,
+	'Bone Shield',
+	'',
+	78
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        187,
+	15,
+	'Power of the Grave (passive)',
+	'',
+	80
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        188,
+	15,
+	'Runic Strikes (Passive)',
+	'',
+	90
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        189,
+	16,
+	'Frost Strike',
+	'',
+	55
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        190,
+	16,
+	'Howling Blast',
+	'',
+	55
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        191,
+	16,
+	'Icy Talons (Passive)',
+	'',
+	55
+    ); 
+
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        192,
+	16,
+	'Obliterate',
+	'',
+	58
+    ); 
+
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        193,
+	16,
+	'Unholy Aura (Passive)',
+	'',
+	60
+    ); 
+
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        194,
+	16,
+	'Killing Machine (Passive)',
+	'',
+	63
+    ); 
+
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        195,
+	16,
+	'Pillar of Frost',
+	'',
+	68
+    ); 
+
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        196,
+	16,
+	'Might of the Frozen Wastes (Passive)',
+	'',
+	74
+    ); 
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        197,
+	17,
+	'Raise Dead',
+	'',
+	56
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        198,
+	17,
+	'Scourge Strike',
+	'',
+	58
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        199,
+	17,
+	'Shadow Infusion (Passive)',
+	'',
+	60
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        200,
+	17,
+	'Unholy Aura (Passive)',
+	'',
+	60
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        201,
+	17,
+	'Festering Strike',
+	'',
+	62
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        202,
+	17,
+	'Sudden Doom (Passive)',
+	'',
+	64
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        203,
+	17,
+	'Dark Transformation',
+	'',
+	70
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        204,
+	17,
+	'Summon Gargoyle',
+	'',
+	74
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        205,
+	17,
+	'Necrosis (Passive)',
+	'',
+	90
+    ); 
+
+
 /*
 ****************************************************************************************
 *  Shaman 7*****************************************************************************
 ****************************************************************************************
 */
+INSERT INTO wowClassSpells
+    VALUES(
+        163,
+	7,
+	'Lighting Bolt',
+	'',
+	1
+    );
 
-        
+INSERT INTO wowClassSpells
+    VALUES(
+        164,
+	7,
+	'Primal Strike',
+	'',
+	3
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        165,
+	7,
+	'Healing Surge',
+	'',
+	7
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        166,
+	7,
+	'Lighting Shield',
+	'',
+	8
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        167,
+	7,
+	'Purge',
+	'',
+	12
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        168,
+	7,
+	'Flame Shock',
+	'',
+	12
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        169,
+	7,
+	'Ancestral Spirit',
+	'',
+	14
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        170,
+	7,
+	'Ghost Wolf',
+	'',
+	15
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        180,
+	7,
+	'Searing Totem',
+	'',
+	16
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        181,
+	7,
+	'Wind Shear',
+	'',
+	16
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        182,
+	7,
+	'Cleanse Spirit',
+	'',
+	18
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        183,
+	7,
+	'Frost Shock',
+	'',
+	22
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        184,
+	7,
+	'Water Walking',
+	'',
+	24
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        185,
+	7,
+	'Earthbind Totem',
+	'',
+	26
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        186,
+	7,
+	'Chain Lightning',
+	'',
+	28
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        187,
+	7,
+	'Healing Stream Totem',
+	'',
+	30
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        188,
+	7,
+	'Totemic Recall',
+	'',
+	30
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        189,
+	7,
+	'Reincarnation (Passive)',
+	'',
+	32
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        190,
+	7,
+	'Astral Recall',
+	'',
+	34
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        191,
+	7,
+	'Far Sight',
+	'',
+	26
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        192,
+	7,
+	'Grounding Totem',
+	'',
+	38
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        193,
+	7,
+	'Tremor Totem',
+	'',
+	54
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        194,
+	7,
+	'Earth Elemental Totem',
+	'',
+	58
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        195,
+	7,
+	'Healing Rain',
+	'',
+	60
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        196,
+	7,
+	'Capacitor Totem',
+	'',
+	63
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        197,
+	7,
+	'Fire Elemental Totem',
+	'',
+	66
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        198,
+	7,
+	'Heroism',
+	'',
+	70
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        199,
+	7,
+	'Bloodlust',
+	'',
+	70
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        200,
+	7,
+	'Hex',
+	'',
+	75
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        201,
+	7,
+	'Grace of Air (Passive)',
+	'',
+	80
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        202,
+	7,
+	'Unleash Life',
+	'',
+	81
+    );
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        206,
+	18,
+	'Earth Shock',
+	'',
+	6
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        207,
+	18,
+	'Thunderstorm',
+	'',
+	10
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        208,
+	18,
+	'Fulmination (Passive)',
+	'',
+	20
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        209,
+	18,
+	'Lava Burst',
+	'',
+	34
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        210,
+	18,
+	'Lava Surge (Passive)',
+	'',
+	50
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        211,
+	18,
+	'Earthquake',
+	'',
+	60
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        212,
+	18,
+	'Shamanistic Rage',
+	'',
+	65
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        213,
+	18,
+	'Unleash Flame',
+	'',
+	81
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        214,
+	18,
+	'Spiritwalkers Grace',
+	'',
+	87
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        215,
+	18,
+	'Ascendance',
+	'',
+	87
+    ); 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        216,
+	18,
+	'Elemental Overload (Passive)',
+	'',
+	90
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        217,
+	19,
+	'Lava Lash',
+	'',
+	10
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        218,
+	19,
+	'Flurry (Passive)',
+	'',
+	20
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        219,
+	19,
+	'Stormstrike',
+	'',
+	26
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        220,
+	19,
+	'Enhanced Weapons (Passive)',
+	'',
+	30
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        221,
+	19,
+	'Magma Totem',
+	'',
+	36
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        222,
+	19,
+	'Fire Nova',
+	'',
+	44
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        223,
+	19,
+	'Maelstorm Weapon (Passive)',
+	'',
+	50
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        224,
+	19,
+	'Feral Spirit',
+	'',
+	60
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        225,
+	19,
+	'Spirit Walk',
+	'',
+	60
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        226,
+	19,
+	'Shamanistic Rage',
+	'',
+	65
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        227,
+	19,
+	'Unleash Elements',
+	'',
+	81
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        228,
+	19,
+	'Ascendance',
+	'',
+	87
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        229,
+	19,
+	'Lightning Strikes (Passive)',
+	'',
+	90
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        230,
+	20,
+	'Riptide',
+	'',
+	10
+    );    
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        231,
+	20,
+	'Telluric Currents (Passive)',
+	'',
+	10
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        232,
+	20,
+	'Purify Spirit',
+	'',
+	18
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        233,
+	20,
+	'Water Shield',
+	'',
+	20
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        234,
+	20,
+	'Earth Shield',
+	'',
+	26
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        235,
+	20,
+	'Lava Burst',
+	'',
+	34
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        236,
+	20,
+	'Resurgence (Passive)',
+	'',
+	40
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        237,
+	20,
+	'Chain Heal',
+	'',
+	44
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        238,
+	20,
+	'Tidal Waves (Passive)',
+	'',
+	50
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        239,
+	20,
+	'Healing Wave',
+	'',
+	60
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        240,
+	20,
+	'Healing Tide Totem',
+	'',
+	65
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        241,
+	20,
+	'Spirit Link Totem',
+	'',
+	70
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        242,
+	20,
+	'Spiritwalkers Grace',
+	'',
+	85
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        243,
+	20,
+	'Ascendance',
+	'',
+	87
+    );   
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        244,
+	20,
+	'Purification (Passive)',
+	'',
+	90
+    );   
+
+
 /*
 ****************************************************************************************
 *   Mage  8*****************************************************************************
 ****************************************************************************************
 */
-        
+INSERT INTO wowClassSpells
+    VALUES(
+        -1,
+	8,
+	'',
+	'',
+	-1
+    );        
 
 /*
 ****************************************************************************************
 * Warlock 9*****************************************************************************
 ****************************************************************************************
 */
-        
+INSERT INTO wowClassSpells
+    VALUES(
+        -1,
+	9,
+	'',
+	'',
+	-1
+    );        
+
 /*
 *****************************************************************************************
 *   Monk  10*****************************************************************************
 *****************************************************************************************
 */
-        
+INSERT INTO wowClassSpells
+    VALUES(
+        -1,
+	10,
+	'',
+	'',
+	-1
+    );        
+
 /*
 *****************************************************************************************
 *  Druid  11*****************************************************************************
 *****************************************************************************************
 */
-
+INSERT INTO wowClassSpells
+    VALUES(
+        -1,
+	11,
+	'',
+	'',
+	-1
+    );
 
 /*wowTalents*/
 /*
@@ -3557,6 +4738,7 @@ INSERT INTO wowSpecSpells
 * Warrior 1*****************************************************************************
 ****************************************************************************************
 */
+/*
 INSERT INTO wowTalents
     VALUES (
         0,
@@ -4097,13 +5279,14 @@ INSERT INTO wowTalents VALUES(
     'Gladiators Resolve',
     '',
     100);
-
+*/
     
 /*
 ****************************************************************************************
 * Paladin 2*****************************************************************************
 ****************************************************************************************
 */
+/*
 
 INSERT INTO wowTalents VALUES(
     63,
@@ -4613,12 +5796,15 @@ INSERT INTO wowTalents VALUES(
     '',
     100);
 
+*/
 
 /*
 ****************************************************************************************
 *  Hunter 3*****************************************************************************
 ****************************************************************************************
 */
+
+/*
 INSERT INTO wowTalents VALUES(
     126,
     3,
@@ -5127,11 +6313,15 @@ INSERT INTO wowTalents VALUES(
     '',
     100);
 
+*/
+
 /*
 ****************************************************************************************
 *  Rogue  4*****************************************************************************
 ****************************************************************************************
 */
+
+/*
 INSERT INTO wowTalents 
     VALUES(
         189,
@@ -5771,11 +6961,14 @@ INSERT INTO wowTalents
         '',
         100
     );
+
+*/
 /*
 ****************************************************************************************
 *  Priest 5*****************************************************************************
 ****************************************************************************************
 */
+/*
 INSERT INTO wowTalents 
     VALUES(
         252,
@@ -6417,13 +7610,14 @@ INSERT INTO wowTalents
         '',
         100
     );
-
+*/
 
 /*
 *********************************************************************************************
 * Death Knight 6*****************************************************************************
 *********************************************************************************************
 */
+/*
 INSERT INTO wowTalents 
     VALUES(
         315,
@@ -7066,12 +8260,13 @@ INSERT INTO wowTalents
         100
     );
 
-
+*/
 /*
 ****************************************************************************************
 *  Shaman 7*****************************************************************************
 ****************************************************************************************
 */
+/*
 INSERT INTO wowTalents 
     VALUES(
         378,
@@ -7714,12 +8909,13 @@ INSERT INTO wowTalents
         100
     );
 
-
+*/
 /*
 ****************************************************************************************
 *   Mage  8*****************************************************************************
 ****************************************************************************************
 */
+/*
 INSERT INTO wowTalents 
     VALUES(
         441,
@@ -8361,12 +9557,14 @@ INSERT INTO wowTalents
         '',
         100
     );
+*/
 
 /*
 ****************************************************************************************
 * Warlock 9*****************************************************************************
 ****************************************************************************************
 */
+/*
 INSERT INTO wowTalents 
     VALUES(
         504,
@@ -9008,12 +10206,13 @@ INSERT INTO wowTalents
         '',
         100
     );
-
+*/
 /*
 *****************************************************************************************
 *   Monk  10*****************************************************************************
 *****************************************************************************************
 */
+/*
 INSERT INTO wowTalents 
     VALUES(
         567,
@@ -9403,9 +10602,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        542,
-        9,
-        25,
+        605,
+        10,
+        28,
         '',
         '',
         90
@@ -9414,9 +10613,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        543,
-        9,
-        25,
+        606,
+        10,
+        28,
         '',
         '',
         100
@@ -9424,9 +10623,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        544,
-        9,
-        25,
+        607,
+        10,
+        28,
         '',
         '',
         100
@@ -9434,9 +10633,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        545,
-        9,
-        25,
+        608,
+        10,
+        28,
         '',
         '',
         100
@@ -9444,9 +10643,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        546,
-        9,
-        26,
+        609,
+        10,
+        29,
         '',
         '',
         15
@@ -9454,9 +10653,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        547,
-        9,
-        26,
+        610,
+        10,
+        29,
         '',
         '',
         15
@@ -9464,9 +10663,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        548,
-        9,
-        26,
+        611,
+        10,
+        29,
         '',
         '',
         15
@@ -9475,9 +10674,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        549,
-        9,
-        26,
+        612,
+        10,
+        29,
         '',
         '',
         30
@@ -9485,9 +10684,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        550,
-        9,
-        26,
+        613,
+        10,
+        29,
         '',
         '',
         30
@@ -9495,9 +10694,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        551,
-        9,
-        26,
+        614,
+        10,
+        29,
         '',
         '',
         30
@@ -9505,9 +10704,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        552,
-        9,
-        26,
+        615,
+        10,
+        29,
         '',
         '',
         45
@@ -9515,9 +10714,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        553,
-        9,
-        26,
+        616,
+        10,
+        29,
         '',
         '',
         45
@@ -9525,9 +10724,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        554,
-        9,
-        26,
+        617,
+        10,
+        29,
         '',
         '',
         45
@@ -9536,9 +10735,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        555,
-        9,
-        26,
+        618,
+        10,
+        29,
         '',
         '',
         60
@@ -9546,9 +10745,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        556,
-        9,
-        26,
+        619,
+        10,
+        29,
         '',
         '',
         60
@@ -9556,9 +10755,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        557,
-        9,
-        26,
+        620,
+        10,
+        29,
         '',
         '',
         60
@@ -9567,9 +10766,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        558,
-        9,
-        26,
+        621,
+        10,
+        29,
         '',
         '',
         75
@@ -9577,9 +10776,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        559,
-        9,
-        26,
+        622,
+        10,
+        29,
         '',
         '',
         75
@@ -9587,9 +10786,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        560,
-        9,
-        26,
+        623,
+        10,
+        29,
         '',
         '',
         75
@@ -9597,9 +10796,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        561,
-        9,
-        26,
+        624,
+        10,
+        29,
         '',
         '',
         90
@@ -9607,9 +10806,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        562,
-        9,
-        26,
+        625,
+        10,
+        29,
         '',
         '',
         90
@@ -9617,9 +10816,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        563,
-        9,
-        26,
+        626,
+        10,
+        29,
         '',
         '',
         90
@@ -9628,9 +10827,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        564,
-        9,
-        26,
+        627,
+        10,
+        29,
         '',
         '',
         100
@@ -9638,9 +10837,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        565,
-        9,
-        26,
+        628,
+        10,
+        29,
         '',
         '',
         100
@@ -9648,18 +10847,875 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        566,
-        9,
-        26,
+        629,
+        10,
+        29,
         '',
         '',
         100
     );
 
-
+*/
 /*
 *****************************************************************************************
 *  Druid  11*****************************************************************************
 *****************************************************************************************
 */
-    
+/*
+INSERT INTO wowTalents 
+    VALUES(
+        630,
+        11,
+        30,
+        '',
+        '',
+        15
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        631,
+        11,
+        30,
+        '',
+        '',
+        15
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        632,
+        11,
+        30,
+        '',
+        '',
+        15
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        633,
+        11,
+        30,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        634,
+        11,
+        30,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        635,
+        11,
+        30,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        636,
+        11,
+        30,
+        '',
+        '',
+        45
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        637,
+        11,
+        30,
+        '',
+        '',
+        45
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        638,
+        11,
+        30,
+        '',
+        '',
+        45
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        639,
+        11,
+        30,
+        '',
+        '',
+        60
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        640,
+        11,
+        30,
+        '',
+        '',
+        60
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        641,
+        11,
+        30,
+        '',
+        '',
+        60
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        642,
+        11,
+        30,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        643,
+        11,
+        30,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        644,
+        11,
+        30,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        645,
+        11,
+        30,
+        '',
+        '',
+        90
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        646,
+        11,
+        30,
+        '',
+        '',
+        90
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        647,
+        11,
+        30,
+        '',
+        '',
+        90
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        648,
+        11,
+        30,
+        '',
+        '',
+        100
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        649,
+        11,
+        30,
+        '',
+        '',
+        100
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        650,
+        11,
+        30,
+        '',
+        '',
+        100
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        651,
+        11,
+        31,
+        '',
+        '',
+        15
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        652,
+        11,
+        31,
+        '',
+        '',
+        15
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        653,
+        11,
+        31,
+        '',
+        '',
+        15
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        654,
+        11,
+        31,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        655,
+        11,
+        31,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        656,
+        11,
+        31,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        657,
+        11,
+        31,
+        '',
+        '',
+        45
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        658,
+        11,
+        31,
+        '',
+        '',
+        45
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        659,
+        11,
+        31,
+        '',
+        '',
+        45
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        660,
+        11,
+        31,
+        '',
+        '',
+        60
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        661,
+        11,
+        31,
+        '',
+        '',
+        60
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        662,
+        11,
+        31,
+        '',
+        '',
+        60
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        663,
+        11,
+        31,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        664,
+        11,
+        31,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        665,
+        11,
+        31,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        666,
+        11,
+        31,
+        '',
+        '',
+        90
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        667,
+        11,
+        31,
+        '',
+        '',
+        90
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        668,
+        11,
+        31,
+        '',
+        '',
+        90
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        669,
+        11,
+        31,
+        '',
+        '',
+        100
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        670,
+        11,
+        31,
+        '',
+        '',
+        100
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        671,
+        11,
+        31,
+        '',
+        '',
+        100
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        672,
+        11,
+        32,
+        '',
+        '',
+        15
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        673,
+        11,
+        32,
+        '',
+        '',
+        15
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        674,
+        11,
+        32,
+        '',
+        '',
+        15
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        675,
+        11,
+        32,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        676,
+        11,
+        32,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        677,
+        11,
+        32,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        678,
+        11,
+        32,
+        '',
+        '',
+        45
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        679,
+        11,
+        32,
+        '',
+        '',
+        45
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        680,
+        11,
+        32,
+        '',
+        '',
+        45
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        681,
+        11,
+        32,
+        '',
+        '',
+        60
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        682,
+        11,
+        32,
+        '',
+        '',
+        60
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        683,
+        11,
+        32,
+        '',
+        '',
+        60
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        684,
+        11,
+        32,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        685,
+        11,
+        32,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        686,
+        11,
+        32,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        687,
+        11,
+        32,
+        '',
+        '',
+        90
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        688,
+        11,
+        32,
+        '',
+        '',
+        90
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        689,
+        11,
+        32,
+        '',
+        '',
+        90
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        690,
+        11,
+        32,
+        '',
+        '',
+        100
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        691,
+        11,
+        32,
+        '',
+        '',
+        100
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        692,
+        11,
+        32,
+        '',
+        '',
+        100
+    );    
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        693,
+        11,
+        33,
+        '',
+        '',
+        15
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        694,
+        11,
+        33,
+        '',
+        '',
+        15
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        695,
+        11,
+        33,
+        '',
+        '',
+        15
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        696,
+        11,
+        33,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        697,
+        11,
+        33,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        698,
+        11,
+        33,
+        '',
+        '',
+        30
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        699,
+        11,
+        33,
+        '',
+        '',
+        45
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        700,
+        11,
+        33,
+        '',
+        '',
+        45
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        701,
+        11,
+        33,
+        '',
+        '',
+        45
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        702,
+        11,
+        33,
+        '',
+        '',
+        60
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        703,
+        11,
+        33,
+        '',
+        '',
+        60
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        704,
+        11,
+        33,
+        '',
+        '',
+        60
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        705,
+        11,
+        33,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        706,
+        11,
+        33,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        707,
+        11,
+        33,
+        '',
+        '',
+        75
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        708,
+        11,
+        33,
+        '',
+        '',
+        90
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        709,
+        11,
+        33,
+        '',
+        '',
+        90
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        710,
+        11,
+        33,
+        '',
+        '',
+        90
+    );
+
+
+INSERT INTO wowTalents 
+    VALUES(
+        711,
+        11,
+        33,
+        '',
+        '',
+        100
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        712,
+        11,
+        33,
+        '',
+        '',
+        100
+    );
+
+INSERT INTO wowTalents 
+    VALUES(
+        713,
+        11,
+        33,
+        '',
+        '',
+        100
+    );    
+*/
