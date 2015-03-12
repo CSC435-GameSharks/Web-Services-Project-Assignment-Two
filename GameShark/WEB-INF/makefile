@@ -14,11 +14,16 @@ SRC = \
 	src/WoW/WoWSpell.java \
 	src/WoW/WoWTalent.java \
 	src/WoW/WoWSpec.java \
+<<<<<<< HEAD
 	src/servlet/LeagueServerStatus.java \
 	src/servlet/LeagueNames.java \
+=======
+	src/WoW/WoWItem.java \
+>>>>>>> origin/Prez2
 	src/servlet/WoWCharServ.java \
 	src/servlet/WoWServServ.java \
-	src/servlet/WoWClassServ.java
+	src/servlet/WoWClassServ.java \
+	src/servlet/WoWItemServ.java
 compile:
 	javac $(CLASSPATH) $(DEST) $(SRC)
 

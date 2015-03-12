@@ -9403,9 +9403,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        605,
-        10,
-        28,
+        542,
+        9,
+        25,
         '',
         '',
         90
@@ -9414,9 +9414,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        606,
-        10,
-        28,
+        543,
+        9,
+        25,
         '',
         '',
         100
@@ -9424,9 +9424,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        607,
-        10,
-        28,
+        544,
+        9,
+        25,
         '',
         '',
         100
@@ -9434,9 +9434,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        608,
-        10,
-        28,
+        545,
+        9,
+        25,
         '',
         '',
         100
@@ -9444,9 +9444,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        609,
-        10,
-        29,
+        546,
+        9,
+        26,
         '',
         '',
         15
@@ -9454,9 +9454,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        610,
-        10,
-        29,
+        547,
+        9,
+        26,
         '',
         '',
         15
@@ -9464,9 +9464,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        611,
-        10,
-        29,
+        548,
+        9,
+        26,
         '',
         '',
         15
@@ -9475,9 +9475,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        612,
-        10,
-        29,
+        549,
+        9,
+        26,
         '',
         '',
         30
@@ -9485,9 +9485,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        613,
-        10,
-        29,
+        550,
+        9,
+        26,
         '',
         '',
         30
@@ -9495,9 +9495,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        614,
-        10,
-        29,
+        551,
+        9,
+        26,
         '',
         '',
         30
@@ -9505,9 +9505,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        615,
-        10,
-        29,
+        552,
+        9,
+        26,
         '',
         '',
         45
@@ -9515,9 +9515,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        616,
-        10,
-        29,
+        553,
+        9,
+        26,
         '',
         '',
         45
@@ -9525,9 +9525,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        617,
-        10,
-        29,
+        554,
+        9,
+        26,
         '',
         '',
         45
@@ -9536,9 +9536,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        618,
-        10,
-        29,
+        555,
+        9,
+        26,
         '',
         '',
         60
@@ -9546,9 +9546,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        619,
-        10,
-        29,
+        556,
+        9,
+        26,
         '',
         '',
         60
@@ -9556,9 +9556,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        620,
-        10,
-        29,
+        557,
+        9,
+        26,
         '',
         '',
         60
@@ -9567,9 +9567,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        621,
-        10,
-        29,
+        558,
+        9,
+        26,
         '',
         '',
         75
@@ -9577,9 +9577,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        622,
-        10,
-        29,
+        559,
+        9,
+        26,
         '',
         '',
         75
@@ -9587,9 +9587,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        623,
-        10,
-        29,
+        560,
+        9,
+        26,
         '',
         '',
         75
@@ -9597,9 +9597,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        624,
-        10,
-        29,
+        561,
+        9,
+        26,
         '',
         '',
         90
@@ -9607,9 +9607,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        625,
-        10,
-        29,
+        562,
+        9,
+        26,
         '',
         '',
         90
@@ -9617,9 +9617,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        626,
-        10,
-        29,
+        563,
+        9,
+        26,
         '',
         '',
         90
@@ -9628,9 +9628,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        627,
-        10,
-        29,
+        564,
+        9,
+        26,
         '',
         '',
         100
@@ -9638,9 +9638,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        628,
-        10,
-        29,
+        565,
+        9,
+        26,
         '',
         '',
         100
@@ -9648,9 +9648,9 @@ INSERT INTO wowTalents
 
 INSERT INTO wowTalents 
     VALUES(
-        629,
-        10,
-        29,
+        566,
+        9,
+        26,
         '',
         '',
         100

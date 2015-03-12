@@ -22,6 +22,7 @@
    </servlet>
 
    <servlet>
+<<<<<<< HEAD
      <servlet-name>LeagueServerStatus</servlet-name>
      <servlet-class>servlet.LeagueServerStatus</servlet-class>
    </servlet>
@@ -29,6 +30,10 @@
    <servlet>
      <servlet-name>LeagueSummonerServ</servlet-name>
      <servlet-class>servlet.LeagueNames</servlet-class>
+=======
+     <servlet-name>WoWItemServ</servlet-name>
+     <servlet-class>servlet.WoWItemServ</servlet-class>
+>>>>>>> origin/Prez2
    </servlet>
  
    <!-- Note: All <servlet> elements MUST be grouped together and
@@ -50,6 +55,7 @@
    </servlet-mapping>
 
    <servlet-mapping>
+<<<<<<< HEAD
      <servlet-name>LeagueServerStatus</servlet-name>
      <url-pattern>/LeagueServerStatus</url-pattern>
    </servlet-mapping>
@@ -59,4 +65,9 @@
      <url-pattern>/LeagueSummonerServ</url-pattern>
    </servlet-mapping>
 
+=======
+     <servlet-name>WoWItemServ</servlet-name>
+     <url-pattern>/wowItemServ</url-pattern>
+   </servlet-mapping>
+>>>>>>> origin/Prez2
 </web-app>
