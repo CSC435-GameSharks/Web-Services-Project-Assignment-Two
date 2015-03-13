@@ -46,7 +46,7 @@ public class DiabloCareerServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        //try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             //?battleTagName=faithpaladin&battleTagCode=1761
             HttpSession s = request.getSession();
@@ -83,7 +83,7 @@ public class DiabloCareerServlet extends HttpServlet {
             }
             RequestDispatcher rd = request.getRequestDispatcher("DiabloCareer.jsp");
             rd.forward(request,response);
-        }
+        //}
     }     
 
     /**
@@ -103,15 +103,13 @@ public class DiabloCareerServlet extends HttpServlet {
             //}
             diabloPlayer = new Career(jsonObject);
             
-        } catch (MalformedURLException ex) {
+        } 
+        catch (MalformedURLException ex) {
             Logger.getLogger(DiabloCareerServlet.class.getName()).log(Level.SEVERE, null, ex);
-        
         } catch (IOException ioe){
             Logger.getLogger(DiabloCareerServlet.class.getName()).log(Level.SEVERE, null, ioe);
-        
         } catch(Exception e){
             Logger.getLogger(DiabloCareerServlet.class.getName()).log(Level.SEVERE, null, e);
-            
         }finally {
             try {
                 is.close();

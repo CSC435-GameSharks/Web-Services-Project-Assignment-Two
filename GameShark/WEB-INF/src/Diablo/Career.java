@@ -29,7 +29,7 @@ public class Career {
     private int paragonLevelHardcore;
     private int paragonLevelSeason;
     private int paragonLevelSeasonHardcore;
-    List<Hero> heroes;
+    List<AbbreviatedHero> heroes;
     private int lastHeroPlayed;
     private int lastUpdated;
     private Kill kills;
@@ -42,9 +42,9 @@ public class Career {
         paragonLevelSeasonHardcore = objIn.getInt("paragonLevelSeasonHardcore");
         
         JsonArray jsonHeroes = objIn.getJsonArray("heroes");
-        ArrayList<Hero> heroes = new ArrayList<Hero>();
+        ArrayList<AbbreviatedHero> heroes = new ArrayList<AbbreviatedHero>();
         for(JsonValue jsonHero : jsonHeroes){
-            heroes.add(new Hero((JsonObject)(jsonHero)));
+            heroes.add(new AbbreviatedHero((JsonObject)(jsonHero)));
         }
         this.heroes=heroes;
         
@@ -66,8 +66,8 @@ public class Career {
         sbReturn.append("Elites: " + this.getKills().getElites() + "</br>\n");
         sbReturn.append("Hardcore Monsters: " + this.getKills().getHardcoreMonsters() + "</br>\n");
         sbReturn.append("Heroes:" + "</br>\n");
-        for(Hero hero : heroes){
-            sbReturn.append(hero.toHTMLString());
+        for(AbbreviatedHero hero : heroes){
+            sbReturn.append(hero.toHtmlString());
         }
         
         return sbReturn.toString();

@@ -9,6 +9,9 @@ package Diablo;
  *
  * @author csaroff
  */
-public class PassiveSkill {
-    
+import javax.json.JsonObject;
+public class PassiveSkill extends Skill{
+	public PassiveSkill(JsonObject objIn){
+		super(objIn);
+	}
 }
