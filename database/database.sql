@@ -4856,12 +4856,302 @@ INSERT INTO wowClassSpells
 
 INSERT INTO wowSpecSpells
     VALUES(
-        244,
-	20,
-	'Purification (Passive)',
+        245,
+	21,
+	'Presence of Mind',
+	'',
+	1
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        246,
+	21,
+	'Arcane Blast',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        247,
+	21,
+	'Arcane Charge (Passive)',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        248,
+	21,
+	'Arcane Barrage',
+	'',
+	12
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        249,
+	21,
+	'Arcane Explosion',
+	'',
+	18
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        250,
+	21,
+	'Arcane Missiles',
+	'',
+	24
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        251,
+	21,
+	'Slow',
+	'',
+	36
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        252,
+	21,
+	'Evocation',
+	'',
+	40
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        253,
+	21,
+	'Arcane Power',
+	'',
+	62
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        254,
+	21,
+	'Mage Armor (Passive)',
+	'',
+	80
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        255,
+	21,
+	'Arcane Mind (Passive)',
 	'',
 	90
     );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        256,
+	22,
+	'Pyroblast',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        257,
+	22,
+	'Fireball',
+	'',
+	12
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        258,
+	22,
+	'Scorch',
+	'',
+	22
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        259,
+	22,
+	'Inferno Blast',
+	'',
+	24
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        260,
+	22,
+	'Molten Armor (Passive)',
+	'',
+	34
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        261,
+	22,
+	'Critical Mass (Passive)',
+	'',
+	36
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        262,
+	22,
+	'Flamestrike',
+	'',
+	44
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        263,
+	22,
+	'Dragons Breath',
+	'',
+	62
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        264,
+	22,
+	'Combustion',
+	'',
+	80
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        265,
+	22,
+	'Incineration (Passive)',
+	'',
+	90
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        266,
+	23,
+	'Summon Water Elemental',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        267,
+	23,
+	'Frostbolt',
+	'',
+	12
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        268,
+	23,
+	'Shatter (Passive)',
+	'',
+	16
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        269,
+	23,
+	'Ice Lance',
+	'',
+	22
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        270,
+	23,
+	'Fingers of Frost (Passive)',
+	'',
+	24
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        271,
+	23,
+	'Icy Veins',
+	'',
+	36
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        272,
+	23,
+	'Blizzard',
+	'',
+	52
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        273,
+	23,
+	'Frost Armor (Passive)',
+	'',
+	54
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        274,
+	23,
+	'Frozen Orb',
+	'',
+	62
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        275,
+	23,
+	'Deep Freeze',
+	'',
+	66
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        276,
+	23,
+	'Brain Freeze (Passive)',
+	'',
+	77
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        277,
+	23,
+	'Ice Shards (Passive)',
+	'',
+	90
+    );  
+
 /*
 ****************************************************************************************
 * Warlock 9*****************************************************************************
@@ -4869,12 +5159,609 @@ INSERT INTO wowSpecSpells
 */
 INSERT INTO wowClassSpells
     VALUES(
-        -1,
+        219,
 	9,
+	'Summon Imp',
 	'',
+	1
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        220,
+	9,
+	'Shadow Bolt',
 	'',
-	-1
-    );        
+	1
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        221,
+	9,
+	'The Codex of Xerrath (Passive)',
+	'',
+	1
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        222,
+	9,
+	'Corruption',
+	'',
+	3
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        223,
+	9,
+	'Summon Voidwalker',
+	'',
+	8
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        224,
+	9,
+	'Create Healthstone',
+	'',
+	9
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        225,
+	9,
+	'Fear',
+	'',
+	14
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        226,
+	9,
+	'Soulstone',
+	'',
+	18
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        227,
+	9,
+	'Summon Succubus',
+	'',
+	20
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        228,
+	9,
+	'Felsteed',
+	'',
+	20
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        229,
+	9,
+	'Eye of Kilrogg',
+	'',
+	22
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        230,
+	9,
+	'Unending Breath',
+	'',
+	24
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        231,
+	9,
+	'Soul Harvest (Passive)',
+	'',
+	27
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        232,
+	9,
+	'Summon Felhunter',
+	'',
+	29
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        233,
+	9,
+	'Enslave Demon',
+	'',
+	31
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        234,
+	9,
+	'Banish',
+	'',
+	32
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        235,
+	9,
+	'Dreadsteed',
+	'',
+	40
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        236,
+	9,
+	'Ritual of Summoning',
+	'',
+	42
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        237,
+	9,
+	'Summon Infernal',
+	'',
+	49
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        238,
+	9,
+	'Command Demon',
+	'',
+	56
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        239,
+	9,
+	'Summon Doomguard',
+	'',
+	58
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        240,
+	9,
+	'Unending Resolve',
+	'',
+	64
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        241,
+	9,
+	'Soulshatter',
+	'',
+	66
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        242,
+	9,
+	'Create Soulwell',
+	'',
+	68
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        243,
+	9,
+	'Demonic Circle: Summon',
+	'',
+	76
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        244,
+	9,
+	'Demonic Circle: Teleport',
+	'',
+	76
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        245,
+	9,
+	'Blood Pact (Passive)',
+	'',
+	80
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        246,
+	9,
+	'Dark Intent',
+	'',
+	82
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        247,
+	9,
+	'Demonic Gateway',
+	'',
+	87
+    );     
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        278,
+	24,
+	'Drain Life',
+	'',
+	7
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        279,
+	24,
+	'Unstable Affliction',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        280,
+	24,
+	'Health Funneel',
+	'',
+	11
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        281,
+	24,
+	'Life Tap',
+	'',
+	16
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        282,
+	24,
+	'Soulburn',
+	'',
+	19
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        283,
+	24,
+	'Seed of Corruption',
+	'',
+	21
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        284,
+	24,
+	'Drain Soul',
+	'',
+	24
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        285,
+	24,
+	'Agony',
+	'',
+	36
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        286,
+	24,
+	'Haunt',
+	'',
+	60
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        287,
+	24,
+	'Soul Swap',
+	'',
+	79
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        288,
+	24,
+	'Dark Soul: Misery',
+	'',
+	84
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        289,
+	24,
+	'Eradication (Passive)',
+	'',
+	90
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        290,
+	25,
+	'Drain Life',
+	'',
+	7
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        291,
+	25,
+	'Metamorphosis',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        292,
+	25,
+	'Molten Core (Passive)',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        293,
+	25,
+	'Health Funnel',
+	'',
+	11
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        294,
+	25,
+	'Demonic Leap',
+	'',
+	12
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        295,
+	25,
+	'Soul Fire',
+	'',
+	13
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        296,
+	25,
+	'Life Tap',
+	'',
+	16
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        297,
+	25,
+	'Hand of Guldan',
+	'',
+	19
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        298,
+	25,
+	'Helfire',
+	'',
+	22
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        299,
+	25,
+	'Wild Imps (Passive)',
+	'',
+	32
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        300,
+	25,
+	'Summon Felguard',
+	'',
+	42
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        301,
+	25,
+	'Dark Soul: Knowledge',
+	'',
+	84
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        302,
+	25,
+	'Demonic Tactics (Passive)',
+	'',
+	90
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        303,
+	26,
+	'Conflagrate',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        304,
+	26,
+	'Incinerate',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        305,
+	26,
+	'Chaos Bolt',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        306,
+	26,
+	'Immolate',
+	'',
+	12
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        307,
+	26,
+	'Ember Tap',
+	'',
+	15
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        308,
+	26,
+	'Rain of Fire',
+	'',
+	21
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        309,
+	26,
+	'Havoc',
+	'',
+	36
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        310,
+	26,
+	'Shadowburn',
+	'',
+	47
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        311,
+	26,
+	'Fire and Brimstone',
+	'',
+	54
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        312,
+	26,
+	'Backdraft (Passive)',
+	'',
+	69
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        313,
+	26,
+	'Flames of Xoroth',
+	'',
+	79
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        314,
+	26,
+	'Dark Soul: Instability',
+	'',
+	84
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        315,
+	26,
+	'Devastation (Passive)',
+	'',
+	90
+    );  
+   
 
 /*
 *****************************************************************************************
@@ -4883,12 +5770,582 @@ INSERT INTO wowClassSpells
 */
 INSERT INTO wowClassSpells
     VALUES(
-        -1,
+        247,
 	10,
+	'Jab',
 	'',
+	1
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        248,
+	10,
+	'Way of the Monk (Passive)',
 	'',
-	-1
-    );        
+	1
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        249,
+	10,
+	'Stance of the Fierce Tiger',
+	'',
+	1
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        250,
+	10,
+	'Tiger Palm',
+	'',
+	3
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        251,
+	10,
+	'Roll',
+	'',
+	5
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        252,
+	10,
+	'Blackout Kick',
+	'',
+	7
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        253,
+	10,
+	'Tiger Strikes (Passive)',
+	'',
+	10
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        254,
+	10,
+	'Surging Mist',
+	'',
+	12
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        255,
+	10,
+	'Provoke',
+	'',
+	14
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        256,
+	10,
+	'Resuscitate',
+	'',
+	18
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        257,
+	10,
+	'Detox',
+	'',
+	20
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        258,
+	10,
+	'Zen Pilgrimage',
+	'',
+	20
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        259,
+	10,
+	'Touch of Death',
+	'',
+	22
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        260,
+	10,
+	'Fortifying Brew',
+	'',
+	24
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        261,
+	10,
+	'Expel Harm',
+	'',
+	26
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        262,
+	10,
+	'Nimble Brew',
+	'',
+	30
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        263,
+	10,
+	'Spear Hand Strike',
+	'',
+	32
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        264,
+	10,
+	'Paralysis',
+	'',
+	44
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        265,
+	10,
+	'Spinning Crane Kick',
+	'',
+	46
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        266,
+	10,
+	'Crackling Jade Lighting',
+	'',
+	54
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        267,
+	10,
+	'Transcendence',
+	'',
+	87
+    );     
+
+INSERT INTO wowClassSpells
+    VALUES(
+        268,
+	10,
+	'Transcendence: Transfer',
+	'',
+	87
+    );     
+ 
+   
+INSERT INTO wowSpecSpells
+    VALUES(
+        316,
+	27,
+	'Dizzing Haze',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        317,
+	27,
+	'Stance of the Sturdy Ox',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        318,
+	27,
+	'Resolve (Passice)',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        319,
+	27,
+	'Keg Smash',
+	'',
+	11
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        320,
+	27,
+	'Breath of Fire',
+	'',
+	18
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        321,
+	27,
+	'Guard',
+	'',
+	26
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        322,
+	27,
+	'Elusive Brew',
+	'',
+	36
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        323,
+	27,
+	'Gift of the Ox (Passive)',
+	'',
+	56
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        324,
+	27,
+	'Summon Black Ox Statue',
+	'',
+	70
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        325,
+	27,
+	'Purifying Brew',
+	'',
+	75
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        326,
+	27,
+	'Legacy of the White Tiger',
+	'',
+	81
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        327,
+	27,
+	'Zen Meditation',
+	'',
+	82
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        328,
+	27,
+	'Ferment (Passive)',
+	'',
+	90
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        329,
+	28,
+	'Stance of the Wise Serpent',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        330,
+	28,
+	'Soothing Mist',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        331,
+	28,
+	'Stance of the Spirited Crane',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        332,
+	28,
+	'Enveloping Mist',
+	'',
+	16
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        333,
+	28,
+	'Legacy of the Emperor',
+	'',
+	22
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        334,
+	28,
+	'Renewing Mist',
+	'',
+	24
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        335,
+	28,
+	'Focus and Harmony (Passive)',
+	'',
+	45
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        336,
+	28,
+	'Life Cocoon',
+	'',
+	50
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        337,
+	28,
+	'Mana Tea',
+	'',
+	56
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        338,
+	28,
+	'Rising Sun Kick',
+	'',
+	56
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        339,
+	28,
+	'Uplift',
+	'',
+	62
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        340,
+	28,
+	'Detonate Chi',
+	'',
+	64
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        341,
+	28,
+	'Thunder Focus Tea',
+	'',
+	66
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        342,
+	28,
+	'Summon Jade Serpent Statue',
+	'',
+	70
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        343,
+	28,
+	'Revival',
+	'',
+	78
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        344,
+	28,
+	'Jade Mists (Passive)',
+	'',
+	90
+    );  
+ 
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        345,
+	29,
+	'Fists of Fury',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        346,
+	29,
+	'Flying Serpent Kick',
+	'',
+	18
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        347,
+	29,
+	'Touch of Karma',
+	'',
+	22
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        348,
+	29,
+	'Afterlife (Passive)',
+	'',
+	26
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        349,
+	29,
+	'Disable',
+	'',
+	28
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        350,
+	29,
+	'Energizing Brew',
+	'',
+	36
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        351,
+	29,
+	'Rising Sun Kick',
+	'',
+	56
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        352,
+	29,
+	'Tigereye Brew',
+	'',
+	56
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        353,
+	29,
+	'Storm, Earth, and Fire',
+	'',
+	75
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        354,
+	29,
+	'Windflurry (Passive)',
+	'',
+	80
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        355,
+	29,
+	'Legacy of the White Tiger',
+	'',
+	81
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        356,
+	29,
+	'Zen Meditation',
+	'',
+	82
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        357,
+	29,
+	'Battle Trance (Passive)',
+	'',
+	90
+    );  
+
 
 /*
 *****************************************************************************************
@@ -4897,12 +6354,796 @@ INSERT INTO wowClassSpells
 */
 INSERT INTO wowClassSpells
     VALUES(
-        -1,
+        269,
 	11,
+	'Wrath',
 	'',
-	'',
-	-1
+	1
     );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        270,
+	11,
+	'Moonfire',
+	'',
+	3
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        271,
+	11,
+	'Rejuvenation',
+	'',
+	4
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        272,
+	11,
+	'Ferocious Bite',
+	'',
+	6
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        273,
+	11,
+	'Cat Form',
+	'',
+	6
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        274,
+	11,
+	'Prowl',
+	'',
+	6
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        275,
+	11,
+	'Shred',
+	'',
+	6
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        276,
+	11,
+	'Mangle',
+	'',
+	8
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        277,
+	11,
+	'Mangle',
+	'',
+	8
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        278,
+	11,
+	'Bear Form',
+	'',
+	8
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        279,
+	11,
+	'Growl',
+	'',
+	8
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        280,
+	11,
+	'Entangling Roots',
+	'',
+	10
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        281,
+	11,
+	'Revive',
+	'',
+	12
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        282,
+	11,
+	'Teleport: Moonglade',
+	'',
+	14
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        283,
+	11,
+	'Thrash',
+	'',
+	14
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        284,
+	11,
+	'Thrash',
+	'',
+	14
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        285,
+	11,
+	'Travel Form',
+	'',
+	16
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        286,
+	11,
+	'Sunfire',
+	'',
+	18
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        287,
+	11,
+	'Dash',
+	'',
+	24
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        288,
+	11,
+	'Healing Touch',
+	'',
+	26
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        289,
+	11,
+	'Primal Fury (Passive)',
+	'',
+	30
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        290,
+	11,
+	'Hurricane',
+	'',
+	42
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        291,
+	11,
+	'Rebirth',
+	'',
+	56
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        292,
+	11,
+	'Soothe',
+	'',
+	60
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        293,
+	11,
+	'Mark of the Wild',
+	'',
+	62
+    );
+
+INSERT INTO wowClassSpells
+    VALUES(
+        294,
+	11,
+	'Frenzied Regeneration',
+	'',
+	68
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        295,
+	11,
+	'Cyclone',
+	'',
+	78
+    );
+
+
+INSERT INTO wowClassSpells
+    VALUES(
+        296,
+	11,
+	'Stampeding Roar',
+	'',
+	84
+    );
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        358,
+	30,
+	'Eclispe (Passive)',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        359,
+	30,
+	'Starfire',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        360,
+	30,
+	'Starsurge',
+	'',
+	12
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        361,
+	30,
+	'Moonkin Form',
+	'',
+	16
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        362,
+	30,
+	'Astral Communion',
+	'',
+	20
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        363,
+	30,
+	'Remove Corruption',
+	'',
+	22
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        364,
+	30,
+	'Shooting Stars (Passive)',
+	'',
+	26
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        365,
+	30,
+	'Solar Beam',
+	'',
+	28
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        366,
+	30,
+	'Natures Birthday',
+	'',
+	38
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        367,
+	30,
+	'Barkskin',
+	'',
+	44
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        368,
+	30,
+	'Celestial Alignment',
+	'',
+	68
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        369,
+	30,
+	'Starfall',
+	'',
+	76
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        370,
+	30,
+	'Astral Showers (Passive)',
+	'',
+	82
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        371,
+	30,
+	'Wild Mushroom',
+	'',
+	84
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        372,
+	30,
+	'Lunar Guidance (Passive)',
+	'',
+	90
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        373,
+	31,
+	'Rake',
+	'',
+	6
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        374,
+	31,
+	'Tigers Fury',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        375,
+	31,
+	'Savage Roar',
+	'',
+	18
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        376,
+	31,
+	'Savage Roar',
+	'',
+	18
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        377,
+	31,
+	'Rip',
+	'',
+	20
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        378,
+	31,
+	'Remove Corruption',
+	'',
+	22
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        379,
+	31,
+	'Swipe',
+	'',
+	22
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        380,
+	31,
+	'Predatory Swiftness (Passive)',
+	'',
+	26
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        381,
+	31,
+	'Faerie Fire',
+	'',
+	28
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        382,
+	31,
+	'Omen of Clarity (Passive)',
+	'',
+	38
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        383,
+	31,
+	'Leader of the Pack (Passive)',
+	'',
+	46
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        384,
+	31,
+	'Berserk',
+	'',
+	48
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        385,
+	31,
+	'Survival instincts',
+	'',
+	56
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        386,
+	31,
+	'Skull Bash',
+	'',
+	64
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        387,
+	31,
+	'Maim',
+	'',
+	82
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        388,
+	31,
+	'Sharpened Claws (Passive)',
+	'',
+	90
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        389,
+	32,
+	'Savage Defense',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        390,
+	32,
+	'Resolve (Passive)',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        391,
+	32,
+	'Maul',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        392,
+	32,
+	'Remove Corruption',
+	'',
+	22
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        393,
+	32,
+	'Faerie Fire',
+	'',
+	28
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        394,
+	32,
+	'Tooth and Claw (Passive)',
+	'',
+	32
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        395,
+	32,
+	'Lacerate',
+	'',
+	38
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        396,
+	32,
+	'Barkskin',
+	'',
+	44
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        397,
+	32,
+	'Berserk',
+	'',
+	48
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        398,
+	32,
+	'Survival Instincts',
+	'',
+	399
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        399,
+	32,
+	'Skull Bash',
+	'',
+	400
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        400,
+	32,
+	'Ursa Major (Passive)',
+	'',
+	90
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        401,
+	32,
+	'Survival of the Fittest (Passive)',
+	'',
+	90
+    );  
+
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        402,
+	33,
+	'Natures Swiftness',
+	'',
+	1
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        403,
+	33,
+	'Swiftmend',
+	'',
+	10
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        404,
+	33,
+	'Regrowth',
+	'',
+	18
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        405,
+	33,
+	'Natures Cure',
+	'',
+	22
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        406,
+	33,
+	'Living Seed (Passive)',
+	'',
+	28
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        407,
+	33,
+	'Lifebloom',
+	'',
+	36
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        408,
+	33,
+	'Omen of Clarity (Passive)',
+	'',
+	38
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        409,
+	33,
+	'Barskin',
+	'',
+	44
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        410,
+	33,
+	'Ironbark',
+	'',
+	64
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        411,
+	33,
+	'Tranquility',
+	'',
+	74
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        412,
+	33,
+	'Wild Growth',
+	'',
+	76
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        413,
+	33,
+	'Wild Mushroom',
+	'',
+	84
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        414,
+	33,
+	'Genesis',
+	'',
+	88
+    );  
+
+INSERT INTO wowSpecSpells
+    VALUES(
+        415,
+	33,
+	'Naturalist (Passive)',
+	'',
+	90
+    );  
+
 
 /*wowTalents*/
 /*
@@ -4910,7 +7151,7 @@ INSERT INTO wowClassSpells
 * Warrior 1*****************************************************************************
 ****************************************************************************************
 */
-/*
+
 INSERT INTO wowTalents
     VALUES (
         0,
@@ -5451,14 +7692,13 @@ INSERT INTO wowTalents VALUES(
     'Gladiators Resolve',
     '',
     100);
-*/
+
     
 /*
 ****************************************************************************************
 * Paladin 2*****************************************************************************
 ****************************************************************************************
 */
-/*
 
 INSERT INTO wowTalents VALUES(
     63,
@@ -5968,7 +8208,7 @@ INSERT INTO wowTalents VALUES(
     '',
     100);
 
-*/
+
 
 /*
 ****************************************************************************************
@@ -5976,7 +8216,7 @@ INSERT INTO wowTalents VALUES(
 ****************************************************************************************
 */
 
-/*
+
 INSERT INTO wowTalents VALUES(
     126,
     3,
@@ -6485,7 +8725,7 @@ INSERT INTO wowTalents VALUES(
     '',
     100);
 
-*/
+
 
 /*
 ****************************************************************************************
@@ -6493,7 +8733,7 @@ INSERT INTO wowTalents VALUES(
 ****************************************************************************************
 */
 
-/*
+
 INSERT INTO wowTalents 
     VALUES(
         189,
@@ -7134,13 +9374,13 @@ INSERT INTO wowTalents
         100
     );
 
-*/
+
 /*
 ****************************************************************************************
 *  Priest 5*****************************************************************************
 ****************************************************************************************
 */
-/*
+
 INSERT INTO wowTalents 
     VALUES(
         252,
@@ -7782,22 +10022,22 @@ INSERT INTO wowTalents
         '',
         100
     );
-*/
+
 
 /*
 *********************************************************************************************
 * Death Knight 6*****************************************************************************
 *********************************************************************************************
 */
-/*
+
 INSERT INTO wowTalents 
     VALUES(
         315,
         6,
         15,
+        'Plague Bearer',
         '',
-        '',
-        15
+        56
     );
 
 INSERT INTO wowTalents 
@@ -7805,9 +10045,9 @@ INSERT INTO wowTalents
         316,
         6,
         15,
+        'Plague Leech',
         '',
-        '',
-        15
+        56
     );
 
 INSERT INTO wowTalents 
@@ -7815,9 +10055,9 @@ INSERT INTO wowTalents
         317,
         6,
         15,
+        'Unholy Blight',
         '',
-        '',
-        15
+        56
     );
 
 
@@ -7826,9 +10066,9 @@ INSERT INTO wowTalents
         318,
         6,
         15,
+        'Lichborne',
         '',
-        '',
-        30
+        57
     );
 
 INSERT INTO wowTalents 
@@ -7836,9 +10076,9 @@ INSERT INTO wowTalents
         319,
         6,
         15,
+        'Anti-Magic Zone',
         '',
-        '',
-        30
+        57
     );
 
 INSERT INTO wowTalents 
@@ -7846,9 +10086,9 @@ INSERT INTO wowTalents
         320,
         6,
         15,
+        'Purgatory',
         '',
-        '',
-        30
+        57
     );
 
 INSERT INTO wowTalents 
@@ -7856,9 +10096,9 @@ INSERT INTO wowTalents
         321,
         6,
         15,
+        'Deaths Advance',
         '',
-        '',
-        45
+        58
     );
 
 INSERT INTO wowTalents 
@@ -7866,9 +10106,9 @@ INSERT INTO wowTalents
         322,
         6,
         15,
+        'Chilblanis',
         '',
-        '',
-        45
+        58
     );
 
 INSERT INTO wowTalents 
@@ -7876,9 +10116,9 @@ INSERT INTO wowTalents
         323,
         6,
         15,
+        'Asphyziate',
         '',
-        '',
-        45
+        58
     );
 
 
@@ -7887,7 +10127,7 @@ INSERT INTO wowTalents
         324,
         6,
         15,
-        '',
+        'Blood Tap',
         '',
         60
     );
@@ -7897,7 +10137,7 @@ INSERT INTO wowTalents
         325,
         6,
         15,
-        '',
+        'Runic Empowerment',
         '',
         60
     );
@@ -7907,7 +10147,7 @@ INSERT INTO wowTalents
         326,
         6,
         15,
-        '',
+        'Runic Corruption',
         '',
         60
     );
@@ -7918,7 +10158,7 @@ INSERT INTO wowTalents
         327,
         6,
         15,
-        '',
+        'Death Pact',
         '',
         75
     );
@@ -7928,7 +10168,7 @@ INSERT INTO wowTalents
         328,
         6,
         15,
-        '',
+        'Death Siphon',
         '',
         75
     );
@@ -7938,7 +10178,7 @@ INSERT INTO wowTalents
         329,
         6,
         15,
-        '',
+        'Conversion',
         '',
         75
     );
@@ -7948,7 +10188,7 @@ INSERT INTO wowTalents
         330,
         6,
         15,
-        '',
+        'Gorefiends Grasp',
         '',
         90
     );
@@ -7958,7 +10198,7 @@ INSERT INTO wowTalents
         331,
         6,
         15,
-        '',
+        'Remoreseless Winter',
         '',
         90
     );
@@ -7968,7 +10208,7 @@ INSERT INTO wowTalents
         332,
         6,
         15,
-        '',
+        'Descrated Ground',
         '',
         90
     );
@@ -7979,7 +10219,7 @@ INSERT INTO wowTalents
         333,
         6,
         15,
-        '',
+        'Necrotic Plague',
         '',
         100
     );
@@ -7989,7 +10229,7 @@ INSERT INTO wowTalents
         334,
         6,
         15,
-        '',
+        'Defile',
         '',
         100
     );
@@ -7999,7 +10239,7 @@ INSERT INTO wowTalents
         335,
         6,
         15,
-        '',
+        'Breath of Sindragosa',
         '',
         100
     );
@@ -8009,9 +10249,9 @@ INSERT INTO wowTalents
         336,
         6,
         16,
+        'Plaguebearer',
         '',
-        '',
-        15
+        56
     );
 
 INSERT INTO wowTalents 
@@ -8019,9 +10259,9 @@ INSERT INTO wowTalents
         337,
         6,
         16,
+        'Plague Leech',
         '',
-        '',
-        15
+        56
     );
 
 INSERT INTO wowTalents 
@@ -8029,9 +10269,9 @@ INSERT INTO wowTalents
         338,
         6,
         16,
+        'Unholy Blight',
         '',
-        '',
-        15
+        56
     );
 
 
@@ -8040,9 +10280,9 @@ INSERT INTO wowTalents
         339,
         6,
         16,
+        'Lichborne',
         '',
-        '',
-        30
+        57
     );
 
 INSERT INTO wowTalents 
@@ -8050,9 +10290,9 @@ INSERT INTO wowTalents
         340,
         6,
         16,
+        'Anti-Magic Zone',
         '',
-        '',
-        30
+        57
     );
 
 INSERT INTO wowTalents 
@@ -8060,9 +10300,9 @@ INSERT INTO wowTalents
         341,
         6,
         16,
+        'Purgatory',
         '',
-        '',
-        30
+        57
     );
 
 INSERT INTO wowTalents 
@@ -8070,9 +10310,9 @@ INSERT INTO wowTalents
         342,
         6,
         16,
+        'Deaths Advance',
         '',
-        '',
-        45
+        58
     );
 
 INSERT INTO wowTalents 
@@ -8080,9 +10320,9 @@ INSERT INTO wowTalents
         343,
         6,
         16,
+        'Chilblains',
         '',
-        '',
-        45
+        58
     );
 
 INSERT INTO wowTalents 
@@ -8090,9 +10330,9 @@ INSERT INTO wowTalents
         344,
         6,
         16,
+        'Asphyxiate',
         '',
-        '',
-        45
+        58
     );
 
 
@@ -8101,7 +10341,7 @@ INSERT INTO wowTalents
         345,
         6,
         16,
-        '',
+        'Blood Tap',
         '',
         60
     );
@@ -8111,7 +10351,7 @@ INSERT INTO wowTalents
         346,
         6,
         16,
-        '',
+        'Runic Empowerment',
         '',
         60
     );
@@ -8121,7 +10361,7 @@ INSERT INTO wowTalents
         347,
         6,
         16,
-        '',
+        'Runic Corruption',
         '',
         60
     );
@@ -8132,7 +10372,7 @@ INSERT INTO wowTalents
         348,
         6,
         16,
-        '',
+        'Death Pact',
         '',
         75
     );
@@ -8142,7 +10382,7 @@ INSERT INTO wowTalents
         349,
         6,
         16,
-        '',
+        'Death Siphon',
         '',
         75
     );
@@ -8152,7 +10392,7 @@ INSERT INTO wowTalents
         350,
         6,
         16,
-        '',
+        'Conversion',
         '',
         75
     );
@@ -8162,7 +10402,7 @@ INSERT INTO wowTalents
         351,
         6,
         16,
-        '',
+        'Gorefiends Grasp',
         '',
         90
     );
@@ -8172,7 +10412,7 @@ INSERT INTO wowTalents
         352,
         6,
         16,
-        '',
+        'Remoreseless Winter',
         '',
         90
     );
@@ -8182,7 +10422,7 @@ INSERT INTO wowTalents
         353,
         6,
         16,
-        '',
+        'Desecrated Ground',
         '',
         90
     );
@@ -8193,7 +10433,7 @@ INSERT INTO wowTalents
         354,
         6,
         16,
-        '',
+        'Necrotic Plague',
         '',
         100
     );
@@ -8203,7 +10443,7 @@ INSERT INTO wowTalents
         355,
         6,
         16,
-        '',
+        'Defile',
         '',
         100
     );
@@ -8213,7 +10453,7 @@ INSERT INTO wowTalents
         356,
         6,
         16,
-        '',
+        'Breath of Sindragosa',
         '',
         100
     );
@@ -8223,9 +10463,9 @@ INSERT INTO wowTalents
         357,
         6,
         17,
+        'Plaguebearer',
         '',
-        '',
-        15
+        56
     );
 
 INSERT INTO wowTalents 
@@ -8233,9 +10473,9 @@ INSERT INTO wowTalents
         358,
         6,
         17,
+        'Plague Leech',
         '',
-        '',
-        15
+        56
     );
 
 INSERT INTO wowTalents 
@@ -8243,9 +10483,9 @@ INSERT INTO wowTalents
         359,
         6,
         17,
+        'Unholy Blight',
         '',
-        '',
-        15
+        56
     );
 
 
@@ -8254,9 +10494,9 @@ INSERT INTO wowTalents
         360,
         6,
         17,
+        'Linchborne',
         '',
-        '',
-        30
+        57
     );
 
 INSERT INTO wowTalents 
@@ -8264,9 +10504,9 @@ INSERT INTO wowTalents
         361,
         6,
         17,
+        'Anti-Magic Zone',
         '',
-        '',
-        30
+        57
     );
 
 INSERT INTO wowTalents 
@@ -8274,9 +10514,9 @@ INSERT INTO wowTalents
         362,
         6,
         17,
+        'Purgatory',
         '',
-        '',
-        30
+        57
     );
 
 INSERT INTO wowTalents 
@@ -8284,9 +10524,9 @@ INSERT INTO wowTalents
         363,
         6,
         17,
+        'Deaths Advance',
         '',
-        '',
-        45
+        58
     );
 
 INSERT INTO wowTalents 
@@ -8294,9 +10534,9 @@ INSERT INTO wowTalents
         364,
         6,
         17,
+        'Chilblains',
         '',
-        '',
-        45
+        58
     );
 
 INSERT INTO wowTalents 
@@ -8304,9 +10544,9 @@ INSERT INTO wowTalents
         365,
         6,
         17,
+        'Asphyxiate',
         '',
-        '',
-        45
+        58
     );
 
 
@@ -8315,7 +10555,7 @@ INSERT INTO wowTalents
         366,
         6,
         17,
-        '',
+        'Blood Tap',
         '',
         60
     );
@@ -8325,7 +10565,7 @@ INSERT INTO wowTalents
         367,
         6,
         17,
-        '',
+        'Runic Empowerment',
         '',
         60
     );
@@ -8335,7 +10575,7 @@ INSERT INTO wowTalents
         368,
         6,
         17,
-        '',
+        'Runic Corruption',
         '',
         60
     );
@@ -8346,7 +10586,7 @@ INSERT INTO wowTalents
         369,
         6,
         17,
-        '',
+        'Death Pact',
         '',
         75
     );
@@ -8356,7 +10596,7 @@ INSERT INTO wowTalents
         370,
         6,
         17,
-        '',
+        'Death Siphon',
         '',
         75
     );
@@ -8366,7 +10606,7 @@ INSERT INTO wowTalents
         371,
         6,
         17,
-        '',
+        'Conversion',
         '',
         75
     );
@@ -8376,7 +10616,7 @@ INSERT INTO wowTalents
         372,
         6,
         17,
-        '',
+        'Gorefiends Grasp',
         '',
         90
     );
@@ -8386,7 +10626,7 @@ INSERT INTO wowTalents
         373,
         6,
         17,
-        '',
+        'Remoreseless Winter',
         '',
         90
     );
@@ -8396,7 +10636,7 @@ INSERT INTO wowTalents
         374,
         6,
         17,
-        '',
+        'Descrated Ground',
         '',
         90
     );
@@ -8407,7 +10647,7 @@ INSERT INTO wowTalents
         375,
         6,
         17,
-        '',
+        'Necrotic Plague',
         '',
         100
     );
@@ -8417,7 +10657,7 @@ INSERT INTO wowTalents
         376,
         6,
         17,
-        '',
+        'Defile',
         '',
         100
     );
@@ -8427,24 +10667,24 @@ INSERT INTO wowTalents
         377,
         6,
         17,
-        '',
+        'Breath of Sindragosa',
         '',
         100
     );
 
-*/
+
 /*
 ****************************************************************************************
 *  Shaman 7*****************************************************************************
 ****************************************************************************************
 */
-/*
+
 INSERT INTO wowTalents 
     VALUES(
         378,
         7,
         18,
-        '',
+        'Natures Guardian',
         '',
         15
     );
@@ -8454,7 +10694,7 @@ INSERT INTO wowTalents
         379,
         7,
         18,
-        '',
+        'Stone Bulwark Totem',
         '',
         15
     );
@@ -8464,7 +10704,7 @@ INSERT INTO wowTalents
         380,
         7,
         18,
-        '',
+        'Astral Shift',
         '',
         15
     );
@@ -8475,7 +10715,7 @@ INSERT INTO wowTalents
         381,
         7,
         18,
-        '',
+        'Frozen Power',
         '',
         30
     );
@@ -8485,7 +10725,7 @@ INSERT INTO wowTalents
         382,
         7,
         18,
-        '',
+        'Earthgrab Totem',
         '',
         30
     );
@@ -8495,7 +10735,7 @@ INSERT INTO wowTalents
         383,
         7,
         18,
-        '',
+        'Windwalk Totem',
         '',
         30
     );
@@ -8505,7 +10745,7 @@ INSERT INTO wowTalents
         384,
         7,
         18,
-        '',
+        'Call of the Elements',
         '',
         45
     );
@@ -8515,7 +10755,7 @@ INSERT INTO wowTalents
         385,
         7,
         18,
-        '',
+        'Totemic Persistence',
         '',
         45
     );
@@ -8525,7 +10765,7 @@ INSERT INTO wowTalents
         386,
         7,
         18,
-        '',
+        'Totemic Projection',
         '',
         45
     );
@@ -8536,7 +10776,7 @@ INSERT INTO wowTalents
         387,
         7,
         18,
-        '',
+        'Elemental Mastery',
         '',
         60
     );
@@ -8546,7 +10786,7 @@ INSERT INTO wowTalents
         388,
         7,
         18,
-        '',
+        'Ancestral Swiftness',
         '',
         60
     );
@@ -8556,7 +10796,7 @@ INSERT INTO wowTalents
         389,
         7,
         18,
-        '',
+        'Echo of the Elements',
         '',
         60
     );
@@ -8567,7 +10807,7 @@ INSERT INTO wowTalents
         390,
         7,
         18,
-        '',
+        'Rushing Streams',
         '',
         75
     );
@@ -8577,7 +10817,7 @@ INSERT INTO wowTalents
         391,
         7,
         18,
-        '',
+        'Ancestral Guidance',
         '',
         75
     );
@@ -8587,7 +10827,7 @@ INSERT INTO wowTalents
         392,
         7,
         18,
-        '',
+        'Conductivity',
         '',
         75
     );
@@ -8597,7 +10837,7 @@ INSERT INTO wowTalents
         393,
         7,
         18,
-        '',
+        'Unleashed Fury',
         '',
         90
     );
@@ -8607,7 +10847,7 @@ INSERT INTO wowTalents
         394,
         7,
         18,
-        '',
+        'Primal Elementalist',
         '',
         90
     );
@@ -8617,7 +10857,7 @@ INSERT INTO wowTalents
         395,
         7,
         18,
-        '',
+        'Elemental Blast',
         '',
         90
     );
@@ -8628,7 +10868,7 @@ INSERT INTO wowTalents
         396,
         7,
         18,
-        '',
+        'Elemental Fusion',
         '',
         100
     );
@@ -8638,7 +10878,7 @@ INSERT INTO wowTalents
         397,
         7,
         18,
-        '',
+        'Storm Elemental Totem',
         '',
         100
     );
@@ -8648,7 +10888,7 @@ INSERT INTO wowTalents
         398,
         7,
         18,
-        '',
+        'Liquid Magma',
         '',
         100
     );
@@ -8658,7 +10898,7 @@ INSERT INTO wowTalents
         399,
         7,
         19,
-        '',
+        'Natures Guardian',
         '',
         15
     );
@@ -8668,7 +10908,7 @@ INSERT INTO wowTalents
         400,
         7,
         19,
-        '',
+        'Stone Bulwark Totem',
         '',
         15
     );
@@ -8678,7 +10918,7 @@ INSERT INTO wowTalents
         401,
         7,
         19,
-        '',
+        'Astral Shift',
         '',
         15
     );
@@ -8689,7 +10929,7 @@ INSERT INTO wowTalents
         402,
         7,
         19,
-        '',
+        'Frozen Power',
         '',
         30
     );
@@ -8699,7 +10939,7 @@ INSERT INTO wowTalents
         403,
         7,
         19,
-        '',
+        'Earthgrap Totem',
         '',
         30
     );
@@ -8709,7 +10949,7 @@ INSERT INTO wowTalents
         404,
         7,
         19,
-        '',
+        'Windwalk Totem',
         '',
         30
     );
@@ -8719,7 +10959,7 @@ INSERT INTO wowTalents
         405,
         7,
         19,
-        '',
+        'Call of the Elements',
         '',
         45
     );
@@ -8729,7 +10969,7 @@ INSERT INTO wowTalents
         406,
         7,
         19,
-        '',
+        'Totemic Persistence',
         '',
         45
     );
@@ -8739,7 +10979,7 @@ INSERT INTO wowTalents
         407,
         7,
         19,
-        '',
+        'Totemic Projection',
         '',
         45
     );
@@ -8750,7 +10990,7 @@ INSERT INTO wowTalents
         408,
         7,
         19,
-        '',
+        'Elemental Mastery',
         '',
         60
     );
@@ -8760,7 +11000,7 @@ INSERT INTO wowTalents
         409,
         7,
         19,
-        '',
+        'Ancestral Swiftness',
         '',
         60
     );
@@ -8770,7 +11010,7 @@ INSERT INTO wowTalents
         410,
         7,
         19,
-        '',
+        'Echo of the Elements',
         '',
         60
     );
@@ -8781,7 +11021,7 @@ INSERT INTO wowTalents
         411,
         7,
         19,
-        '',
+        'Rushing Streams',
         '',
         75
     );
@@ -8791,7 +11031,7 @@ INSERT INTO wowTalents
         412,
         7,
         19,
-        '',
+        'Ancestral Guidance',
         '',
         75
     );
@@ -8801,7 +11041,7 @@ INSERT INTO wowTalents
         413,
         7,
         19,
-        '',
+        'Conductivity',
         '',
         75
     );
@@ -8811,7 +11051,7 @@ INSERT INTO wowTalents
         414,
         7,
         19,
-        '',
+        'Unleashed Fury',
         '',
         90
     );
@@ -8821,7 +11061,7 @@ INSERT INTO wowTalents
         415,
         7,
         19,
-        '',
+        'Primal Elementalist',
         '',
         90
     );
@@ -8831,7 +11071,7 @@ INSERT INTO wowTalents
         416,
         7,
         19,
-        '',
+        'Elemental Blast',
         '',
         90
     );
@@ -8842,7 +11082,7 @@ INSERT INTO wowTalents
         417,
         7,
         19,
-        '',
+        'Elemental Fusion',
         '',
         100
     );
@@ -8852,7 +11092,7 @@ INSERT INTO wowTalents
         418,
         7,
         19,
-        '',
+        'Storm Elemental Totem',
         '',
         100
     );
@@ -8863,7 +11103,7 @@ INSERT INTO wowTalents
         7,
         19,
         '',
-        '',
+        'Liquid Magma',
         100
     );
 
@@ -8872,7 +11112,7 @@ INSERT INTO wowTalents
         420,
         7,
         20,
-        '',
+        'Natures Guardian',
         '',
         15
     );
@@ -8882,7 +11122,7 @@ INSERT INTO wowTalents
         421,
         7,
         20,
-        '',
+        'Stone Bulwark Totem',
         '',
         15
     );
@@ -8892,7 +11132,7 @@ INSERT INTO wowTalents
         422,
         7,
         20,
-        '',
+        'Astral Shift',
         '',
         15
     );
@@ -8903,7 +11143,7 @@ INSERT INTO wowTalents
         423,
         7,
         20,
-        '',
+        'Frozen Power',
         '',
         30
     );
@@ -8913,7 +11153,7 @@ INSERT INTO wowTalents
         424,
         7,
         20,
-        '',
+        'Earthgrab Totem',
         '',
         30
     );
@@ -8923,7 +11163,7 @@ INSERT INTO wowTalents
         425,
         7,
         20,
-        '',
+        'Windwalk Totem',
         '',
         30
     );
@@ -8933,7 +11173,7 @@ INSERT INTO wowTalents
         426,
         7,
         20,
-        '',
+        'Call of the Elements',
         '',
         45
     );
@@ -8943,7 +11183,7 @@ INSERT INTO wowTalents
         427,
         7,
         20,
-        '',
+        'Totemic Persistence',
         '',
         45
     );
@@ -8953,7 +11193,7 @@ INSERT INTO wowTalents
         428,
         7,
         20,
-        '',
+        'Totemic Projection',
         '',
         45
     );
@@ -8964,7 +11204,7 @@ INSERT INTO wowTalents
         429,
         7,
         20,
-        '',
+        'Elemental Mastery',
         '',
         60
     );
@@ -8974,7 +11214,7 @@ INSERT INTO wowTalents
         430,
         7,
         20,
-        '',
+        'Ancestral Swiftness',
         '',
         60
     );
@@ -8984,7 +11224,7 @@ INSERT INTO wowTalents
         431,
         7,
         20,
-        '',
+        'Echo of the Elements',
         '',
         60
     );
@@ -8995,7 +11235,7 @@ INSERT INTO wowTalents
         432,
         7,
         20,
-        '',
+        'Rushing Streams',
         '',
         75
     );
@@ -9005,7 +11245,7 @@ INSERT INTO wowTalents
         433,
         7,
         20,
-        '',
+        'Ancestral Guidance',
         '',
         75
     );
@@ -9015,7 +11255,7 @@ INSERT INTO wowTalents
         434,
         7,
         20,
-        '',
+        'Conductivity',
         '',
         75
     );
@@ -9025,7 +11265,7 @@ INSERT INTO wowTalents
         435,
         7,
         20,
-        '',
+        'Unleashed Fury',
         '',
         90
     );
@@ -9035,7 +11275,7 @@ INSERT INTO wowTalents
         436,
         7,
         20,
-        '',
+        'Primal Elementalist',
         '',
         90
     );
@@ -9045,7 +11285,7 @@ INSERT INTO wowTalents
         437,
         7,
         20,
-        '',
+        'Elemental Blast',
         '',
         90
     );
@@ -9056,7 +11296,7 @@ INSERT INTO wowTalents
         438,
         7,
         20,
-        '',
+        'Cloudburst Totem',
         '',
         100
     );
@@ -9066,7 +11306,7 @@ INSERT INTO wowTalents
         439,
         7,
         20,
-        '',
+        'Storm Elemental Totem',
         '',
         100
     );
@@ -9076,24 +11316,24 @@ INSERT INTO wowTalents
         440,
         7,
         20,
-        '',
+        'High Tide',
         '',
         100
     );
 
-*/
+
 /*
 ****************************************************************************************
 *   Mage  8*****************************************************************************
 ****************************************************************************************
 */
-/*
+
 INSERT INTO wowTalents 
     VALUES(
         441,
         8,
         21,
-        '',
+        'Evanesce',
         '',
         15
     );
@@ -9103,7 +11343,7 @@ INSERT INTO wowTalents
         442,
         8,
         21,
-        '',
+        'Blazing Speed',
         '',
         15
     );
@@ -9113,7 +11353,7 @@ INSERT INTO wowTalents
         443,
         8,
         21,
-        '',
+        'Ice Floes',
         '',
         15
     );
@@ -9124,7 +11364,7 @@ INSERT INTO wowTalents
         444,
         8,
         21,
-        '',
+        'Alter Time',
         '',
         30
     );
@@ -9134,7 +11374,7 @@ INSERT INTO wowTalents
         445,
         8,
         21,
-        '',
+        'Flameglow',
         '',
         30
     );
@@ -9144,7 +11384,7 @@ INSERT INTO wowTalents
         446,
         8,
         21,
-        '',
+        'Ice Barrier',
         '',
         30
     );
@@ -9154,7 +11394,7 @@ INSERT INTO wowTalents
         447,
         8,
         21,
-        '',
+        'Ring of Frost',
         '',
         45
     );
@@ -9164,7 +11404,7 @@ INSERT INTO wowTalents
         448,
         8,
         21,
-        '',
+        'Ice Ward',
         '',
         45
     );
@@ -9174,7 +11414,7 @@ INSERT INTO wowTalents
         449,
         8,
         21,
-        '',
+        'Frostjaw',
         '',
         45
     );
@@ -9185,7 +11425,7 @@ INSERT INTO wowTalents
         450,
         8,
         21,
-        '',
+        'Greater Invisibility',
         '',
         60
     );
@@ -9195,7 +11435,7 @@ INSERT INTO wowTalents
         451,
         8,
         21,
-        '',
+        'Cauterize',
         '',
         60
     );
@@ -9205,7 +11445,7 @@ INSERT INTO wowTalents
         452,
         8,
         21,
-        '',
+        'Clod Snap',
         '',
         60
     );
@@ -9216,7 +11456,7 @@ INSERT INTO wowTalents
         453,
         8,
         21,
-        '',
+        'Nether Tempest',
         '',
         75
     );
@@ -9226,7 +11466,7 @@ INSERT INTO wowTalents
         454,
         8,
         21,
-        '',
+        'Unstable Magic',
         '',
         75
     );
@@ -9236,7 +11476,7 @@ INSERT INTO wowTalents
         455,
         8,
         21,
-        '',
+        'Supernova',
         '',
         75
     );
@@ -9246,7 +11486,7 @@ INSERT INTO wowTalents
         456,
         8,
         21,
-        '',
+        'Mirror Image',
         '',
         90
     );
@@ -9256,7 +11496,7 @@ INSERT INTO wowTalents
         457,
         8,
         21,
-        '',
+        'Rune of Power',
         '',
         90
     );
@@ -9266,7 +11506,7 @@ INSERT INTO wowTalents
         458,
         8,
         21,
-        '',
+        'Incanters Flow',
         '',
         90
     );
@@ -9277,7 +11517,7 @@ INSERT INTO wowTalents
         459,
         8,
         21,
-        '',
+        'Overpowered',
         '',
         100
     );
@@ -9287,7 +11527,7 @@ INSERT INTO wowTalents
         460,
         8,
         21,
-        '',
+        'Prismatic Crystal',
         '',
         100
     );
@@ -9297,7 +11537,7 @@ INSERT INTO wowTalents
         461,
         8,
         21,
-        '',
+        'Arcane Orb',
         '',
         100
     );
@@ -9307,7 +11547,7 @@ INSERT INTO wowTalents
         462,
         8,
         22,
-        '',
+        'Evanesce',
         '',
         15
     );
@@ -9317,7 +11557,7 @@ INSERT INTO wowTalents
         463,
         8,
         22,
-        '',
+        'Blazing Speed',
         '',
         15
     );
@@ -9327,7 +11567,7 @@ INSERT INTO wowTalents
         464,
         8,
         22,
-        '',
+        'Ice Floes',
         '',
         15
     );
@@ -9338,7 +11578,7 @@ INSERT INTO wowTalents
         465,
         8,
         22,
-        '',
+        'Alter Time',
         '',
         30
     );
@@ -9348,7 +11588,7 @@ INSERT INTO wowTalents
         466,
         8,
         22,
-        '',
+        'Flameglow',
         '',
         30
     );
@@ -9358,7 +11598,7 @@ INSERT INTO wowTalents
         467,
         8,
         22,
-        '',
+        'Ice Barrier',
         '',
         30
     );
@@ -9368,7 +11608,7 @@ INSERT INTO wowTalents
         468,
         8,
         22,
-        '',
+        'Ring of Frost',
         '',
         45
     );
@@ -9378,7 +11618,7 @@ INSERT INTO wowTalents
         469,
         8,
         22,
-        '',
+        'Ice Ward',
         '',
         45
     );
@@ -9388,7 +11628,7 @@ INSERT INTO wowTalents
         470,
         8,
         22,
-        '',
+        'Frostjaw',
         '',
         45
     );
@@ -9399,7 +11639,7 @@ INSERT INTO wowTalents
         471,
         8,
         22,
-        '',
+        'Greater Invisibility',
         '',
         60
     );
@@ -9409,7 +11649,7 @@ INSERT INTO wowTalents
         472,
         8,
         22,
-        '',
+        'Cauterize',
         '',
         60
     );
@@ -9419,7 +11659,7 @@ INSERT INTO wowTalents
         473,
         8,
         22,
-        '',
+        'Cold Snap',
         '',
         60
     );
@@ -9430,7 +11670,7 @@ INSERT INTO wowTalents
         474,
         8,
         22,
-        '',
+        'Living Bomb',
         '',
         75
     );
@@ -9440,7 +11680,7 @@ INSERT INTO wowTalents
         475,
         8,
         22,
-        '',
+        'Unstable Magic',
         '',
         75
     );
@@ -9450,7 +11690,7 @@ INSERT INTO wowTalents
         476,
         8,
         22,
-        '',
+        'Blast Wave',
         '',
         75
     );
@@ -9460,7 +11700,7 @@ INSERT INTO wowTalents
         477,
         8,
         22,
-        '',
+        'Mirror Image',
         '',
         90
     );
@@ -9470,7 +11710,7 @@ INSERT INTO wowTalents
         478,
         8,
         22,
-        '',
+        'Rune of Power',
         '',
         90
     );
@@ -9480,7 +11720,7 @@ INSERT INTO wowTalents
         479,
         8,
         22,
-        '',
+        'Incanters Flow',
         '',
         90
     );
@@ -9491,7 +11731,7 @@ INSERT INTO wowTalents
         480,
         8,
         22,
-        '',
+        'Kindling',
         '',
         100
     );
@@ -9501,7 +11741,7 @@ INSERT INTO wowTalents
         481,
         8,
         22,
-        '',
+        'Prismatic Crystal',
         '',
         100
     );
@@ -9511,7 +11751,7 @@ INSERT INTO wowTalents
         482,
         8,
         22,
-        '',
+        'Meteor',
         '',
         100
     );
@@ -9521,7 +11761,7 @@ INSERT INTO wowTalents
         483,
         8,
         23,
-        '',
+        'Evanesce',
         '',
         15
     );
@@ -9531,7 +11771,7 @@ INSERT INTO wowTalents
         484,
         8,
         23,
-        '',
+        'Blazing Speed',
         '',
         15
     );
@@ -9541,7 +11781,7 @@ INSERT INTO wowTalents
         485,
         8,
         23,
-        '',
+        'Ice Floes',
         '',
         15
     );
@@ -9552,7 +11792,7 @@ INSERT INTO wowTalents
         486,
         8,
         23,
-        '',
+        'Alter Time',
         '',
         30
     );
@@ -9562,7 +11802,7 @@ INSERT INTO wowTalents
         487,
         8,
         23,
-        '',
+        'Flameglow',
         '',
         30
     );
@@ -9572,7 +11812,7 @@ INSERT INTO wowTalents
         488,
         8,
         23,
-        '',
+        'Ice Barrier',
         '',
         30
     );
@@ -9582,7 +11822,7 @@ INSERT INTO wowTalents
         489,
         8,
         23,
-        '',
+        'Ring of Frost',
         '',
         45
     );
@@ -9592,7 +11832,7 @@ INSERT INTO wowTalents
         490,
         8,
         23,
-        '',
+        'Ice Ward',
         '',
         45
     );
@@ -9602,7 +11842,7 @@ INSERT INTO wowTalents
         491,
         8,
         23,
-        '',
+        'Frostjaw',
         '',
         45
     );
@@ -9613,7 +11853,7 @@ INSERT INTO wowTalents
         492,
         8,
         23,
-        '',
+        'Greater Invisibility',
         '',
         60
     );
@@ -9623,7 +11863,7 @@ INSERT INTO wowTalents
         493,
         8,
         23,
-        '',
+        'Cauterize',
         '',
         60
     );
@@ -9633,7 +11873,7 @@ INSERT INTO wowTalents
         494,
         8,
         23,
-        '',
+        'Cold Snap',
         '',
         60
     );
@@ -9644,7 +11884,7 @@ INSERT INTO wowTalents
         495,
         8,
         23,
-        '',
+        'Frost Bomb',
         '',
         75
     );
@@ -9654,7 +11894,7 @@ INSERT INTO wowTalents
         496,
         8,
         23,
-        '',
+        'Unstable Magic',
         '',
         75
     );
@@ -9664,7 +11904,7 @@ INSERT INTO wowTalents
         497,
         8,
         23,
-        '',
+        'Ice Nova',
         '',
         75
     );
@@ -9674,7 +11914,7 @@ INSERT INTO wowTalents
         498,
         8,
         23,
-        '',
+        'Mirror Image',
         '',
         90
     );
@@ -9684,7 +11924,7 @@ INSERT INTO wowTalents
         499,
         8,
         23,
-        '',
+        'Rune of Power',
         '',
         90
     );
@@ -9694,7 +11934,7 @@ INSERT INTO wowTalents
         500,
         8,
         23,
-        '',
+        'Incanters Flow',
         '',
         90
     );
@@ -9705,7 +11945,7 @@ INSERT INTO wowTalents
         501,
         8,
         23,
-        '',
+        'Thermal Void',
         '',
         100
     );
@@ -9715,7 +11955,7 @@ INSERT INTO wowTalents
         502,
         8,
         23,
-        '',
+        'Prismatic Crystal',
         '',
         100
     );
@@ -9725,24 +11965,24 @@ INSERT INTO wowTalents
         503,
         8,
         23,
-        '',
+        'Comet Storm',
         '',
         100
     );
-*/
+
 
 /*
 ****************************************************************************************
 * Warlock 9*****************************************************************************
 ****************************************************************************************
 */
-/*
+
 INSERT INTO wowTalents 
     VALUES(
         504,
         9,
         24,
-        '',
+        'Dark Regeneration',
         '',
         15
     );
@@ -9752,7 +11992,7 @@ INSERT INTO wowTalents
         505,
         9,
         24,
-        '',
+        'Soul Leech',
         '',
         15
     );
@@ -9762,7 +12002,7 @@ INSERT INTO wowTalents
         506,
         9,
         24,
-        '',
+        'Harvest Life',
         '',
         15
     );
@@ -9773,7 +12013,7 @@ INSERT INTO wowTalents
         507,
         9,
         24,
-        '',
+        'Howl of Terror',
         '',
         30
     );
@@ -9783,7 +12023,7 @@ INSERT INTO wowTalents
         508,
         9,
         24,
-        '',
+        'Mortal Coil',
         '',
         30
     );
@@ -9793,7 +12033,7 @@ INSERT INTO wowTalents
         509,
         9,
         24,
-        '',
+        'Shadowfury',
         '',
         30
     );
@@ -9803,7 +12043,7 @@ INSERT INTO wowTalents
         510,
         9,
         24,
-        '',
+        'Soul Link',
         '',
         45
     );
@@ -9813,7 +12053,7 @@ INSERT INTO wowTalents
         511,
         9,
         24,
-        '',
+        'Sacrifical Pact',
         '',
         45
     );
@@ -9823,7 +12063,7 @@ INSERT INTO wowTalents
         512,
         9,
         24,
-        '',
+        'Drak Bargain',
         '',
         45
     );
@@ -9834,7 +12074,7 @@ INSERT INTO wowTalents
         513,
         9,
         24,
-        '',
+        'Blood Horror',
         '',
         60
     );
@@ -9844,7 +12084,7 @@ INSERT INTO wowTalents
         514,
         9,
         24,
-        '',
+        'Burning Rush',
         '',
         60
     );
@@ -9854,7 +12094,7 @@ INSERT INTO wowTalents
         515,
         9,
         24,
-        '',
+        'Unbound Will',
         '',
         60
     );
@@ -9865,7 +12105,7 @@ INSERT INTO wowTalents
         516,
         9,
         24,
-        '',
+        'Grimoire of Supremacy',
         '',
         75
     );
@@ -9875,7 +12115,7 @@ INSERT INTO wowTalents
         517,
         9,
         24,
-        '',
+        'Grimoire of Service',
         '',
         75
     );
@@ -9885,7 +12125,7 @@ INSERT INTO wowTalents
         518,
         9,
         24,
-        '',
+        'Gro,pore pf Sacrofoce',
         '',
         75
     );
@@ -9895,7 +12135,7 @@ INSERT INTO wowTalents
         519,
         9,
         24,
-        '',
+        'Archimondes Darkness',
         '',
         90
     );
@@ -9905,7 +12145,7 @@ INSERT INTO wowTalents
         520,
         9,
         24,
-        '',
+        'Kil jaedens Cunning',
         '',
         90
     );
@@ -9915,7 +12155,7 @@ INSERT INTO wowTalents
         521,
         9,
         24,
-        '',
+        'Mannoroths Fury',
         '',
         90
     );
@@ -9926,7 +12166,7 @@ INSERT INTO wowTalents
         522,
         9,
         24,
-        '',
+        'Soulburn: Haunt',
         '',
         100
     );
@@ -9936,7 +12176,7 @@ INSERT INTO wowTalents
         523,
         9,
         24,
-        '',
+        'Cataclysm',
         '',
         100
     );
@@ -9946,7 +12186,7 @@ INSERT INTO wowTalents
         524,
         9,
         24,
-        '',
+        'Demonic Servitude',
         '',
         100
     );
@@ -9956,7 +12196,7 @@ INSERT INTO wowTalents
         525,
         9,
         25,
-        '',
+        'Dark Regeneration',
         '',
         15
     );
@@ -9966,7 +12206,7 @@ INSERT INTO wowTalents
         526,
         9,
         25,
-        '',
+        'Soul Leech',
         '',
         15
     );
@@ -9976,7 +12216,7 @@ INSERT INTO wowTalents
         527,
         9,
         25,
-        '',
+        'Harvest Life',
         '',
         15
     );
@@ -9987,7 +12227,7 @@ INSERT INTO wowTalents
         528,
         9,
         25,
-        '',
+        'Howl of Terror',
         '',
         30
     );
@@ -9997,7 +12237,7 @@ INSERT INTO wowTalents
         529,
         9,
         25,
-        '',
+        'Mortal Coil',
         '',
         30
     );
@@ -10007,7 +12247,7 @@ INSERT INTO wowTalents
         530,
         9,
         25,
-        '',
+        'Shadowfury',
         '',
         30
     );
@@ -10017,7 +12257,7 @@ INSERT INTO wowTalents
         531,
         9,
         25,
-        '',
+        'Soul Link',
         '',
         45
     );
@@ -10027,7 +12267,7 @@ INSERT INTO wowTalents
         532,
         9,
         25,
-        '',
+        'Sacrificaial Pact',
         '',
         45
     );
@@ -10037,7 +12277,7 @@ INSERT INTO wowTalents
         533,
         9,
         25,
-        '',
+        'Dark Bargain',
         '',
         45
     );
@@ -10048,7 +12288,7 @@ INSERT INTO wowTalents
         534,
         9,
         25,
-        '',
+        'Blood Horror',
         '',
         60
     );
@@ -10058,7 +12298,7 @@ INSERT INTO wowTalents
         535,
         9,
         25,
-        '',
+        'Burning Rush',
         '',
         60
     );
@@ -10068,7 +12308,7 @@ INSERT INTO wowTalents
         536,
         9,
         25,
-        '',
+        'Unbound Will',
         '',
         60
     );
@@ -10079,7 +12319,7 @@ INSERT INTO wowTalents
         537,
         9,
         25,
-        '',
+        'Grimoire of Superemacy',
         '',
         75
     );
@@ -10089,7 +12329,7 @@ INSERT INTO wowTalents
         538,
         9,
         25,
-        '',
+        'Grimoire of Service',
         '',
         75
     );
@@ -10099,7 +12339,7 @@ INSERT INTO wowTalents
         539,
         9,
         25,
-        '',
+        'Grimoire of Synergy',
         '',
         75
     );
@@ -10109,7 +12349,7 @@ INSERT INTO wowTalents
         540,
         9,
         25,
-        '',
+        'Archimondes Darkness',
         '',
         90
     );
@@ -10119,7 +12359,7 @@ INSERT INTO wowTalents
         541,
         9,
         25,
-        '',
+        'Kiljaedens Cunning',
         '',
         90
     );
@@ -10129,7 +12369,7 @@ INSERT INTO wowTalents
         542,
         9,
         25,
-        '',
+        'Mannoroths Fury',
         '',
         90
     );
@@ -10140,7 +12380,7 @@ INSERT INTO wowTalents
         543,
         9,
         25,
-        '',
+        'Demonbolt',
         '',
         100
     );
@@ -10150,7 +12390,7 @@ INSERT INTO wowTalents
         544,
         9,
         25,
-        '',
+        'Cataclysm',
         '',
         100
     );
@@ -10160,7 +12400,7 @@ INSERT INTO wowTalents
         545,
         9,
         25,
-        '',
+        'Demonic Servitude',
         '',
         100
     );
@@ -10170,7 +12410,7 @@ INSERT INTO wowTalents
         546,
         9,
         26,
-        '',
+        'Dark Regeneration',
         '',
         15
     );
@@ -10180,7 +12420,7 @@ INSERT INTO wowTalents
         547,
         9,
         26,
-        '',
+        'Soul Leech',
         '',
         15
     );
@@ -10190,7 +12430,7 @@ INSERT INTO wowTalents
         548,
         9,
         26,
-        '',
+        'Searing Flames',
         '',
         15
     );
@@ -10201,7 +12441,7 @@ INSERT INTO wowTalents
         549,
         9,
         26,
-        '',
+        'Howl of Terror',
         '',
         30
     );
@@ -10211,7 +12451,7 @@ INSERT INTO wowTalents
         550,
         9,
         26,
-        '',
+        'Mortal Coil',
         '',
         30
     );
@@ -10221,7 +12461,7 @@ INSERT INTO wowTalents
         551,
         9,
         26,
-        '',
+        'Shadowfury',
         '',
         30
     );
@@ -10231,7 +12471,7 @@ INSERT INTO wowTalents
         552,
         9,
         26,
-        '',
+        'Soul Link',
         '',
         45
     );
@@ -10241,7 +12481,7 @@ INSERT INTO wowTalents
         553,
         9,
         26,
-        '',
+        'Sacrifical Pact',
         '',
         45
     );
@@ -10251,7 +12491,7 @@ INSERT INTO wowTalents
         554,
         9,
         26,
-        '',
+        'Dark Bargain',
         '',
         45
     );
@@ -10262,7 +12502,7 @@ INSERT INTO wowTalents
         555,
         9,
         26,
-        '',
+        'Blood Horror',
         '',
         60
     );
@@ -10272,7 +12512,7 @@ INSERT INTO wowTalents
         556,
         9,
         26,
-        '',
+        'Burning Rush',
         '',
         60
     );
@@ -10282,7 +12522,7 @@ INSERT INTO wowTalents
         557,
         9,
         26,
-        '',
+        'Unbound Will',
         '',
         60
     );
@@ -10293,7 +12533,7 @@ INSERT INTO wowTalents
         558,
         9,
         26,
-        '',
+        'Grimoire of Supermacy',
         '',
         75
     );
@@ -10303,7 +12543,7 @@ INSERT INTO wowTalents
         559,
         9,
         26,
-        '',
+        'Grimoire of Service',
         '',
         75
     );
@@ -10313,7 +12553,7 @@ INSERT INTO wowTalents
         560,
         9,
         26,
-        '',
+        'Grimoire of Sacrifice',
         '',
         75
     );
@@ -10323,7 +12563,7 @@ INSERT INTO wowTalents
         561,
         9,
         26,
-        '',
+        'Archimondes Darkness',
         '',
         90
     );
@@ -10333,7 +12573,7 @@ INSERT INTO wowTalents
         562,
         9,
         26,
-        '',
+        'Kil jaedens Cunning',
         '',
         90
     );
@@ -10343,7 +12583,7 @@ INSERT INTO wowTalents
         563,
         9,
         26,
-        '',
+        'Mannoroths Fury',
         '',
         90
     );
@@ -10354,7 +12594,7 @@ INSERT INTO wowTalents
         564,
         9,
         26,
-        '',
+        'Charred Remains',
         '',
         100
     );
@@ -10364,7 +12604,7 @@ INSERT INTO wowTalents
         565,
         9,
         26,
-        '',
+        'Cataclysm',
         '',
         100
     );
@@ -10374,23 +12614,23 @@ INSERT INTO wowTalents
         566,
         9,
         26,
-        '',
+        'Demonic Servitude',
         '',
         100
     );
-*/
+
 /*
 *****************************************************************************************
 *   Monk  10*****************************************************************************
 *****************************************************************************************
 */
-/*
+
 INSERT INTO wowTalents 
     VALUES(
         567,
         10,
         27,
-        '',
+        'Celerity',
         '',
         15
     );
@@ -10400,7 +12640,7 @@ INSERT INTO wowTalents
         568,
         10,
         27,
-        '',
+        'Tigers Lust',
         '',
         15
     );
@@ -10410,7 +12650,7 @@ INSERT INTO wowTalents
         569,
         10,
         27,
-        '',
+        'Momentum',
         '',
         15
     );
@@ -10421,7 +12661,7 @@ INSERT INTO wowTalents
         570,
         10,
         27,
-        '',
+        'Chi Wave',
         '',
         30
     );
@@ -10431,7 +12671,7 @@ INSERT INTO wowTalents
         571,
         10,
         27,
-        '',
+        'Zen Sphere',
         '',
         30
     );
@@ -10441,7 +12681,7 @@ INSERT INTO wowTalents
         572,
         10,
         27,
-        '',
+        'Chi Burst',
         '',
         30
     );
@@ -10451,7 +12691,7 @@ INSERT INTO wowTalents
         573,
         10,
         27,
-        '',
+        'Power Strikes',
         '',
         45
     );
@@ -10461,7 +12701,7 @@ INSERT INTO wowTalents
         574,
         10,
         27,
-        '',
+        'Ascension',
         '',
         45
     );
@@ -10471,7 +12711,7 @@ INSERT INTO wowTalents
         575,
         10,
         27,
-        '',
+        'Chi Brew',
         '',
         45
     );
@@ -10482,7 +12722,7 @@ INSERT INTO wowTalents
         576,
         10,
         27,
-        '',
+        'Ring of Peace',
         '',
         60
     );
@@ -10492,7 +12732,7 @@ INSERT INTO wowTalents
         577,
         10,
         27,
-        '',
+        'Charging Ox Wave',
         '',
         60
     );
@@ -10502,7 +12742,7 @@ INSERT INTO wowTalents
         578,
         10,
         27,
-        '',
+        'Leg Sweep',
         '',
         60
     );
@@ -10513,7 +12753,7 @@ INSERT INTO wowTalents
         579,
         10,
         27,
-        '',
+        'Healing Elixirs',
         '',
         75
     );
@@ -10523,7 +12763,7 @@ INSERT INTO wowTalents
         580,
         10,
         27,
-        '',
+        'Dampen Harm',
         '',
         75
     );
@@ -10533,7 +12773,7 @@ INSERT INTO wowTalents
         581,
         10,
         27,
-        '',
+        'Diffuse Magic',
         '',
         75
     );
@@ -10543,7 +12783,7 @@ INSERT INTO wowTalents
         582,
         10,
         27,
-        '',
+        'Rushing Jade Wind',
         '',
         90
     );
@@ -10553,7 +12793,7 @@ INSERT INTO wowTalents
         583,
         10,
         27,
-        '',
+        'Invoke Xuen, the White Tiger',
         '',
         90
     );
@@ -10563,7 +12803,7 @@ INSERT INTO wowTalents
         584,
         10,
         27,
-        '',
+        'Chi Torpedo',
         '',
         90
     );
@@ -10574,7 +12814,7 @@ INSERT INTO wowTalents
         585,
         10,
         27,
-        '',
+        'Soul Dance',
         '',
         100
     );
@@ -10584,7 +12824,7 @@ INSERT INTO wowTalents
         586,
         10,
         27,
-        '',
+        'Chi Explosion',
         '',
         100
     );
@@ -10594,7 +12834,7 @@ INSERT INTO wowTalents
         587,
         10,
         27,
-        '',
+        'Serenity',
         '',
         100
     );
@@ -10604,7 +12844,7 @@ INSERT INTO wowTalents
         588,
         10,
         28,
-        '',
+        'Celerity',
         '',
         15
     );
@@ -10614,7 +12854,7 @@ INSERT INTO wowTalents
         589,
         10,
         28,
-        '',
+        'Tigers Lust',
         '',
         15
     );
@@ -10624,7 +12864,7 @@ INSERT INTO wowTalents
         590,
         10,
         28,
-        '',
+        'Momentum',
         '',
         15
     );
@@ -10635,7 +12875,7 @@ INSERT INTO wowTalents
         591,
         10,
         28,
-        '',
+        'Chi Wave',
         '',
         30
     );
@@ -10645,7 +12885,7 @@ INSERT INTO wowTalents
         592,
         10,
         28,
-        '',
+        'Zen Sphere',
         '',
         30
     );
@@ -10655,7 +12895,7 @@ INSERT INTO wowTalents
         593,
         10,
         28,
-        '',
+        'Chi Burst',
         '',
         30
     );
@@ -10665,7 +12905,7 @@ INSERT INTO wowTalents
         594,
         10,
         28,
-        '',
+        'Power Strikes',
         '',
         45
     );
@@ -10675,7 +12915,7 @@ INSERT INTO wowTalents
         595,
         10,
         28,
-        '',
+        'Ascension',
         '',
         45
     );
@@ -10685,7 +12925,7 @@ INSERT INTO wowTalents
         596,
         10,
         28,
-        '',
+        'Chi Brew',
         '',
         45
     );
@@ -10696,7 +12936,7 @@ INSERT INTO wowTalents
         597,
         10,
         28,
-        '',
+        'Ring of Peace',
         '',
         60
     );
@@ -10706,7 +12946,7 @@ INSERT INTO wowTalents
         598,
         10,
         28,
-        '',
+        'Charging Ox Wave',
         '',
         60
     );
@@ -10716,7 +12956,7 @@ INSERT INTO wowTalents
         599,
         10,
         28,
-        '',
+        'Leg Sweep',
         '',
         60
     );
@@ -10727,7 +12967,7 @@ INSERT INTO wowTalents
         600,
         10,
         28,
-        '',
+        'Healing Elixers',
         '',
         75
     );
@@ -10737,7 +12977,7 @@ INSERT INTO wowTalents
         601,
         10,
         28,
-        '',
+        'Dampen Harm',
         '',
         75
     );
@@ -10747,7 +12987,7 @@ INSERT INTO wowTalents
         602,
         10,
         28,
-        '',
+        'Diffuse Magic',
         '',
         75
     );
@@ -10757,7 +12997,7 @@ INSERT INTO wowTalents
         603,
         10,
         28,
-        '',
+        'Rushing Jade Wind',
         '',
         90
     );
@@ -10767,7 +13007,7 @@ INSERT INTO wowTalents
         604,
         10,
         28,
-        '',
+        'Invoke Xuen, the White Tiger',
         '',
         90
     );
@@ -10777,7 +13017,7 @@ INSERT INTO wowTalents
         605,
         10,
         28,
-        '',
+        'Chi Torpedo',
         '',
         90
     );
@@ -10788,7 +13028,7 @@ INSERT INTO wowTalents
         606,
         10,
         28,
-        '',
+        'Breath of the Serpent',
         '',
         100
     );
@@ -10798,7 +13038,7 @@ INSERT INTO wowTalents
         607,
         10,
         28,
-        '',
+        'Chi Explosion',
         '',
         100
     );
@@ -10808,7 +13048,7 @@ INSERT INTO wowTalents
         608,
         10,
         28,
-        '',
+        'Pool of Mists',
         '',
         100
     );
@@ -10818,7 +13058,7 @@ INSERT INTO wowTalents
         609,
         10,
         29,
-        '',
+        'Celerity',
         '',
         15
     );
@@ -10828,7 +13068,7 @@ INSERT INTO wowTalents
         610,
         10,
         29,
-        '',
+        'Tigers Lust',
         '',
         15
     );
@@ -10838,7 +13078,7 @@ INSERT INTO wowTalents
         611,
         10,
         29,
-        '',
+        'Momentum',
         '',
         15
     );
@@ -10849,7 +13089,7 @@ INSERT INTO wowTalents
         612,
         10,
         29,
-        '',
+        'Chi Wave',
         '',
         30
     );
@@ -10859,7 +13099,7 @@ INSERT INTO wowTalents
         613,
         10,
         29,
-        '',
+        'Zen Sphere',
         '',
         30
     );
@@ -10869,7 +13109,7 @@ INSERT INTO wowTalents
         614,
         10,
         29,
-        '',
+        'Chi Burst',
         '',
         30
     );
@@ -10879,7 +13119,7 @@ INSERT INTO wowTalents
         615,
         10,
         29,
-        '',
+        'Power Strikes',
         '',
         45
     );
@@ -10889,7 +13129,7 @@ INSERT INTO wowTalents
         616,
         10,
         29,
-        '',
+        'Ascension',
         '',
         45
     );
@@ -10899,7 +13139,7 @@ INSERT INTO wowTalents
         617,
         10,
         29,
-        '',
+        'Chi Brew',
         '',
         45
     );
@@ -10910,7 +13150,7 @@ INSERT INTO wowTalents
         618,
         10,
         29,
-        '',
+        'Ring of Peace',
         '',
         60
     );
@@ -10920,7 +13160,7 @@ INSERT INTO wowTalents
         619,
         10,
         29,
-        '',
+        'Charging Ox Wave',
         '',
         60
     );
@@ -10930,7 +13170,7 @@ INSERT INTO wowTalents
         620,
         10,
         29,
-        '',
+        'Leg Sweep',
         '',
         60
     );
@@ -10941,7 +13181,7 @@ INSERT INTO wowTalents
         621,
         10,
         29,
-        '',
+        'Healing Elixers',
         '',
         75
     );
@@ -10951,7 +13191,7 @@ INSERT INTO wowTalents
         622,
         10,
         29,
-        '',
+        'Dampen Harm',
         '',
         75
     );
@@ -10961,7 +13201,7 @@ INSERT INTO wowTalents
         623,
         10,
         29,
-        '',
+        'Diffuse Magic',
         '',
         75
     );
@@ -10971,7 +13211,7 @@ INSERT INTO wowTalents
         624,
         10,
         29,
-        '',
+        'Rushing Jade Wind',
         '',
         90
     );
@@ -10981,7 +13221,7 @@ INSERT INTO wowTalents
         625,
         10,
         29,
-        '',
+        'Invoke Xuen, the White Tiger',
         '',
         90
     );
@@ -10991,7 +13231,7 @@ INSERT INTO wowTalents
         626,
         10,
         29,
-        '',
+        'Chi Torpedo',
         '',
         90
     );
@@ -11002,7 +13242,7 @@ INSERT INTO wowTalents
         627,
         10,
         29,
-        '',
+        'Hurricane Strike',
         '',
         100
     );
@@ -11012,7 +13252,7 @@ INSERT INTO wowTalents
         628,
         10,
         29,
-        '',
+        'Chi Explosion',
         '',
         100
     );
@@ -11022,24 +13262,24 @@ INSERT INTO wowTalents
         629,
         10,
         29,
-        '',
+        'Serenity',
         '',
         100
     );
 
-*/
+
 /*
 *****************************************************************************************
 *  Druid  11*****************************************************************************
 *****************************************************************************************
 */
-/*
+
 INSERT INTO wowTalents 
     VALUES(
         630,
         11,
         30,
-        '',
+        'Feline Swiftness',
         '',
         15
     );
@@ -11049,7 +13289,7 @@ INSERT INTO wowTalents
         631,
         11,
         30,
-        '',
+        'Displacer Beast',
         '',
         15
     );
@@ -11059,7 +13299,7 @@ INSERT INTO wowTalents
         632,
         11,
         30,
-        '',
+        'Wild Charge',
         '',
         15
     );
@@ -11070,7 +13310,7 @@ INSERT INTO wowTalents
         633,
         11,
         30,
-        '',
+        'Yseras Gift',
         '',
         30
     );
@@ -11080,7 +13320,7 @@ INSERT INTO wowTalents
         634,
         11,
         30,
-        '',
+        'Renewal',
         '',
         30
     );
@@ -11090,7 +13330,7 @@ INSERT INTO wowTalents
         635,
         11,
         30,
-        '',
+        'Cenarion Ward',
         '',
         30
     );
@@ -11100,7 +13340,7 @@ INSERT INTO wowTalents
         636,
         11,
         30,
-        '',
+        'Faerie Swarm',
         '',
         45
     );
@@ -11110,7 +13350,7 @@ INSERT INTO wowTalents
         637,
         11,
         30,
-        '',
+        'Mass Entanglement',
         '',
         45
     );
@@ -11120,7 +13360,7 @@ INSERT INTO wowTalents
         638,
         11,
         30,
-        '',
+        'Typhoon',
         '',
         45
     );
@@ -11131,7 +13371,7 @@ INSERT INTO wowTalents
         639,
         11,
         30,
-        '',
+        'Soul of the Forest',
         '',
         60
     );
@@ -11141,7 +13381,7 @@ INSERT INTO wowTalents
         640,
         11,
         30,
-        '',
+        'Incarnation: Chosen of Elune',
         '',
         60
     );
@@ -11151,7 +13391,7 @@ INSERT INTO wowTalents
         641,
         11,
         30,
-        '',
+        'Force of Nature',
         '',
         60
     );
@@ -11162,7 +13402,7 @@ INSERT INTO wowTalents
         642,
         11,
         30,
-        '',
+        'Incapacitating Roar',
         '',
         75
     );
@@ -11172,7 +13412,7 @@ INSERT INTO wowTalents
         643,
         11,
         30,
-        '',
+        'Ursols Vortex',
         '',
         75
     );
@@ -11182,7 +13422,7 @@ INSERT INTO wowTalents
         644,
         11,
         30,
-        '',
+        'Mighty Bash',
         '',
         75
     );
@@ -11192,7 +13432,7 @@ INSERT INTO wowTalents
         645,
         11,
         30,
-        '',
+        'Heart of the Wild',
         '',
         90
     );
@@ -11202,7 +13442,7 @@ INSERT INTO wowTalents
         646,
         11,
         30,
-        '',
+        'Dream of Cenarius',
         '',
         90
     );
@@ -11212,7 +13452,7 @@ INSERT INTO wowTalents
         647,
         11,
         30,
-        '',
+        'Natures Vigil',
         '',
         90
     );
@@ -11223,7 +13463,7 @@ INSERT INTO wowTalents
         648,
         11,
         30,
-        '',
+        'Euphoria',
         '',
         100
     );
@@ -11233,7 +13473,7 @@ INSERT INTO wowTalents
         649,
         11,
         30,
-        '',
+        'Stellar Flare',
         '',
         100
     );
@@ -11243,7 +13483,7 @@ INSERT INTO wowTalents
         650,
         11,
         30,
-        '',
+        'Balance of Power',
         '',
         100
     );
@@ -11253,7 +13493,7 @@ INSERT INTO wowTalents
         651,
         11,
         31,
-        '',
+        'Feline Swiftness',
         '',
         15
     );
@@ -11263,7 +13503,7 @@ INSERT INTO wowTalents
         652,
         11,
         31,
-        '',
+        'Displacer Beast',
         '',
         15
     );
@@ -11273,7 +13513,7 @@ INSERT INTO wowTalents
         653,
         11,
         31,
-        '',
+        'Wild Charge',
         '',
         15
     );
@@ -11284,7 +13524,7 @@ INSERT INTO wowTalents
         654,
         11,
         31,
-        '',
+        'Yseras Gift',
         '',
         30
     );
@@ -11294,7 +13534,7 @@ INSERT INTO wowTalents
         655,
         11,
         31,
-        '',
+        'Renewal',
         '',
         30
     );
@@ -11304,7 +13544,7 @@ INSERT INTO wowTalents
         656,
         11,
         31,
-        '',
+        'Cenarion Ward',
         '',
         30
     );
@@ -11314,7 +13554,7 @@ INSERT INTO wowTalents
         657,
         11,
         31,
-        '',
+        'Faerie Swarm',
         '',
         45
     );
@@ -11324,7 +13564,7 @@ INSERT INTO wowTalents
         658,
         11,
         31,
-        '',
+        'Mass Entanglement',
         '',
         45
     );
@@ -11334,7 +13574,7 @@ INSERT INTO wowTalents
         659,
         11,
         31,
-        '',
+        'Typhoon',
         '',
         45
     );
@@ -11345,7 +13585,7 @@ INSERT INTO wowTalents
         660,
         11,
         31,
-        '',
+        'Soul of the Forest',
         '',
         60
     );
@@ -11355,7 +13595,7 @@ INSERT INTO wowTalents
         661,
         11,
         31,
-        '',
+        'Incarnation: King of the Jungle',
         '',
         60
     );
@@ -11365,7 +13605,7 @@ INSERT INTO wowTalents
         662,
         11,
         31,
-        '',
+        'Force of Nature',
         '',
         60
     );
@@ -11376,7 +13616,7 @@ INSERT INTO wowTalents
         663,
         11,
         31,
-        '',
+        'Incapacitating Roar',
         '',
         75
     );
@@ -11386,7 +13626,7 @@ INSERT INTO wowTalents
         664,
         11,
         31,
-        '',
+        'Ursols Vortex',
         '',
         75
     );
@@ -11396,7 +13636,7 @@ INSERT INTO wowTalents
         665,
         11,
         31,
-        '',
+        'Mighty Bash',
         '',
         75
     );
@@ -11406,7 +13646,7 @@ INSERT INTO wowTalents
         666,
         11,
         31,
-        '',
+        'Heart of the Wild',
         '',
         90
     );
@@ -11416,7 +13656,7 @@ INSERT INTO wowTalents
         667,
         11,
         31,
-        '',
+        'Dream of Cenarius',
         '',
         90
     );
@@ -11426,7 +13666,7 @@ INSERT INTO wowTalents
         668,
         11,
         31,
-        '',
+        'Natures Vigil',
         '',
         90
     );
@@ -11437,7 +13677,7 @@ INSERT INTO wowTalents
         669,
         11,
         31,
-        '',
+        'Lunar Inspiration',
         '',
         100
     );
@@ -11447,7 +13687,7 @@ INSERT INTO wowTalents
         670,
         11,
         31,
-        '',
+        'Bloodtalons',
         '',
         100
     );
@@ -11457,7 +13697,7 @@ INSERT INTO wowTalents
         671,
         11,
         31,
-        '',
+        'Claws of Shirvallah',
         '',
         100
     );
@@ -11467,7 +13707,7 @@ INSERT INTO wowTalents
         672,
         11,
         32,
-        '',
+        'Feline Swiftness',
         '',
         15
     );
@@ -11477,7 +13717,7 @@ INSERT INTO wowTalents
         673,
         11,
         32,
-        '',
+        'Displacer Beast',
         '',
         15
     );
@@ -11487,7 +13727,7 @@ INSERT INTO wowTalents
         674,
         11,
         32,
-        '',
+        'Wild Charge',
         '',
         15
     );
@@ -11498,7 +13738,7 @@ INSERT INTO wowTalents
         675,
         11,
         32,
-        '',
+        'Ysera Gift',
         '',
         30
     );
@@ -11508,7 +13748,7 @@ INSERT INTO wowTalents
         676,
         11,
         32,
-        '',
+        'Renewal',
         '',
         30
     );
@@ -11518,7 +13758,7 @@ INSERT INTO wowTalents
         677,
         11,
         32,
-        '',
+        'Cenarion Ward',
         '',
         30
     );
@@ -11528,7 +13768,7 @@ INSERT INTO wowTalents
         678,
         11,
         32,
-        '',
+        'Faerie Swarm',
         '',
         45
     );
@@ -11538,7 +13778,7 @@ INSERT INTO wowTalents
         679,
         11,
         32,
-        '',
+        'Mass Entanglement',
         '',
         45
     );
@@ -11548,7 +13788,7 @@ INSERT INTO wowTalents
         680,
         11,
         32,
-        '',
+        'Typhoon',
         '',
         45
     );
@@ -11559,7 +13799,7 @@ INSERT INTO wowTalents
         681,
         11,
         32,
-        '',
+        'Soul of the Forest',
         '',
         60
     );
@@ -11569,7 +13809,7 @@ INSERT INTO wowTalents
         682,
         11,
         32,
-        '',
+        'Incarnation: Son of Ursoc',
         '',
         60
     );
@@ -11579,7 +13819,7 @@ INSERT INTO wowTalents
         683,
         11,
         32,
-        '',
+        'Force of Nature',
         '',
         60
     );
@@ -11590,7 +13830,7 @@ INSERT INTO wowTalents
         684,
         11,
         32,
-        '',
+        'Incapacitating Roar',
         '',
         75
     );
@@ -11600,7 +13840,7 @@ INSERT INTO wowTalents
         685,
         11,
         32,
-        '',
+        'Ursols Vortex',
         '',
         75
     );
@@ -11610,7 +13850,7 @@ INSERT INTO wowTalents
         686,
         11,
         32,
-        '',
+        'Mighty Bash',
         '',
         75
     );
@@ -11620,7 +13860,7 @@ INSERT INTO wowTalents
         687,
         11,
         32,
-        '',
+        'Heart of the Wild',
         '',
         90
     );
@@ -11630,7 +13870,7 @@ INSERT INTO wowTalents
         688,
         11,
         32,
-        '',
+        'Dream of Cenarius',
         '',
         90
     );
@@ -11640,7 +13880,7 @@ INSERT INTO wowTalents
         689,
         11,
         32,
-        '',
+        'Natures Vigil',
         '',
         90
     );
@@ -11651,7 +13891,7 @@ INSERT INTO wowTalents
         690,
         11,
         32,
-        '',
+        'Guardian of Elune',
         '',
         100
     );
@@ -11661,7 +13901,7 @@ INSERT INTO wowTalents
         691,
         11,
         32,
-        '',
+        'Pulverize',
         '',
         100
     );
@@ -11671,7 +13911,7 @@ INSERT INTO wowTalents
         692,
         11,
         32,
-        '',
+        'Bristling Fur',
         '',
         100
     );    
@@ -11682,7 +13922,7 @@ INSERT INTO wowTalents
         693,
         11,
         33,
-        '',
+        'Feline Swiftness',
         '',
         15
     );
@@ -11692,7 +13932,7 @@ INSERT INTO wowTalents
         694,
         11,
         33,
-        '',
+        'Displacer Beast',
         '',
         15
     );
@@ -11702,7 +13942,7 @@ INSERT INTO wowTalents
         695,
         11,
         33,
-        '',
+        'Wild Charge',
         '',
         15
     );
@@ -11713,7 +13953,7 @@ INSERT INTO wowTalents
         696,
         11,
         33,
-        '',
+        'Yseras Gift',
         '',
         30
     );
@@ -11723,7 +13963,7 @@ INSERT INTO wowTalents
         697,
         11,
         33,
-        '',
+        'Renewal',
         '',
         30
     );
@@ -11733,7 +13973,7 @@ INSERT INTO wowTalents
         698,
         11,
         33,
-        '',
+        'Cenarion Ward',
         '',
         30
     );
@@ -11743,7 +13983,7 @@ INSERT INTO wowTalents
         699,
         11,
         33,
-        '',
+        'Faerie Swarm',
         '',
         45
     );
@@ -11753,7 +13993,7 @@ INSERT INTO wowTalents
         700,
         11,
         33,
-        '',
+        'Mass Entanglement',
         '',
         45
     );
@@ -11763,7 +14003,7 @@ INSERT INTO wowTalents
         701,
         11,
         33,
-        '',
+        'Typhoon',
         '',
         45
     );
@@ -11774,7 +14014,7 @@ INSERT INTO wowTalents
         702,
         11,
         33,
-        '',
+        'Soul of the Forest',
         '',
         60
     );
@@ -11784,7 +14024,7 @@ INSERT INTO wowTalents
         703,
         11,
         33,
-        '',
+        'Incarnation: Tree of Life',
         '',
         60
     );
@@ -11794,7 +14034,7 @@ INSERT INTO wowTalents
         704,
         11,
         33,
-        '',
+        'Force of Nature',
         '',
         60
     );
@@ -11805,7 +14045,7 @@ INSERT INTO wowTalents
         705,
         11,
         33,
-        '',
+        'Incapacitating Roar',
         '',
         75
     );
@@ -11815,7 +14055,7 @@ INSERT INTO wowTalents
         706,
         11,
         33,
-        '',
+        'Ursols Vortex',
         '',
         75
     );
@@ -11825,7 +14065,7 @@ INSERT INTO wowTalents
         707,
         11,
         33,
-        '',
+        'Mighty Bash',
         '',
         75
     );
@@ -11835,7 +14075,7 @@ INSERT INTO wowTalents
         708,
         11,
         33,
-        '',
+        'Heart of the Wild',
         '',
         90
     );
@@ -11845,7 +14085,7 @@ INSERT INTO wowTalents
         709,
         11,
         33,
-        '',
+        'Dream of Cenarius',
         '',
         90
     );
@@ -11855,7 +14095,7 @@ INSERT INTO wowTalents
         710,
         11,
         33,
-        '',
+        'Natures Vigil',
         '',
         90
     );
@@ -11866,7 +14106,7 @@ INSERT INTO wowTalents
         711,
         11,
         33,
-        '',
+        'Moment of Clarity',
         '',
         100
     );
@@ -11876,7 +14116,7 @@ INSERT INTO wowTalents
         712,
         11,
         33,
-        '',
+        'Germination',
         '',
         100
     );
@@ -11886,8 +14126,8 @@ INSERT INTO wowTalents
         713,
         11,
         33,
-        '',
+        'Rampant Growth',
         '',
         100
     );    
-*/
+

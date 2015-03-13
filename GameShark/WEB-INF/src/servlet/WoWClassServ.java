@@ -54,7 +54,7 @@ public class WoWClassServ extends HttpServlet {
 	    }
 
 	    conn = DriverManager.getConnection(
-			    "jdbc:mysql://localhost:3306/csc435", "dbconnect", "dbconnect");
+			    "jdbc:mysql://localhost:3306/csc435", "root", "root");
 		
 	    stmt = conn.createStatement();
 		
