@@ -52,9 +52,9 @@ public class WoWClassServ extends HttpServlet {
 	    if(request.getParameter("spec") != null){
 		sSpecID = request.getParameter("spec");
 	    }
-
+            Class.forName("com.mysql.jdbc.Driver");
 	    conn = DriverManager.getConnection(
-			    "jdbc:mysql://localhost:3306/csc435", "kirito", "spaz1991");
+			    "jdbc:mysql://localhost:3306/csc435", "kelly", "kelly");
 		
 	    stmt = conn.createStatement();
 		

@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.json.Json;
+import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.servlet.RequestDispatcher;
@@ -42,34 +43,32 @@ public class LeagueNames extends HttpServlet {
 
             HttpSession s = request.getSession();
             String sName = "";
-            
+
             //Check the session for a current summoner name
             out.println("Look for name from session");
             if (s.getAttribute("sessionName") != null) {
                 sName = s.getAttribute("sessionName").toString();
-                
+
             }
-            
+
             //check for a new summoner name
             //will want to use over current session summoner name
             out.println("Look for name from request");
             if (request.getParameter("name") != null) {
-                sName = request.getParameter("name");
+                sName = request.getParameter("name").toLowerCase();
                 s.setAttribute("sessionName", sName);
 
             }
 
-
             out.println(sName);
 
-                LeagueSummoner sum = makeAPIRequest(sName, out);
-                request.setAttribute("summoner", sum);
-                RequestDispatcher rd = request.getRequestDispatcher("LeagueSummoner.jsp");
-                rd.forward(request, response);
+            LeagueSummoner sum = makeAPIRequest(sName, out);
+            request.setAttribute("summoner", sum);
+            RequestDispatcher rd = request.getRequestDispatcher("LeagueSummoner.jsp");
+            rd.forward(request, response);
 
-            
         } catch (IOException ex) {
-            
+
             Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -81,26 +80,35 @@ public class LeagueNames extends HttpServlet {
         try {
 
             is = new URL("https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + n + "?api_key=cc288bed-bfa3-4158-9642-6b276a1381d7").openStream();
-           // is = connection.getInputStream();
-            
+
             JsonReader jsonReader = Json.createReader(is);
             JsonObject json = jsonReader.readObject();
             JsonObject summonerObject = json.getJsonObject(n);
             summoner = new LeagueSummoner(summonerObject);
+            out.println("first api call done");
+            String id = summoner.getID();
+            is = new URL("https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/" + id + "/summary?season=SEASON2015&api_key=cc288bed-bfa3-4158-9642-6b276a1381d7").openStream();
+            out.println("second api call done");
+            jsonReader = Json.createReader(is);
+            json = jsonReader.readObject();
+            JsonArray tmp = json.getJsonArray("playerStatSummaries");
+            summoner.updateSummonerStats(tmp, out);
+            
             jsonReader.close();
             is.close();
         } catch (MalformedURLException ex) {
-            Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, ex);
+            out.println(ex.toString());
             return summoner;
 
         } catch (IOException ioe) {
-             return summoner;
-
-        } catch (Exception e) {
-            Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, e);
+            out.println(ioe.toString());
             return summoner;
 
-        } 
+        } catch (Exception e) {
+            out.println(e.toString());
+            return summoner;
+
+        }
         return summoner;
 
     }
