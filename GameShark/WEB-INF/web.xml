@@ -6,25 +6,6 @@
  
    <!-- To save as "GameShark\WEB-INF\web.xml" -->
  
-   <servlet>
-      <servlet-name>WoWCharServ</servlet-name>
-      <servlet-class>servlet.WoWCharServ</servlet-class>
-   </servlet>
-
-   <servlet>
-     <servlet-name>WoWServServ</servlet-name>
-     <servlet-class>servlet.WoWServServ</servlet-class>
-   </servlet>
-
-   <servlet>
-     <servlet-name>WoWClassServ</servlet-name>
-     <servlet-class>servlet.WoWClassServ</servlet-class>
-   </servlet>
-
-   <servlet>
-     <servlet-name>WoWItemServ</servlet-name>
-     <servlet-class>servlet.WoWItemServ</servlet-class>
-   </servlet>
     <servlet>
         <servlet-name>LeagueServerStatus</servlet-name>
         <servlet-class>servlet.LeagueServerStatus</servlet-class>
@@ -41,53 +22,69 @@
         <servlet-name>LeagueBuildABuildServ</servlet-name>
         <servlet-class>servlet.LeagueBuildABuildServ</servlet-class>
     </servlet>
+        <servlet>
+        <servlet-name>LeagueNamesApi</servlet-name>
+        <servlet-class>servlet.LeagueNamesApi</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LeagueBuildABuildApi</servlet-name>
+        <servlet-class>servlet.LeagueBuildABuildApi</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LeagueServerApi</servlet-name>
+        <servlet-class>servlet.LeagueServerApi</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LeagueChampionApi</servlet-name>
+        <servlet-class>servlet.LeagueChampionApi</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>JsonResponseServ</servlet-name>
+        <servlet-class>servlet.JsonResponseServ</servlet-class>
+    </servlet>
  
    <!-- Note: All <servlet> elements MUST be grouped together and
          placed IN FRONT of the <servlet-mapping> elements -->
  
-   <servlet-mapping>
-      <servlet-name>WoWCharServ</servlet-name>
-      <url-pattern>/wowCharServ</url-pattern>
-   </servlet-mapping>
-
-   <servlet-mapping>
-     <servlet-name>WoWServServ</servlet-name>
-     <url-pattern>/wowServServ</url-pattern>
-   </servlet-mapping>
-
-   <servlet-mapping>
-     <servlet-name>WoWClassServ</servlet-name>
-     <url-pattern>/wowClassServ</url-pattern>
-   </servlet-mapping>
 
    <servlet-mapping>
      <servlet-name>LeagueServerStatus</servlet-name>
      <url-pattern>/LeagueServerStatus</url-pattern>
    </servlet-mapping>
-
-   <servlet-mapping>
-     <servlet-name>LeagueSummonerServ</servlet-name>
-     <url-pattern>/LeagueSummonerServ</url-pattern>
-   </servlet-mapping>
-
-   <servlet-mapping>
-     <servlet-name>WoWItemServ</servlet-name>
-     <url-pattern>/wowItemServ</url-pattern>
-   </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>LeagueServerStatus</servlet-name>
-        <url-pattern>/LeagueServerStatus</url-pattern>
-    </servlet-mapping>
+   
+    
     <servlet-mapping>
         <servlet-name>LeagueSummonerServ</servlet-name>
         <url-pattern>/LeagueSummonerServ</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>LeagueChampionServ</servlet-name>
         <url-pattern>/LeagueChampionServ</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>LeagueBuildABuildServ</servlet-name>
         <url-pattern>/LeagueBuildABuildServ</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LeagueNamesApi</servlet-name>
+        <url-pattern>/api/LeagueNamesApi</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LeagueBuildABuildApi</servlet-name>
+        <url-pattern>/api/LeagueBuildABuildApi</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LeagueServerApi</servlet-name>
+        <url-pattern>/api/LeagueServerApi</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LeagueChampionApi</servlet-name>
+        <url-pattern>/api/LeagueChampionApi</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JsonResponseServ</servlet-name>
+        <url-pattern>/api/JsonResponseServ</url-pattern>
     </servlet-mapping>
 </web-app>

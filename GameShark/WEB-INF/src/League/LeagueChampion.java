@@ -90,6 +90,9 @@ public class LeagueChampion {
     public String getLore(){
         return lore;
     }
+    public LeagueChampSpells[] getSkills(){
+        return this.spells;
+    }
   
     public String getSkillQImage() {
         if (spells != null && 1 <= spells.length) {

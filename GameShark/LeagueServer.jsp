@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>
-            League of Legends Server Statusessss
+            League of Legends Server Statuses
         </h1>
         <div>
             <%@ page import="League.LeagueServer" %>

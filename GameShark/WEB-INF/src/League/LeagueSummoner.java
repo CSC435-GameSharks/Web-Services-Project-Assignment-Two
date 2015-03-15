@@ -31,9 +31,9 @@ public class LeagueSummoner {
     public void updateSummonerStats(JsonArray s, PrintWriter out) {
         stats = new LeagueSummonerStats[s.size()];
        
-        out.println("Size: "+ s.size());
+        //out.println("Size: "+ s.size());
         for (int i = 0; i < s.size(); i++) {
-            out.println("Got stat " + i);
+          //  out.println("Got stat " + i);
             stats[i] = new LeagueSummonerStats(s.getJsonObject(i), out);
         }
 

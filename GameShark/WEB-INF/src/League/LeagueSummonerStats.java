@@ -26,14 +26,14 @@ public class LeagueSummonerStats {
     
     
     public LeagueSummonerStats(JsonObject json,PrintWriter out){
-       out.println("in summoner stats");
+      // out.println("in summoner stats");
         statSummaryType = json.getString("playerStatSummaryType");
         wins = json.get("wins").toString();
        
         if(json.get("losses")!= null){
             losses = json.get("losses").toString();
         }else{
-            losses = "N/A";
+            losses = "0";
         }
 
         JsonObject tmp = json.getJsonObject("aggregatedStats");
@@ -41,33 +41,33 @@ public class LeagueSummonerStats {
         if(tmp.get("totalChampionKills") != null){
             totalChampKills = tmp.get("totalChampionKills").toString();
         }else{
-            totalChampKills = "N/A";
+            totalChampKills = "0";
         }
        // out.println("1");
         if(tmp.get("totalMinionKills")!= null){
             totalMinionKills = tmp.get("totalMinionKills").toString();
         }else{
-            totalMinionKills = "N/A";
+            totalMinionKills = "0";
         }
        // out.println("2");
         if(tmp.get("totalTurrentsKilled") != null){
             totalTurrentKills = tmp.get("totalTurrentsKilled").toString();
         }else{
-            totalTurrentKills = "N/A";
+            totalTurrentKills = "0";
         }
        // out.println("3");
         if(tmp.get("totalNeutralMinionsKilled") != null){
             totalNeutralMinionsKilled = tmp.get("totalNeutralMinionsKilled").toString();  
         }else{
-            totalNeutralMinionsKilled = "N/A";
+            totalNeutralMinionsKilled = "0";
         }
        // out.println("4");
         if(tmp.get("totalAssists") != null){
             totalAssists = tmp.get("totalAssists").toString();
         }else{
-            totalAssists = "N/A";
+            totalAssists = "0";
         }
-        out.println("done in summoner stats");
+        //out.println("done in summoner stats");
         
     }
     

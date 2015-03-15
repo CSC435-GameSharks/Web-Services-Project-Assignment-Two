@@ -31,6 +31,10 @@ public class LeagueChampSpells {
         return name;
     }
     
+    public String getCostType(){
+        return costType;
+    }
+    
     public String getDescription(){
      return description;   
     }

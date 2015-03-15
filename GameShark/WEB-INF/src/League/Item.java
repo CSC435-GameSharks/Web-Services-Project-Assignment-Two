@@ -19,11 +19,12 @@ public class Item {
     String description;
     String name;
     String image;
-    double armor, attackSpeed, block, critDamage, critChance, hp;
-    double hpRegen, mp, mpRegen, magicDamage,movementSpeed,physicalDamage;
-    double spellBlock, parmor,pattackSpeed,pblock, pdodge, pcritChance;
-    double pcritDamage,php,phpRegen,pmp,pmpRegen,plifeSteal,pmagicDamage;
-    double pmovementSpeed, pphysicalDamage, pspellBlock, pspellVamp;
+    //This should be getters but so many
+   public double armor, attackSpeed, block, critDamage, critChance, hp;
+    public double hpRegen, mp, mpRegen, magicDamage,movementSpeed,physicalDamage;
+    public double spellBlock, parmor,pattackSpeed,pblock, pdodge, pcritChance;
+    public double pcritDamage,php,phpRegen,pmp,pmpRegen,plifeSteal,pmagicDamage;
+    public double pmovementSpeed, pphysicalDamage, pspellBlock, pspellVamp;
     
     
     
