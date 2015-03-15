@@ -25,6 +25,32 @@
      <servlet-name>WoWItemServ</servlet-name>
      <servlet-class>servlet.WoWItemServ</servlet-class>
    </servlet>
+
+   <servlet>
+     <servlet-name>WoWServApi</servlet-name>
+     <servlet-class>servlet.WoWServApi</servlet-class>
+   </servlet>
+
+   <servlet>
+     <servlet-name>WoWClassApi</servlet-name>
+     <servlet-class>servlet.WoWClassApi</servlet-class>
+   </servlet>
+
+   <servlet>
+     <servlet-name>WoWCharApi</servlet-name>
+     <servlet-class>servlet.WoWCharApi</servlet-class>
+   </servlet>
+
+   <servlet>
+     <servlet-name>WoWItemApi</servlet-name>
+     <servlet-class>servlet.WoWItemApi</servlet-class>
+   </servlet>
+
+   <servlet>
+     <servlet-name>WoWDisplayApi</servlet-name>
+     <servlet-class>servlet.WoWDisplayApi</servlet-class>
+   </servlet>
+
  
    <!-- Note: All <servlet> elements MUST be grouped together and
          placed IN FRONT of the <servlet-mapping> elements -->
@@ -48,4 +74,30 @@
      <servlet-name>WoWItemServ</servlet-name>
      <url-pattern>/wowItemServ</url-pattern>
    </servlet-mapping>
+
+   <servlet-mapping>
+     <servlet-name>WoWServApi</servlet-name>
+     <url-pattern>/api/wowServApi</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+     <servlet-name>WoWClassApi</servlet-name>
+     <url-pattern>/api/wowClassApi</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+     <servlet-name>WoWCharApi</servlet-name>
+     <url-pattern>/api/wowCharApi</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+     <servlet-name>WoWItemApi</servlet-name>
+     <url-pattern>/api/wowItemApi</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+     <servlet-name>WoWDisplayApi</servlet-name>
+     <url-pattern>/api/wowDisplayApi</url-pattern>
+   </servlet-mapping>
+
 </web-app>

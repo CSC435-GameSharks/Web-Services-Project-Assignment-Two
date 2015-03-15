@@ -68,6 +68,21 @@ public class WoWClassDetail {
 	}
 	return sReturn;
     }
+
+    public String getRolesStringNoSpace(){
+	String sReturn = "";
+	boolean bFirstPass = true;
+	for(int i = 0; i < aryRoles.length; i++){
+	    if(bFirstPass){
+		sReturn += aryRoles[i];
+		bFirstPass = false;
+	    }else{
+		sReturn += "," + aryRoles[i];
+	    }
+	}
+	return sReturn;
+    }
+
     /**
      * @return an array of strings that are the classes
      * specs

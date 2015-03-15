@@ -23,8 +23,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * This Servlet 
  */
-@WebServlet(name = "WoWServServ", urlPatterns = {"/WoWServServ"})
-public class WoWServServ extends HttpServlet {
+@WebServlet(name = "WoWServApi", urlPatterns = {"/api/wowServApi"})
+public class WoWServApi extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,11 +37,19 @@ public class WoWServServ extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-	    RequestDispatcher rd = request.getRequestDispatcher("WoWServ.jsp");
+ 
             WoWServer[] aryServer = makeServerAPIRequest();
-            request.setAttribute("servList", aryServer);
-	    rd.forward(request,response);
+            String strOut = "";
+	    RequestDispatcher rd = request.getRequestDispatcher("/api/wowDisplayApi");
+
+	    if(aryServer == null){
+		strOut = "{\"error\":{\"code\":404}}";
+	    }else{
+		strOut = makeServerJson(aryServer);
+	    }
+
+	    request.setAttribute("json", strOut);
+	    rd.forward(request, response);
 
     }
 
@@ -123,6 +131,30 @@ public class WoWServServ extends HttpServlet {
         }
         
         return aryServer;
+    }
+
+    private String makeServerJson(WoWServer[] aryIn){
+	String strReturn = "";
+	strReturn = "{\"realms\":[";
+
+	for(int i = 0; i < aryIn.length; i++){
+	    strReturn += "{";
+	    strReturn += "\"name\":\"" + aryIn[i].getName() + "\",";
+	    strReturn += "\"type\":\"" + aryIn[i].getType() + "\",";
+	    strReturn += "\"population\":\"" + aryIn[i].getPopulation() + "\",";
+	    strReturn += "\"queue\":\"" + aryIn[i].getQueue() + "\",";
+	    strReturn += "\"status\":\"" + aryIn[i].getStatus() + "\",";
+	    strReturn += "\"locale\":\"" + aryIn[i].getLocale() + "\",";
+	    strReturn += "\"timezone\":\"" + aryIn[i].getTimeZone() + "\"";
+
+	    if(i == aryIn.length - 1){
+		strReturn += "}";
+	    }else{
+		strReturn += "},";
+	    }
+	}
+	strReturn += "]}";
+	return strReturn;
     }
 
 }

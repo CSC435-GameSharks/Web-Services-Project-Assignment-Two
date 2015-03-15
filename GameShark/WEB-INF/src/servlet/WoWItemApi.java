@@ -24,8 +24,8 @@ import java.util.HashMap;
  *
  *
  */
-@WebServlet(name = "WoWItemServ", urlPatterns = {"/WoWItemServ"})
-public class WoWItemServ extends HttpServlet {
+@WebServlet(name = "WoWItemApi", urlPatterns = {"/api/wowItemApi"})
+public class WoWItemApi extends HttpServlet {
     HashMap<Integer, Integer> mapStats = new HashMap<Integer, Integer>();
 
 
@@ -40,15 +40,15 @@ public class WoWItemServ extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 	throws ServletException, IOException {
-	intit();
-	RequestDispatcher rd = request.getRequestDispatcher("WoWItem.jsp");
-        
-        if(request.getParameter("head") != null){
+        intit();
+       	RequestDispatcher rd = request.getRequestDispatcher("/api/wowDisplayApi");
+
+	if(request.getParameter("head") != null){
 	    if(request.getParameter("head") != ""){
-		int tempID = Integer.parseInt(request.getParameter("head"));
+	        int tempID = Integer.parseInt(request.getParameter("head"));
 		makeServerAPIRequest(tempID);
 		request.setAttribute("head", tempID);
-	   }
+	    }
 	}
 
 	if(request.getParameter("shoulder") != null){
@@ -172,6 +172,8 @@ public class WoWItemServ extends HttpServlet {
 	}
 		
 	request.setAttribute("mapStats", mapStats);
+	String sOutput = makeItemJson();
+	request.setAttribute("json", sOutput);
 	rd.forward(request, response);
     }
 
@@ -251,5 +253,19 @@ public class WoWItemServ extends HttpServlet {
             }
         }
 
+    }
+
+    private String makeItemJson(){
+	String sReturn = "";
+	
+	sReturn += "{\"stats\":{";
+	sReturn += "\"str\":" + mapStats.get(4) + ",";
+	sReturn += "\"agi\":" + mapStats.get(3) + ",";
+	sReturn += "\"sta\":" + mapStats.get(7) + ",";
+	sReturn += "\"int\":" + mapStats.get(5) + ",";
+	sReturn += "\"spi\":" + mapStats.get(6) + "";
+	sReturn += "}}";
+
+	return sReturn;
     }
 }

@@ -24,14 +24,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.sql.*;
 
-@WebServlet(name = "WoWClassServ", urlPatterns = {"/WoWClassServ"})
+@WebServlet(name = "WoWClassApi", urlPatterns = {"/wowClassApi"})
 
-public class WoWClassServ extends HttpServlet {
+public class WoWClassApi extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { 
 	Connection conn = null;
 	Statement stmt = null;
-       
 
 	try {
 	    WoWClassDetail wowClass;
@@ -42,8 +41,9 @@ public class WoWClassServ extends HttpServlet {
 	    int indexCounter = 0;
 	    String sClassID = "1";
 	    String sSpecID = "0";
-	    RequestDispatcher rd = request.getRequestDispatcher("WoWClass.jsp");
-
+	    String sOutput = "";
+            RequestDispatcher rd = request.getRequestDispatcher("/api/wowDisplayApi");
+	    
 	    if(request.getParameter("classID") != null){
 		    sClassID = request.getParameter("classID");
 	    }
@@ -104,8 +104,8 @@ public class WoWClassServ extends HttpServlet {
 	    sqlStr = "SELECT lvl, spellName FROM (SELECT lvl, spellName FROM wowClassSpells WHERE classID = " + wowClass.getID() + " UNION SELECT lvl, spellName FROM wowSpecSpells WHERE specID = " + sSpecID + ") temp ORDER BY temp.lvl";
 	    rset = stmt.executeQuery(sqlStr);
 	    while(rset.next()){
-                arySpells[indexCounter] = new WoWSpell(rset.getString("spellName"), rset.getInt("lvl"));
-	        indexCounter ++;
+	    arySpells[indexCounter] = new WoWSpell(rset.getString("spellName"), rset.getInt("lvl"));
+	    indexCounter ++;
 	    }
 	    
 	    //Get the talents for the class
@@ -128,10 +128,10 @@ public class WoWClassServ extends HttpServlet {
 	    wowClass.setSpells(arySpells);
 	    wowClass.setTalents(aryTalents);
 
-	    request.setAttribute("wowClass", wowClass);
-	    request.setAttribute("wowSpecID", sSpecID);
+	    sOutput = makeClassJson(wowClass, sSpecID);
+	    request.setAttribute("json", sOutput);
 	    rd.forward(request, response);
-
+    
         }catch (Exception ex) {
 	    //out.println(ex.toString());
 	}finally{
@@ -162,5 +162,63 @@ public class WoWClassServ extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
 	throws ServletException, IOException{
 	processRequest(request, response);
+    }
+
+
+    private String makeClassJson(WoWClassDetail wowClass, String sSpec){
+	String sReturn = "";
+	WoWSpec[] arySpecs = wowClass.getSpecs();
+	WoWSpell[] arySpells = wowClass.getSpells();
+	WoWTalent[] aryTalents = wowClass.getTalents();
+	sReturn = "{\"class\":{";
+
+	
+
+	sReturn += "\"name\":\"" + wowClass.getName() + "\",";
+	sReturn += "\"id\":" + wowClass.getID() + ",";
+	sReturn += "\"roles\":\"" + wowClass.getRolesStringNoSpace() + "\",";
+	
+	sReturn += "\"specs\":[";
+	for(int i = 0; i < arySpecs.length; i++){
+	    sReturn += "{";
+	    sReturn += "\"id\":" + arySpecs[i].getID() + ",";
+	    sReturn += "\"name\":\"" + arySpecs[i].getName() + "\"";
+	    if(i == arySpecs.length - 1){
+		sReturn += "}";
+	    }else{
+		sReturn += "},";
+	    }
+	}
+	sReturn += "],";
+
+	sReturn += "\"spells\":[";
+	for(int i = 0; i < arySpells.length; i++){
+	    sReturn += "{";
+	    sReturn += "\"name\":\"" + arySpells[i].getName() + "\",";
+	    sReturn += "\"level\":" + arySpells[i].getLvl() + "";
+	    if(i == arySpells.length - 1){
+		sReturn += "}";
+	    }else{
+		sReturn += "},";
+	    }
+	}
+	sReturn += "],";
+
+
+	sReturn += "\"talents\":[";
+	for(int i = 0; i < aryTalents.length; i++){
+	    sReturn += "{";
+	    sReturn += "\"name\":\"" + aryTalents[i].getName() + "\",";
+	    sReturn += "\"level\":" + aryTalents[i].getLvl() + "";
+	    if(i == aryTalents.length - 1){
+		sReturn += "}";
+	    }else{
+		sReturn += "},";
+	    }
+	}
+	sReturn += "]";
+
+	sReturn += "}}";
+	return sReturn;
     }
 }

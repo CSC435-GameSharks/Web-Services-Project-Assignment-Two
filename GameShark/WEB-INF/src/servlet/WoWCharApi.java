@@ -24,8 +24,8 @@ import javax.servlet.http.HttpSession;
  * This servlet is used to get the WoW Server information from the API
  * 
  */
-@WebServlet(name = "WoWCharServ", urlPatterns = {"/WoWCharServ"})
-public class WoWCharServ extends HttpServlet {
+@WebServlet(name = "WoWCharApi", urlPatterns = {"/api/wowCharApi"})
+public class WoWCharApi extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,25 +44,28 @@ public class WoWCharServ extends HttpServlet {
         HttpSession s = request.getSession();
         String sCharName = "";
         String sCharRealm = "";
-	RequestDispatcher rd = request.getRequestDispatcher("WoWChar.jsp");
-		   
+	String sOutput = "";
+	WoWCharacter wowChar = null;
+	RequestDispatcher rd = request.getRequestDispatcher("/api/wowDisplayApi");
+	
         //Check the session for a realm
         if(s.getAttribute("charRealm") != null){
             sCharRealm = s.getAttribute("charRealm").toString();
         }
 	    
-        //Check the session for a name
+	//Check the session for a name
         if(s.getAttribute("charName") != null){
-           sCharName = s.getAttribute("charName").toString();
+            sCharName = s.getAttribute("charName").toString();
         }
 
             
         //Check if there are any quert string infromation
         //if we have these we want to use them instead of what
         //we got from the session.  We also want to overwrite the session
-        if(request.getParameter("name") != null){
-	    sCharName = request.getParameter("name");
+	if(request.getParameter("name") != null){
+            sCharName = request.getParameter("name");
             s.setAttribute("charName", sCharName);
+            
         }
             
 	if(request.getParameter("realm") != null){
@@ -72,15 +75,22 @@ public class WoWCharServ extends HttpServlet {
             
             
         //Start building the output
-        WoWCharacter wowChar = null;
-	//Check to see if we have valid information to make a request
+        //Check to see if we have valid information to make a request
         if(sCharName == "" || sCharRealm == "" ){
-            //sOutput += "</br>ERROR: Bad User or Realm  ";
-	}else{
-	    wowChar = makeServerAPIRequest(sCharName, sCharRealm);
-            request.setAttribute("userChar",wowChar);
-	    rd.forward(request, response);
-        }                
+            sOutput += "{\"error\":{\"code\":404, \"message\":\"please provide a character name and realm\"}}";
+	    request.setAttribute("json",sOutput);
+        }else{
+            wowChar = makeServerAPIRequest(sCharName, sCharRealm);
+	    if(wowChar == null){
+	        sOutput += "{\"error\":{\"code\":404}}";
+		request.setAttribute("json",sOutput);
+ 	    }else{
+		sOutput = makeCharacterJson(wowChar);
+		request.setAttribute("json",sOutput);
+	    }
+        }
+	
+        rd.forward(request, response);
     }
 
     /**
@@ -156,5 +166,24 @@ public class WoWCharServ extends HttpServlet {
         }
         
         return wowChar;
+    }
+
+    private String makeCharacterJson(WoWCharacter charIn){
+	String sReturn = "";
+	sReturn = "{\"character\":{";
+	
+	sReturn += "\"name\":\"" + charIn.getName()  + "\",";
+	sReturn += "\"realm\":\"" + charIn.getRealm()  + "\",";
+	sReturn += "\"battlegroup\":\"" + charIn.getBattleGroup()  + "\",";
+	sReturn += "\"class\":\"" + charIn.getCharClass()  + "\",";
+	sReturn += "\"race\":\"" + charIn.getRace()  + "\",";
+	sReturn += "\"gender\":" + charIn.getGender()  + ",";
+	sReturn += "\"level\":" + charIn.getLevel()  + ",";
+	sReturn += "\"achievementpoints\":" + charIn.getAchievementPoints()  + ",";
+	sReturn += "\"thumbnail\":\"" + charIn.getThumbnail()  + "\",";
+	sReturn += "\"honorablekills\":\"" + charIn.getHonorableKills()  + "\"";
+
+	sReturn += "}}";
+	return sReturn;
     }
 }

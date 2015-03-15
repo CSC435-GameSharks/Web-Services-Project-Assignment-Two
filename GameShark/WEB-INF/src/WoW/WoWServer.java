@@ -116,7 +116,7 @@ public class WoWServer {
      * 
      * @return what time zone the server is in.
      */
-    public String geTimeZone(){
+    public String getTimeZone(){
         return sTimeZone;
     }
     

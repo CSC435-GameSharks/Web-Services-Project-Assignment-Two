@@ -23,8 +23,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * This Servlet 
  */
-@WebServlet(name = "WoWServServ", urlPatterns = {"/WoWServServ"})
-public class WoWServServ extends HttpServlet {
+@WebServlet(name = "WoWDisplayApi", urlPatterns = {"/api/wowDisplayApi"})
+public class WoWDisplayApi extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,11 +38,24 @@ public class WoWServServ extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-	    RequestDispatcher rd = request.getRequestDispatcher("WoWServ.jsp");
-            WoWServer[] aryServer = makeServerAPIRequest();
-            request.setAttribute("servList", aryServer);
-	    rd.forward(request,response);
+         response.setContentType("application/json;charset=UTF-8");
+	 
+	 try (PrintWriter out = response.getWriter()) {
+            String strOut = "";
+	    
+	    if(request.getAttribute("json") == null){
+		strOut = "{\"error\":{\"code\":404}}";
+	    }else{
+		strOut = (String) request.getAttribute("json");
+	    }
 
+	    try{
+		out.println(strOut);
+	    }catch (Exception ex){
+		out.println(ex);
+	    }
+
+        }
     }
 
     /**
@@ -83,46 +96,4 @@ public class WoWServServ extends HttpServlet {
         return "Short description";
     }
     
-    /**
-     * 
-     * @return an array of WoW Servers
-     */
-    private WoWServer[] makeServerAPIRequest() {
-        InputStream is = null;
-        WoWServer[] aryServer = null;
-        try {
-            //?realms=Medivh
-            is = new URL("http://us.battle.net/api/wow/realm/status").openStream();
-            JsonReader jsonReader = Json.createReader(is);
-            JsonObject jsonObject = jsonReader.readObject();
-            JsonArray jsonArray = jsonObject.getJsonArray("realms");
-            jsonReader.close();
-
-            aryServer = new WoWServer[jsonArray.size()];
-            for(int i = 0; i < jsonArray.size(); i++){
-                JsonObject obj = jsonArray.getJsonObject(i);
-                aryServer[i] = new WoWServer(obj);
-                
-            }
-        
-        } catch (MalformedURLException ex) {
-            Logger.getLogger(WoWServServ.class.getName()).log(Level.SEVERE, null, ex);
-        
-        } catch (IOException ioe){
-            Logger.getLogger(WoWServServ.class.getName()).log(Level.SEVERE, null, ioe);
-        
-        } catch(Exception e){
-            Logger.getLogger(WoWServServ.class.getName()).log(Level.SEVERE, null, e);
-            
-        }finally {
-            try {
-                is.close();
-            } catch (IOException ex) {
-                Logger.getLogger(WoWServServ.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        
-        return aryServer;
-    }
-
 }

@@ -13,7 +13,12 @@ SRC = \
 	src/servlet/WoWCharServ.java \
 	src/servlet/WoWServServ.java \
 	src/servlet/WoWClassServ.java \
-	src/servlet/WoWItemServ.java
+	src/servlet/WoWItemServ.java \
+	src/servlet/WoWServApi.java \
+	src/servlet/WoWCharApi.java \
+	src/servlet/WoWClassApi.java \
+	src/servlet/WoWItemApi.java \
+	src/servlet/WoWDisplayApi.java
 compile:
 	javac $(CLASSPATH) $(DEST) $(SRC)
 
