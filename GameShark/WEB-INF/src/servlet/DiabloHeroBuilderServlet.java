@@ -102,16 +102,16 @@ private static final Logger logger = Logger.getLogger(DiabloHeroBuilderServlet.c
             diabloItem = new Item(jsonObject);
             Database.cacheItem(diabloItem);
         }catch (MalformedURLException ex) {
-            Logger.getLogger(WoWServServ.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DiabloHeroBuilderServlet.class.getName()).log(Level.SEVERE, null, ex);
         }catch (IOException ioe){
-            Logger.getLogger(WoWCharServ.class.getName()).log(Level.SEVERE, null, ioe);
+            Logger.getLogger(DiabloHeroBuilderServlet.class.getName()).log(Level.SEVERE, null, ioe);
         }catch(Exception e){
-            Logger.getLogger(WoWCharServ.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(DiabloHeroBuilderServlet.class.getName()).log(Level.SEVERE, null, e);
         }finally {
             try {
                 is.close();
             } catch (IOException ex) {
-                Logger.getLogger(WoWCharServ.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(DiabloHeroBuilderServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return diabloItem;

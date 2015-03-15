@@ -1,10 +1,10 @@
 CLASSPATH = -classpath ~/Software/apache-tomcat-8.0.18/lib/servlet-api.jar:lib/javax.json.jar:src/servlet/
 DEST = -d classes
 SRC = \
-    src/League/*.java \
-	src/WoW/*.java \
 	src/servlet/*.java \
 	src/Diablo/*.java
+    #src/League/*.java \
+	#src/WoW/*.java \
 #SRC = \
 #    src/League/LeagueServer.java \
 #    src/League/LeagueServerService.java \

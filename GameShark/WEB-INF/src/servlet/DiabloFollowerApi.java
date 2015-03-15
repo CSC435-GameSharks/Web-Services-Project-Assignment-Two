@@ -3,16 +3,19 @@ package servlet;
 
 import Diablo.Career;
 import Diablo.Follower;
+import Diablo.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
+import javax.json.*;
 import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
@@ -22,9 +25,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author csaroff
  */
-@WebServlet(name = "DiabloFollowerServlet", urlPatterns = {"/DiabloFollowerServlet"})
-public class DiabloFollowerServlet extends HttpServlet {
-private static final Logger logger = Logger.getLogger(DiabloFollowerServlet.class.getName());
+@WebServlet(name = "DiabloFollowerApi", urlPatterns = {"/api/DiabloFollower"})
+public class DiabloFollowerApi extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,30 +39,41 @@ private static final Logger logger = Logger.getLogger(DiabloFollowerServlet.clas
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        //response.setContentType("text/html;charset=UTF-8");
-     try (PrintWriter out = response.getWriter()) {
         String strFollower = "";
+        Follower follower = null;
         if(request.getParameter("follower") != null){
              strFollower = request.getParameter("follower");
         }
         if(strFollower.equals("enchantress")||strFollower.equals("scoundrel")||strFollower.equals("templar")){
-            request.setAttribute("follower", makeServerAPIRequest(strFollower));
+            follower = makeServerAPIRequest(strFollower);
         }
-        RequestDispatcher rd = request.getRequestDispatcher("DiabloFollower.jsp");
-        rd.forward(request,response);
+
+        if(follower==null){
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            return;
+        }
+        try(JsonWriter writer = Json.createWriter(response.getWriter())){
+            writer.writeObject(toJsonObject(follower));
         }
     }
     private Follower makeServerAPIRequest(String strFollower){
         Follower diabloFollower = null;
         InputStream is = null;
-        
         try{
-            is = new URL("http://us.battle.net/api/d3/data/follower/" + strFollower).openStream();
+            URL url = new URL("http://us.battle.net/api/d3/data/follower/" + strFollower);
+            int code = ((HttpURLConnection)url.openConnection()).getResponseCode();
+            if(code<200 || code>299){
+                return null;
+            }
+            is = url.openStream();
             JsonReader jsonReader = Json.createReader(is);
             JsonObject jsonObject = jsonReader.readObject();
             jsonReader.close();
-            
+            String errorCode = jsonObject.getString("code", null);
+            if(jsonObject==null||(errorCode!=null&&errorCode.equals("NOTFOUND"))){
+                System.out.println("jsonObject contained error message");
+                return null;
+            }
             diabloFollower = new Follower(jsonObject);
             
         } catch (MalformedURLException ex) {
@@ -82,8 +95,29 @@ private static final Logger logger = Logger.getLogger(DiabloFollowerServlet.clas
         
         return diabloFollower;
     }
+    private JsonObject toJsonObject(Follower follower){
+        JsonBuilderFactory factory = Json.createBuilderFactory(null);
+        JsonObjectBuilder tempObj = factory.createObjectBuilder()
+        .add("slug", follower.getSlug())
+        .add("name", follower.getName())
+        .add("realName", follower.getRealName())
+        .add("portrait", follower.getPortrait());
+        JsonArrayBuilder skills = factory.createArrayBuilder();
+        for(ActiveSkill skill : follower.getActiveSkills()){
+            skills.add(factory.createObjectBuilder()
+                .add("slug",skill.getSlug())
+                .add("name",skill.getName())
+                .add("icon",skill.getIcon())
+                .add("level",skill.getLevel())
+                .add("tooltipUrl",skill.getTooltipUrl())
+                .add("description",skill.getDescription())
+                .add("skillCalcId",skill.getSkillCalcId()));
+        }
+        tempObj.add("skills", skills);
+        return tempObj.build();
+        
+    }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -120,5 +154,5 @@ private static final Logger logger = Logger.getLogger(DiabloFollowerServlet.clas
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
+    }
 }
