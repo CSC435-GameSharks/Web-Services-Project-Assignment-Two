@@ -29,17 +29,6 @@ public class Skill{
         description=objIn.getString("description");
         skillCalcId=objIn.getString("skillCalcId");
     }
-    public String toHtmlString(){
-        StringBuilder sbReturn = new StringBuilder();
-        
-        sbReturn.append("           </br>\n");
-        sbReturn.append("Name:    " + this.getName()+ "</br>\n");
-        sbReturn.append("Level:    " + this.getLevel()+ "</br>\n");
-        sbReturn.append("Description:    " + this.getDescription()+ "</br>\n");
-        sbReturn.append("<img src=\"" + IMAGE_URL_PREFIX + this.getIcon() + ".png\">" + "</br>\n");
-        
-        return sbReturn.toString();
-    }
 
     public String getSlug() {
         return slug;

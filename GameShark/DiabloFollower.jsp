@@ -12,12 +12,22 @@
             <option value="DiabloFollowerServ?follower=templar">Templar</option>
             <option value="DiabloFollowerServ?follower=scoundrel">Scoundrel</option>
     </select>
-    <%@ page import="Diablo.Follower" %>
+    <%@ page import="Diablo.*" %>
     <%
     Follower follower;
     if(request.getParameter("follower") != null){
         follower = (Follower)request.getAttribute("follower");
-        out.println(follower.toHtmlString());
+        StringBuilder sbReturn = new StringBuilder();
+        sbReturn.append("           </br>\n");
+        sbReturn.append("Name:    " + follower.getName()+ "</br>\n");
+        for(ActiveSkill skill : follower.getActiveSkills()){
+            sbReturn.append("           </br>\n");
+            sbReturn.append("Name:    " + skill.getName()+ "</br>\n");
+            sbReturn.append("Level:    " + skill.getLevel()+ "</br>\n");
+            sbReturn.append("Description:    " + skill.getDescription()+ "</br>\n");
+            sbReturn.append("<img src=\"" + skill.IMAGE_URL_PREFIX + skill.getIcon() + ".png\">" + "</br>\n");
+        }
+        out.println(sbReturn.toString());
     }
     %>
 

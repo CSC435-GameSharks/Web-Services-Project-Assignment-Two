@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Diablo;
 import java.util.List;
 import java.util.ArrayList;
@@ -65,31 +60,6 @@ public class Hero {
         }
         //dead = objIn.getBoolean("dead");
     }
-    public String toHtmlString(){
-        StringBuilder sbReturn = new StringBuilder();
-        sbReturn.append("           </br>\n");
-        sbReturn.append("Name:    " + this.getName()+ "</br>\n");
-        sbReturn.append("Level:    " + this.getLevel()+ "</br>\n");
-        //sbReturn.append("Dead:    " + (this.dead?"Yes":"No") + "</br>\n");
-        
-        sbReturn.append("</br>\n Base Stats </br>");
-        for(String statKey : stats.keySet()){
-            sbReturn.append(statKey+":    " + stats.get(statKey) +  "</br>\n");
-            sbReturn.append("</br>\n");
-        }
-        
-        for(ActiveSkill skill : activeSkills){
-            sbReturn.append(skill.toHtmlString() + "</br>\n");
-        }
-        for(PassiveSkill skill : passiveSkills){
-            sbReturn.append(skill.toHtmlString() + "</br>\n");
-        }
-        for(String key : items.keySet()){
-            sbReturn.append(key + ":    </br>\n");
-            sbReturn.append(items.get(key).toHtmlString());
-        }
-        return sbReturn.toString();
-    }
 
     public String getName() {
         return name;
@@ -113,5 +83,17 @@ public class Hero {
 
     public int getLastUpdated() {
         return lastUpdated;
+    }
+    public Map<String, Double> getStats(){
+        return stats;
+    }
+    public List<ActiveSkill> getActiveSkills(){
+        return activeSkills;
+    }
+    public List<PassiveSkill> getPassiveSkills(){
+        return passiveSkills;
+    }
+    public Map<String, Item> getItems(){
+        return items;
     }
 }

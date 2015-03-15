@@ -92,14 +92,14 @@ public class Follower {
         return activeSkills;
     }
     
-    public String toHtmlString(){
-        StringBuilder sbReturn = new StringBuilder();
-        
-        sbReturn.append("           </br>\n");
-        sbReturn.append("Name:    " + this.getName()+ "</br>\n");
-        for(ActiveSkill skill : activeSkills){
-            sbReturn.append(skill.toHtmlString() + "</br>");
-        }
-        return sbReturn.toString();
-    }
+    //public String toHtmlString(){
+    //    StringBuilder sbReturn = new StringBuilder();
+    //    
+    //    sbReturn.append("           </br>\n");
+    //    sbReturn.append("Name:    " + this.getName()+ "</br>\n");
+    //    for(ActiveSkill skill : activeSkills){
+    //        sbReturn.append(skill.toHtmlString() + "</br>");
+    //    }
+    //    return sbReturn.toString();
+    //}
 }

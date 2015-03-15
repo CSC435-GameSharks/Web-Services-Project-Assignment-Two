@@ -52,26 +52,23 @@ public class Career {
         lastUpdated = objIn.getInt("lastUpdated");
         kills = new Kill(objIn.getJsonObject("kills"));
     }
-        public String toHtmlString(){
-        StringBuilder sbReturn = new StringBuilder();
-        
-//        sbReturn.append("               <img src=\"http://us.battle.net/static-render/us/" + diabloPlayer.getThumbnail() + "\"/>");
-//        sbReturn.append("<img src=\"http://i7.minus.com/iDiaMmIM6QE9R.jpg\">");
-        sbReturn.append("           </br>\n");
-        sbReturn.append("Battle Tag:    " + this.getBattleTag()+ "</br>\n");
-        sbReturn.append("Paragon Level " + this.getParagonLevel() + "</br>\n");
-//        sbReturn.append("               Last Hero Played: " + diabloPlayer.getLastHero());
-        sbReturn.append("Number of Kills: " + "</br>\n");
-        sbReturn.append("Monsters: " + this.getKills().getMonsters() + "</br>\n");
-        sbReturn.append("Elites: " + this.getKills().getElites() + "</br>\n");
-        sbReturn.append("Hardcore Monsters: " + this.getKills().getHardcoreMonsters() + "</br>\n");
-        sbReturn.append("Heroes:" + "</br>\n");
-        for(AbbreviatedHero hero : heroes){
-            sbReturn.append(hero.toHtmlString());
-        }
-        
-        return sbReturn.toString();
-    }
+//    public String toHtmlString(){
+//        StringBuilder sbReturn = new StringBuilder();
+//        
+//        sbReturn.append("           </br>\n");
+//        sbReturn.append("Battle Tag:    " + this.getBattleTag()+ "</br>\n");
+//        sbReturn.append("Paragon Level " + this.getParagonLevel() + "</br>\n");
+//        sbReturn.append("Number of Kills: " + "</br>\n");
+//        sbReturn.append("Monsters: " + this.getKills().getMonsters() + "</br>\n");
+//        sbReturn.append("Elites: " + this.getKills().getElites() + "</br>\n");
+//        sbReturn.append("Hardcore Monsters: " + this.getKills().getHardcoreMonsters() + "</br>\n");
+//        sbReturn.append("Heroes:" + "</br>\n");
+//        for(AbbreviatedHero hero : heroes){
+//            sbReturn.append(hero.toHtmlString());
+//        }
+//        
+//        return sbReturn.toString();
+//    }
     public String getBattleTag() {
         return battleTag;
     }
@@ -92,6 +89,9 @@ public class Career {
         return paragonLevelSeasonHardcore;
     }
 
+    public List<AbbreviatedHero> getHeroes(){
+        return heroes;
+    }
 //    public int getLastHeroPlayed() {
 //        return lastHeroPlayed;
 //    }

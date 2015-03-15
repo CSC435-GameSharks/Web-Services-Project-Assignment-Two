@@ -28,17 +28,17 @@ public class AbbreviatedHero {
         lastUpdated = objIn.getInt("last-updated");
         dead = objIn.getBoolean("dead");
     }
-    String toHtmlString(){
-        StringBuilder sbReturn = new StringBuilder();
-        
-        sbReturn.append("           </br>\n");
-        sbReturn.append("<a href=\"DiabloHeroServlet?hero=" + id + "\">" + "Name:    " + this.getName()+ "</a></br>\n");
-        sbReturn.append("Level:    " + this.getLevel()+ "</br>\n");
-        sbReturn.append("Dead:    " + (this.dead?"Yes":"No") + "</br>\n");
-        //sbReturn.append("<a href=\"" "\">" + + " </a>")
-        
-        return sbReturn.toString();
-    }
+    //String toHtmlString(){
+    //    StringBuilder sbReturn = new StringBuilder();
+    //    
+    //    sbReturn.append("           </br>\n");
+    //    sbReturn.append("<a href=\"DiabloHeroServlet?hero=" + id + "\">" + "Name:    " + this.getName()+ "</a></br>\n");
+    //    sbReturn.append("Level:    " + this.getLevel()+ "</br>\n");
+    //    sbReturn.append("Dead:    " + (this.dead?"Yes":"No") + "</br>\n");
+    //    //sbReturn.append("<a href=\"" "\">" + + " </a>")
+    //    
+    //    return sbReturn.toString();
+    //}
 
     public String getName() {
         return name;
