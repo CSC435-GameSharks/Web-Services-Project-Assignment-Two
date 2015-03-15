@@ -42,6 +42,25 @@ public class LeagueChampion {
         
         
     }
+        public LeagueChampion(JsonObject json){
+     
+        name = json.getString("name");
+        image = name +".png";
+        title = json.getString("title");
+        id = json.getInt("id");
+        lore = json.getString("lore");
+        partype = json.getString("partype");
+        
+        stats = new LeagueChampStats(json.getJsonObject("stats"));
+        passive = new LeagueChampionPassive(json.getJsonObject("passive"));
+        JsonArray sp = json.getJsonArray("spells");
+        spells = new  LeagueChampSpells[sp.size()];
+        for(int i = 0; i<sp.size(); i++){
+            spells[i] = new LeagueChampSpells(sp.getJsonObject(i));
+        }
+        
+        
+    }
     
     public void updateStats(boolean newItem, Item item){
         stats.updateArmor(newItem, item.armor, item.parmor);
@@ -60,6 +79,10 @@ public class LeagueChampion {
         stats.updateSpellVamp(newItem, 0, item.pspellVamp);
         stats.updateLifeSteal(newItem, 0, item.plifeSteal);
     
+    }
+    
+    public void updateLevel(int lvl){
+        stats.updateLevel(lvl);
     }
     
     public int getID(){

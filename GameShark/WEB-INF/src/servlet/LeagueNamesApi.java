@@ -43,31 +43,22 @@ public class LeagueNamesApi extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("application/json;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-                       HttpSession s = request.getSession();
+            
             String sName = "";
             String sOutput = "";
-
-            //Check the session for a current summoner name
-           // out.println("Look for name from session");
-            if (s.getAttribute("sessionName") != null) {
-                sName = s.getAttribute("sessionName").toString();
-
-            }
 
             //check for a new summoner name
             //will want to use over current session summoner name
            // out.println("Look for name from request");
             if (request.getParameter("name") != null) {
                 sName = request.getParameter("name").toLowerCase();
-                s.setAttribute("sessionName", sName);
-
             }
 
             //Start building the output
             LeagueSummoner summoner = null;
 	    //Check to see if we have valid information to make a request
             if(sName.equals("")){
-                sOutput += "{\"error\":{\"code\":404, \"message\":\"please provide a character name and realm\"}}";
+                sOutput += "{\"error\":{\"code\":404, \"message\":\"please provide a valid summoner name\"}}";
             }else{
                 summoner = makeAPIRequest(sName, out);
 		if(summoner== null){
@@ -108,15 +99,15 @@ public class LeagueNamesApi extends HttpServlet {
             jsonReader.close();
             is.close();
         } catch (MalformedURLException ex) {
-            //out.println(ex.toString());
+            out.println(ex.toString());
             return summoner;
 
         } catch (IOException ioe) {
-           // out.println(ioe.toString());
+            out.println(ioe.toString());
             return summoner;
 
         } catch (Exception e) {
-          //  out.println(e.toString());
+            out.println(e.toString());
             return summoner;
 
         }

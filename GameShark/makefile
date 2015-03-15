@@ -1,5 +1,5 @@
 compile:
-	jar -cvf GameShark2.war *
+	jar -cvf GameShark.war *
 
 clean:
 	$(RM) *.class

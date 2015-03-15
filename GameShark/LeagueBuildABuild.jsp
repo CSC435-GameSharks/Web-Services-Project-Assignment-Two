@@ -67,7 +67,6 @@
                 border:1px solid #bbb;
                 list-style-type:none;
             }
-
             #stats td{
                 width:190px;
                 padding:5px 6px 6px 5px;
@@ -76,16 +75,25 @@
                 font-size:14px;
             }
             .labelText{
-                color: #0000ff;
+                color: #0099cc;
+                float:right;
+                font-weight: bold;
+                
             }
+            #lvl{
+                position:absolute;
+                top:115px;
+                font-size:15px;
+                left:132px;
+            }
+
 
         </style>
         <%@page import="League.LeagueChampion"%>
-            <%
-                if (request.getAttribute("championObject") != null && request.getAttribute("itemList") != null && request.getAttribute("selectedItems")!=null) {
+        <%
+                if (request.getAttribute("championObject") != null) {
                     LeagueChampion champ = (LeagueChampion) request.getAttribute("championObject");
-                    ArrayList<Item> items = (ArrayList<Item>) request.getAttribute("itemList");
-                    ArrayList<Item> selectedItems = (ArrayList<Item>) request.getAttribute("selectedItems");
+ 
                     %>
         <title>
             <%out.print(champ.getName());%>: Build-A-Build
@@ -96,14 +104,38 @@
 <%
                     out.print("<h1>" + champ.getName() + "</h1>");
                     out.print("<img src='http://ddragon.leagueoflegends.com/cdn/5.2.1/img/champion/" + champ.getImage() + "'/>");
-                    out.print("Level: "+champ.getLevel());
             %>
-
-
-
+ <div id="lvl">
+  <form method="POST" action="LeagueBuildABuildServ">
+      
+<select name="level">
+        <option>Lvl</option>
+        <option value="18">18</option>
+        <option value="17">17</option>
+        <option value="16">16</option>
+        <option value="15">15</option>
+        <option value="14">14</option>
+        <option value="13">13</option>
+        <option value="12">12</option>
+        <option value="11">11</option>
+        <option value="10">10</option>
+        <option value="9">9</option>
+        <option value="8">8</option>
+        <option value="7">7</option>
+        <option value="6">6</option>
+        <option value="5">5</option>
+        <option value="4">4</option>
+        <option value="3">3</option>
+        <option value="2">2</option>
+        <option value="1">1</option>
+    </select> 
+      <%out.print(champ.getLevel());%>
+      <input type="submit">
+  </form>
+            </div>
             <table id="stats">
                 <tr>
-                    <td>Health: <label class="labelText" id='health'><%out.print(champ.getHealth());%></label></td></tr>
+                    <td>Health: <span class="labelText" id='health'><%out.print(champ.getHealth());%></span></td></tr>
                 <tr>
                     <td>Health Regen: <label class="labelText" id='healthregen'><%out.print(champ.getHealthRegen());%></label></td></tr>
                 <tr>
@@ -168,6 +200,23 @@
                         <p><%out.print(champ.getSkillRDesc());%></p>
                 </div>
             </div>
+                        <%
+                    ArrayList<Item> items;
+                    ArrayList<Item> selectedItems;
+                         if(request.getAttribute("itemList") != null){
+                             items = (ArrayList<Item>) request.getAttribute("itemList");
+                         }else{
+                             items = (ArrayList<Item>) session.getAttribute("itemList");
+                         }
+                         if(request.getAttribute("selectedItems") != null){
+                             selectedItems = (ArrayList<Item>) request.getAttribute("selectedItems");
+                         }else{
+                             selectedItems = (ArrayList<Item>) session.getAttribute("selectedItems");
+                         }    
+                             
+                        %>
+                        
+                        
                 <div>
                     Selected Items
                     

@@ -51,24 +51,24 @@ public class LeagueBuildABuildApi extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String selectedChampID = "";
-            String image = "";
+        
             String item = "";
             LeagueChampion cmp;
             ArrayList<Item> items;
             ArrayList<Item> selectedItems;
             String sOutput = "problem";
 
-            if(request.getParameter("championID") != null && request.getParameter("championImage") !=null) {
-                image = request.getParameter("championImage");
+            if(request.getParameter("championID") != null ) {
+                
                 selectedChampID = request.getParameter("championID");
-                cmp = makeAPIRequest(out, selectedChampID, image);
+                cmp = makeAPIRequest(out, selectedChampID);
+                
+		if(cmp != null){
                 items = this.getItems(out);
                 selectedItems = new ArrayList<Item>();
-                
-
-                //handle item clicked to select
+                out.println("looking to see if there is items");
                 if (request.getParameter("item1") != null) {
-                        item = (String) request.getParameter("item");
+                        item = (String) request.getParameter("item1");
                         int itemID = Integer.parseInt(item);
                         Item tmp = items.get(itemID);
                         if(!selectedItems.contains(tmp)){
@@ -77,7 +77,7 @@ public class LeagueBuildABuildApi extends HttpServlet {
                         }
                 }
                 if (request.getParameter("item2") != null) {
-                        item = (String) request.getParameter("item");
+                        item = (String) request.getParameter("item2");
                         int itemID = Integer.parseInt(item);
                         Item tmp = items.get(itemID);
                         if(!selectedItems.contains(tmp)){
@@ -86,7 +86,7 @@ public class LeagueBuildABuildApi extends HttpServlet {
                         }
                 }
                 if (request.getParameter("item3") != null) {
-                        item = (String) request.getParameter("item");
+                        item = (String) request.getParameter("item3");
                         int itemID = Integer.parseInt(item);
                         Item tmp = items.get(itemID);
                         if(!selectedItems.contains(tmp)){
@@ -95,7 +95,7 @@ public class LeagueBuildABuildApi extends HttpServlet {
                         }
                 }
                 if (request.getParameter("item4") != null) {
-                        item = (String) request.getParameter("item");
+                        item = (String) request.getParameter("item4");
                         int itemID = Integer.parseInt(item);
                         Item tmp = items.get(itemID);
                         if(!selectedItems.contains(tmp)){
@@ -103,33 +103,41 @@ public class LeagueBuildABuildApi extends HttpServlet {
                         selectedItems.add(tmp);
                         }
                 }
-                if (request.getParameter("item5") != null) {
-                        item = (String) request.getParameter("item");
+                    if (request.getParameter("item5") != null) {
+                        item = (String) request.getParameter("item5");
                         int itemID = Integer.parseInt(item);
                         Item tmp = items.get(itemID);
-                        if(!selectedItems.contains(tmp)){
-                        cmp.updateStats(true, tmp);
-                        selectedItems.add(tmp);
+                        if (!selectedItems.contains(tmp)) {
+                            cmp.updateStats(true, tmp);
+                            selectedItems.add(tmp);
                         }
-                }
-                if (request.getParameter("item6") != null) {
-                        item = (String) request.getParameter("item");
+                    }
+                    if (request.getParameter("item6") != null) {
+                        item = (String) request.getParameter("item6");
                         int itemID = Integer.parseInt(item);
                         Item tmp = items.get(itemID);
-                        if(!selectedItems.contains(tmp)){
-                        cmp.updateStats(true, tmp);
-                        selectedItems.add(tmp);
+                        if (!selectedItems.contains(tmp)) {
+                            cmp.updateStats(true, tmp);
+                            selectedItems.add(tmp);
                         }
+                    }
+                    sOutput = makeJson(cmp, selectedItems);
+                } else {
+                    sOutput = "{\"error\":{\"code\":404, \"message\":\"please provide a valid champion ID\" }}";
                 }
-                sOutput = makeJson(cmp, selectedItems);
+
+            } else {
+                sOutput += "{\"error\":{\"code\":404, \"message\":\"please provide a champion ID\"}}";
+            
             }
             request.setAttribute("json", sOutput);
-                RequestDispatcher rd = request.getRequestDispatcher("/api/JsonResponseServ");
-                rd.forward(request, response);
+            RequestDispatcher rd = request.getRequestDispatcher("/api/JsonResponseServ");
+            rd.forward(request, response);
         }
     }
-    private String makeJson(LeagueChampion cmp, ArrayList<Item> selectedItems){
-        String sReturn="";
+
+    private String makeJson(LeagueChampion cmp, ArrayList<Item> selectedItems) {
+        String sReturn = "";
         sReturn = "{\""+cmp.getName().toLowerCase()+"\":{";
         sReturn += "\"id\":" + cmp.getID() + ",";
         sReturn += "\"name\":\"" + cmp.getName() + "\",";
@@ -187,7 +195,7 @@ public class LeagueBuildABuildApi extends HttpServlet {
             sReturn += "{";
             sReturn += "\"name\":\"" + selectedItems.get(i).getName() + "\",";
             sReturn += "\"id\":" + selectedItems.get(i).getID() + ",";
-            sReturn += "\"image\":\"" + selectedItems.get(i).getImage() + "\"";
+            sReturn += "\"image\":\"" + selectedItems.get(i).getImage() + "\",";
             sReturn += "\"stats\":{";
                 sReturn += "\"armor\":" + selectedItems.get(i).armor + ",";
                 sReturn += "\"attackSpeed\":" + selectedItems.get(i).attackSpeed + ",";
@@ -228,33 +236,34 @@ public class LeagueBuildABuildApi extends HttpServlet {
         return sReturn;
     }
     
-      private LeagueChampion makeAPIRequest(PrintWriter out, String id, String image) {
+      private LeagueChampion makeAPIRequest(PrintWriter out, String id) {
         InputStream is = null;
         LeagueChampion champion = null;
         try {
-            out.println("Making build a build api request");
             is = new URL("https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/" + id + "?champData=all&api_key=cc288bed-bfa3-4158-9642-6b276a1381d7").openStream();
             JsonReader jsonReader = Json.createReader(is);
             JsonObject json = jsonReader.readObject();
-            champion = new LeagueChampion(json, image);
+            
+            champion = new LeagueChampion(json);
 
             jsonReader.close();
             is.close();
         } catch (MalformedURLException ex) {
-            Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, ex);
+           out.println(ex.toString());
             return champion;
 
         } catch (IOException ioe) {
+            out.println(ioe.toString());
             return champion;
 
         } catch (Exception e) {
-            Logger.getLogger(LeagueNames.class.getName()).log(Level.SEVERE, null, e);
+            out.println(e.toString());
             return champion;
         }
         return champion;
     }
       
-          private ArrayList<Item> getItems(PrintWriter out) {
+     private ArrayList<Item> getItems(PrintWriter out) {
        Connection conn = null;
         Statement stmt = null;
 
@@ -310,7 +319,7 @@ public class LeagueBuildABuildApi extends HttpServlet {
          if (items.isEmpty()) {
             items = null;
         }
-       // out.println("got " + items.size() + "items");
+        out.println("got " + items.size() + "items");
         return items;
     }
 

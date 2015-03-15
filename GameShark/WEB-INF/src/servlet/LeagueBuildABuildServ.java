@@ -55,12 +55,18 @@ public class LeagueBuildABuildServ extends HttpServlet {
             ArrayList<Item> items;
             ArrayList<Item> selectedItems;
 
+            //handle new champion selection
+            //request has champ ID and session has current champ
             if (request.getParameter("championID") != null && s.getAttribute("currentChampion") != null) {
+                out.println("new champ request with session");
                 selectedChampID = request.getParameter("championID");
                 LeagueChampion tmp = (LeagueChampion) s.getAttribute("currentChampion");
+                //see if session id matches request id
+                //if it does you have cmp
                 if (tmp.getIDasString().equals(selectedChampID)) {
                     out.println("session champ = requested champ");
                     cmp = tmp;
+                    //if not make a new api call
                 } else {
                     out.println("making api call");
                     image = request.getParameter("championImage");
@@ -68,57 +74,67 @@ public class LeagueBuildABuildServ extends HttpServlet {
                 }
                 s.setAttribute("currentChampion", cmp);
                 request.setAttribute("championObject", cmp);
+            //session doesnt have current champ but request has a champ id
             } else if (request.getParameter("championID") != null) {
+                out.println("new champ request no session");
                 image = request.getParameter("championImage");
                 selectedChampID = request.getParameter("championID");
                 cmp = makeAPIRequest(out, selectedChampID, image);
                 s.setAttribute("currentChampion", cmp);
                 request.setAttribute("championObject", cmp);
-            }else if(s.getAttribute("currentChampion") != null){
-                request.setAttribute("championObject", s.getAttribute("currentChampion"));
-            }
-
-            if (s.getAttribute("itemList") != null && s.getAttribute("selectedItems") != null) {
-                cmp = (LeagueChampion)s.getAttribute("currentChampion");
-                out.println("got items and selected items");
-                items = (ArrayList<Item>) s.getAttribute("itemList");
-                selectedItems = (ArrayList<Item>) s.getAttribute("selectedItems");
-
-                //handle selected item clicked to unselect
-                if (request.getParameter("selectedItem") != null) {
-                    //edit champion stats
-                    item = (String) request.getParameter("selectedItem");
-                    int itemID = Integer.parseInt(item);
-                    Item tmp = selectedItems.get(itemID);
-                    cmp.updateStats(false, tmp);
-                    s.setAttribute("currentChampion", cmp);
-                    request.setAttribute("championObject", cmp);
-                    selectedItems.remove(itemID);
-
-                }
-
-                //handle item clicked to select
-                if (request.getParameter("item") != null) {
-                    if (selectedItems.size() < 6) {
-                        item = (String) request.getParameter("item");
-                        int itemID = Integer.parseInt(item);
-                        Item tmp = items.get(itemID);
-                        if(!selectedItems.contains(tmp)){
-
-                        cmp.updateStats(true, tmp);
-                        s.setAttribute("currentChampion", cmp);
-                        request.setAttribute("championObject", cmp);
-                        selectedItems.add(tmp);
-                        }
+            //not a new champ request therefore on session && item/level/runes/materies
+            }else{
+                out.println("else");
+                cmp = (LeagueChampion) s.getAttribute("currentChampion");
+                //handle items(session must have a current champion)
+                if (s.getAttribute("itemList") != null && s.getAttribute("selectedItems") != null) {
+                    items = (ArrayList<Item>) s.getAttribute("itemList");//all items
+                    selectedItems = (ArrayList<Item>) s.getAttribute("selectedItems");//selected items
+                    ArrayList<Item> itemsMinusSelected = (ArrayList<Item>)s.getAttribute("itemList");//all items for now
+                    
+                    for(Item tmpItem:selectedItems){
+                        itemsMinusSelected.remove(tmpItem);
                     }
 
-                }
-                request.setAttribute("itemList", items);
-                out.println("got " + items.size() + "items");
-                s.setAttribute("selectedItems", selectedItems);
-                request.setAttribute("selectedItems", selectedItems);
-            }
+                    //handle selected item clicked to unselect
+                    if (request.getParameter("selectedItem") != null) {
+                        item = (String) request.getParameter("selectedItem");
+                        int itemID = Integer.parseInt(item);
+                        Item tmp = selectedItems.get(itemID);
+                        cmp.updateStats(false, tmp);
+                        selectedItems.remove(itemID);
+                        itemsMinusSelected.add(tmp);
+                    }
 
+                    //handle item clicked to select
+                    if (request.getParameter("item") != null) {
+                        if (selectedItems.size() < 6) {
+                            item = (String) request.getParameter("item");
+                            int itemID = Integer.parseInt(item);
+                            Item tmp = items.get(itemID);
+                            if (!selectedItems.contains(tmp)) {
+                                cmp.updateStats(true, tmp);
+                                selectedItems.add(tmp);
+                                itemsMinusSelected.remove(tmp);
+                            }
+                        }
+                    }
+                    request.setAttribute("itemList", itemsMinusSelected);
+                    s.setAttribute("selectedItems", selectedItems);//so that this servlet can get this list again
+                    //request.setAttribute("selectedItems", selectedItems);
+                }
+                //handle new level selected(session must have current champion)
+                if (request.getParameter("level") != null) {
+                    out.println("request of level");
+                    out.print(request.getParameter("level"));
+                    String level = (String) request.getParameter("level");
+                    out.println(level);
+                    int lvl = Integer.parseInt(level);
+                    cmp.updateLevel(lvl);
+                }
+                s.setAttribute("currentChampion", cmp);
+                request.setAttribute("championObject", cmp);
+            }
             RequestDispatcher rd = request.getRequestDispatcher("LeagueBuildABuild.jsp");
             rd.forward(request, response);
         }
