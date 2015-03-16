@@ -69,6 +69,10 @@ public class Hero {
         return id;
     }
 
+    public String getClassName(){
+        return className;
+    }
+
     public int getLevel() {
         return level;
     }

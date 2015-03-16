@@ -1,9 +1,11 @@
 package servlet;
 
-
 import Diablo.Career;
-import Diablo.Follower;
-import Diablo.*;
+import Diablo.Hero;
+import Diablo.Item;
+import Diablo.ItemBuilder;
+import Diablo.Database;
+import Diablo.ItemBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -12,6 +14,7 @@ import java.net.URL;
 import java.net.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.ArrayList;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
@@ -22,11 +25,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 /**
  * @author csaroff
  */
-@WebServlet(name = "DiabloFollowerApi", urlPatterns = {"/api/DiabloFollower"})
-public class DiabloFollowerApi extends HttpServlet {
+@WebServlet(name = "DiabloHeroBuilderApi", urlPatterns = {"/api/DiabloHeroBuilder"})
+public class DiabloHeroBuilderApi extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,31 +41,37 @@ public class DiabloFollowerApi extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json; charset=UTF-8");
-        String strFollower = "";
-        Follower follower = null;
-        if(request.getParameter("follower") != null){
-             strFollower = request.getParameter("follower");
+        int NUM_ITEMS=13;
+        HttpSession s = request.getSession();
+        String battleID = "";
+        ArrayList<String> itemIds = new ArrayList<String>();
+        ArrayList<Item> items = new ArrayList<Item>();
+        for(int i=0; i<NUM_ITEMS; i++){
+            if(request.getParameter(i+"")!=null&&!request.getParameter(i+"").equals("")){
+                itemIds.add(request.getParameter(i+""));
+            }
         }
-        if(strFollower.equals("enchantress")||strFollower.equals("scoundrel")||strFollower.equals("templar")){
-            follower = makeServerAPIRequest(strFollower);
+        for(String itemId : itemIds){
+            Item item = getItemFromID(itemId);
+            if(item!=null)
+                items.add(item);
+        }
+        ItemBuilder itemBuild = new ItemBuilder(items);
+        try(JsonWriter writer = Json.createWriter(response.getWriter())){
+            writer.writeObject(toJsonObject(itemBuild));
         }
 
-        if(follower==null){
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST);
-            return;
-        }
-        try(JsonWriter writer = Json.createWriter(response.getWriter())){
-            writer.writeObject(toJsonObject(follower));
-        }
+
     }
-    private Follower makeServerAPIRequest(String strFollower){
-        Follower diabloFollower = null;
+    private Item getItemFromID(String id){
+        Item diabloItem = null;
         InputStream is = null;
+        diabloItem = Database.getItem(id);
+        if(diabloItem!=null){return diabloItem;}
         try{
-            URL url = new URL("http://us.battle.net/api/d3/data/follower/" + strFollower);
+            URL url = new URL("http://us.battle.net/api/d3/data/item/" + id);
             int code = ((HttpURLConnection)url.openConnection()).getResponseCode();
             if(code<200 || code>299){
                 return null;
@@ -72,50 +82,34 @@ public class DiabloFollowerApi extends HttpServlet {
             jsonReader.close();
             String errorCode = jsonObject.getString("code", null);
             if(jsonObject==null||(errorCode!=null&&errorCode.equals("NOTFOUND"))){
-                System.out.println("jsonObject contained error message");
                 return null;
             }
-            diabloFollower = new Follower(jsonObject);
-            
-        } catch (MalformedURLException ex) {
-            Logger.getLogger(DiabloFollowerServlet.class.getName()).log(Level.SEVERE, null, ex);
-        
-        } catch (IOException ioe){
-            Logger.getLogger(DiabloFollowerServlet.class.getName()).log(Level.SEVERE, null, ioe);
-        
-        } catch(Exception e){
-            Logger.getLogger(DiabloFollowerServlet.class.getName()).log(Level.SEVERE, null, e);
-            
+            diabloItem = new Item(jsonObject);
+            Database.cacheItem(diabloItem);
+        }catch (MalformedURLException ex) {
+            Logger.getLogger(DiabloHeroBuilderServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }catch (IOException ioe){
+            Logger.getLogger(DiabloHeroBuilderServlet.class.getName()).log(Level.SEVERE, null, ioe);
+        }catch(Exception e){
+            Logger.getLogger(DiabloHeroBuilderServlet.class.getName()).log(Level.SEVERE, null, e);
         }finally {
             try {
-                is.close();
+                if(is!=null)
+                    is.close();
             } catch (IOException ex) {
-                Logger.getLogger(DiabloFollowerServlet.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(DiabloHeroBuilderServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
-        return diabloFollower;
+        return diabloItem;
     }
-    private JsonObject toJsonObject(Follower follower){
+    private JsonObject toJsonObject(ItemBuilder itemBuild){
         JsonBuilderFactory factory = Json.createBuilderFactory(null);
-        JsonObjectBuilder tempObj = factory.createObjectBuilder()
-        .add("slug", follower.getSlug())
-        .add("name", follower.getName())
-        .add("realName", follower.getRealName())
-        .add("portrait", follower.getPortrait());
-        JsonArrayBuilder skills = factory.createArrayBuilder();
-        for(ActiveSkill skill : follower.getActiveSkills()){
-            skills.add(factory.createObjectBuilder()
-                .add("slug",skill.getSlug())
-                .add("name",skill.getName())
-                .add("icon",skill.getIcon())
-                .add("level",skill.getLevel())
-                .add("tooltipUrl",skill.getTooltipUrl())
-                .add("description",skill.getDescription())
-                .add("skillCalcId",skill.getSkillCalcId()));
+        JsonObjectBuilder stats = factory.createObjectBuilder();
+        for(String statName : itemBuild.getStats().keySet()){
+            stats
+                .add(statName, itemBuild.getStats().get(statName));
         }
-        tempObj.add("skills", skills);
-        return tempObj.build();
+        return stats.build();
         
     }
 
@@ -155,5 +149,5 @@ public class DiabloFollowerApi extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Short description";
-    }
+    }// </editor-fold>
 }

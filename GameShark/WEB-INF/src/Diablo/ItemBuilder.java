@@ -6,20 +6,18 @@ public class ItemBuilder{
 	//private List<Item> items;
 	private LinkedHashMap<String, Double> stats = new LinkedHashMap<String, Double>();
 	public ItemBuilder(List<Item> items){
-	//	this.items=items;
-		if(items==null){
-			System.out.println("items is null");
-		}
-		for(Item item : items){
-			System.out.println("itemName=" + item.getName());
-			LinkedHashMap<String, Double> rawAttributes = item.getRawAttributes();
-			for(String rawAttributesKey : rawAttributes.keySet()){
-				if(stats.get(rawAttributesKey)==null){
-					stats.put(rawAttributesKey, rawAttributes.get(rawAttributesKey));
-				}else{
-					Double totalBuildAttributeValue = stats.get(rawAttributesKey);
-					Double itemAttributeValue = rawAttributes.get(rawAttributesKey);
-					stats.put(rawAttributesKey, totalBuildAttributeValue + itemAttributeValue);
+		if(items!=null){
+			for(Item item : items){
+				System.out.println("itemName=" + item.getName());
+				LinkedHashMap<String, Double> rawAttributes = item.getRawAttributes();
+				for(String rawAttributesKey : rawAttributes.keySet()){
+					if(stats.get(rawAttributesKey)==null){
+						stats.put(rawAttributesKey, rawAttributes.get(rawAttributesKey));
+					}else{
+						Double totalBuildAttributeValue = stats.get(rawAttributesKey);
+						Double itemAttributeValue = rawAttributes.get(rawAttributesKey);
+						stats.put(rawAttributesKey, totalBuildAttributeValue + itemAttributeValue);
+					}
 				}
 			}
 		}
